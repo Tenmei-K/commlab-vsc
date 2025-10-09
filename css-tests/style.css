@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    background-color: aliceblue;
+}
+
+#main-wrapper{
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    background-color: rgb(54, 170, 54);
+    margin: auto;
+}
+
+#headline-wrapper{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(184, 249, 227);
+}
+#headline-wrapper h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav-item{
+    width: 24%;
+    height: 50px;
+    background-color: black;
+    display: inline-block;
+}
+.nav-item p{
+    color: white;
+    text-align: center;
+}
+#nav_wrapper{
+    text-align: center;
+    outline: 1px;
+}
