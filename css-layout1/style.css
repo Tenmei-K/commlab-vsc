@@ -1,0 +1,56 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box{
+    width: 300px;
+    height: 100px;
+    outline: 2px solid rgb(185,202,211);
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+}
+.box:hover{
+    background-color: rgb(247, 249, 249);
+}
+/* #one{
+    visibility:visible
+}
+#one:hover{
+    visibility:hidden
+} 
+*/
+
+#one{
+    /* display: none; 用这个时 section 2 会上去 */
+    /* visibility:hidden */
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+}
+#one span{
+    position: relative;
+    top: -2px;
+    left: -10px;
+}
+
+#two{
+    position: absolute;
+    top: 500px;
+    left: 900px;
+}
+#three{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+#four{
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+#five{
+    height: 2000px;
+}
