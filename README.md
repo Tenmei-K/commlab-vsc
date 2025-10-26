@@ -1,9 +1,10 @@
 # Commlab page
-
-2025.9-2025-12 projects
-
-![manimani-banner](image.png)
 <br>
+<br>
+<h2>2025.9-2025-12 projects</h2>
+<br>
+
+![manimani-banner](manimani.png)
 <br>
 <h3>Projects</h3>
 
