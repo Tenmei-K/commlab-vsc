@@ -80,8 +80,8 @@ p{
 
 #middle{
     height: 1000px;
-    max-width: 47vw;
-    min-width: 47vw;
+    max-width: 30vw;
+    min-width: 30vw;
     border-left: 1px solid rgb(238,243,244);
     border-right: 1px solid rgb(238,243,244);
     display: inline-flex;
@@ -91,13 +91,14 @@ p{
 }
 
 #upfixed-wrapper{
-    /* position: fixed;
-    top: 0px; */
-    height: 53px;
-    max-width: 47vw;
-    min-width: 47vw;
+    position: fixed;
+    top: 0px;
+    height: 120px;
+    max-width: 30vw;
+    min-width: 30vw;
     background-color: rgb(255, 255, 255);
     display: flex;
+    border-bottom: 1px solid rgb(238,243,244);
 }
 
 
@@ -111,7 +112,7 @@ p{
     border-bottom-right-radius:9999px;
     position: fixed;
     top: 48.5px;
-    left: 46.7vw;
+    left: 23.29vw;
     display:block;
 }
 
@@ -126,6 +127,10 @@ p{
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(238,243,244);
 }
+#upfixed-head{
+    position: absolute;
+    left: 16px;
+}
 .upfixed:hover{
     background-color: rgb(232,232,233);
 }
@@ -134,10 +139,11 @@ p{
 }
 #For-you{
     align-items: center;
-    font-size: 15px;
-    font-weight: 500;
-    color: rgb(83, 100, 113);
+    
     display: block;
+    font-size:15px;
+    font-weight:700;
+    color:rgb(15, 20, 25)
 }
 
 #Following{
@@ -148,10 +154,17 @@ p{
     display:block;
     font-kerning:auto;
     font-optical-sizing:auto;
-    font-size:15px;
-    font-weight:700;
-    color:rgb(15, 20, 25)
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(83, 100, 113);
 }
+
+#search-tweet{
+    position: absolute;
+    top: 35vh;
+    left: 35vw;
+}
+
 
 /* NEW TWEET */
 #new-tweet-wrapper{
@@ -284,8 +297,8 @@ p{
     position: relative;
     align-items: center;
     height: 100%;
-    max-width:352px;
-    min-width: 352px;
+    max-width:600px;
+    min-width: 600px;
     display: block;
 }
 /* #right{
@@ -294,11 +307,9 @@ p{
 } */
 
 #search{
-    position: fixed;
-    top: 4.4px;
-    right: 7.6vw;
     font-size:15px;
     height:44px;
+    width: 28vw;
     border-color:rgb(207, 217, 222);
     border-style:solid;
     border-width: 1px;
@@ -309,11 +320,14 @@ p{
     box-sizing:border-box;
     margin-bottom: 12px;
     background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 60px;
+    left: 15.3vw;
 }
 #megame{
     position: fixed;
-    left: 64.65vw;
-    top: 19px;
+    top: 74px;
+    left: 16.2vw;
 }
 
 #search-box{
@@ -328,14 +342,14 @@ p{
     font-weight: 400;
     border: 0px;
     background-color: rgb(255, 255, 255);
-    position: fixed;
-    top: 6.5px;
-    left: 843px;
     box-sizing:border-box;
     caption-side:top;
     caret-color:rgb(29, 155, 240);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 62px;
+    left: 17.5vw;
 }
 
 #search-box:focus{

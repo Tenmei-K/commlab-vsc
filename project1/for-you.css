@@ -11,6 +11,9 @@ div{
     unicode-bidi: isolate; 
     margin: 0%;
 }
+p{
+    margin:0px
+}
 
 #main-wrapper{
     height: 100vh;
@@ -21,7 +24,7 @@ div{
 }
 
 #left{
-    display: inline-block;
+    display: block;
     height: 678px;
     max-width: 230px;
     min-width: 230px;
@@ -29,37 +32,78 @@ div{
     padding-right: 8px;
     outline: 1px transparent;
     border-bottom: 0px;
+    position:fixed;
+    left: 7.8vw;
+    top: 0.3vh;
 }
-#left-pf{
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    outline: 1px transparent;
-    border-bottom: 0px;
+#left-wrapper{
+    display: flex;
+    flex-direction: row;
 }
+.left-outside{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    padding:0.11vh;
+}
+.left-back{
+    border-radius: 9999px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+.left-back:hover{
+    background-color: rgb(231, 231, 232);
+}
+#leftpost{
+    padding-top: 2.4vh;
+}
+#leftpfpout{
+    padding-top: 3vh;
+    position: absolute;
+    right: 15.2vw;
+}
+#leftpfpback{
+    min-width: 64px;
+    height: 64px;
+}
+#leftpfp{
+    border-radius: 9999px;
+    background-color: black;
+    display: flex;
+}
+
 
 
 #middle{
-    position: relative;
     height: 1000px;
     max-width: 47vw;
     min-width: 47vw;
     border-left: 1px solid rgb(238,243,244);
     border-right: 1px solid rgb(238,243,244);
+    display: inline-flex;
+    align-content: center;
+    position: absolute;
+    left: 14.1vw;
 }
 
 #upfixed-wrapper{
-    position: fixed;
-    top: 0px;
+    /* position: fixed;
+    top: 0px; */
     height: 53px;
-    width: 43%;
+    max-width: 47vw;
+    min-width: 47vw;
     background-color: rgb(255, 255, 255);
+    display: flex;
 }
 
 
 #upfixed-blue{
     background-color: rgb(29, 155, 240);
-    width:56px;
+    width:69.0312px;
     height:4px;
     border-top-left-radius:9999px;
     border-top-right-radius:9999px;
@@ -67,7 +111,7 @@ div{
     border-bottom-right-radius:9999px;
     position: fixed;
     top: 48.5px;
-    left: 23.87vw;
+    left: 23.29vw;
     display:block;
 }
 
@@ -75,71 +119,104 @@ div{
     position: fixed;
     top: 0px;
     height: 53px;
-    width: 21vw;
+    width: 20.97vw;
     padding-left: 16px;
     padding-right: 16px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(238,243,244);
 }
-
 .upfixed:hover{
     background-color: rgb(232,232,233);
 }
+.upfixed p{
+    margin: 16px;
+}
 #For-you{
+    align-items: center;
+    
+    display: block;
     font-size:15px;
-    font-size-adjust:none;
     font-weight:700;
     color:rgb(15, 20, 25)
 }
 
 #Following{
+    align-items: center;
     position: fixed;
     top: 0px;
-    left: 37.8vw;
+    left: 37.66vw;
+    display:block;
     font-kerning:auto;
     font-optical-sizing:auto;
     font-size: 15px;
     font-weight: 500;
     color: rgb(83, 100, 113);
-    
-    font-stretch:100%;
-    font-style:normal;
-    font-variant-alternates:normal;
-    font-variant-caps:normal;
-    font-variant-east-asian:normal;
-    font-variant-ligatures:normal;
-    font-variant-numeric:normal;
-    font-variant-position:normal;
-    font-variation-settings:normal;
-    
 }
 
+#for-you-tweet{
+    position: absolute;
+    top: 43vh;
+    left: 1.5vw;
+}
+
+
+/* NEW TWEET */
 #new-tweet-wrapper{
-    height: 120px;
-    width: 568px;
-    margin-top: 4px;
-    margin-left: 16px;
-    margin-right: 16px;
+    height: 104px;
+    max-width: 44.5vw;
+    min-width: 44.5vw;
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
     border-bottom: 1px solid rgb(238,243,244);
     position: absolute;
     top: 53px;
-
+    display: flex;
 }
 
 #new-tweet-box{
-    width: 47vh;
+    width: 40vw;
     position: absolute;
     left: 5vw;
     top: 3.5vh;
     border: 0px;
     font-size: 20px;
     font-weight: 400;
+    font-family: "Chirp", Arial, Helvetica, sans-serif;
+    display: flex;
 }
 
 #new-tweet-box:focus{
     border: 0px;
     outline: 0px;
+}
+
+.new-tweet-outside{
+    height: 34px;
+    width: 34px;
+    padding-top: 20px;
+}
+.new-tweet-back{
+    height: 34px;
+    width: 34px;
+    border-radius: 9999px;
+    align-items: center;
+    align-content: normal;
+    display: flex;
+    justify-content: center;
+}
+.new-tweet-back:hover{
+    background-color: rgb(235,245,254);
+}
+#new-tweet-outside-one{
+    padding-left: 45px;
+}
+#new-tweet-outside-seven:hover{
+    background-color: rgb(255, 255, 255);
+}
+.new-tweet-inside{
+    width: 20px;
 }
 
 #post-wrapper{
@@ -154,33 +231,80 @@ div{
 }
 #post-button{
     position: absolute;
-    left: 500px;
-    top: 72px;
+    left: 40.4vw;
+    top: 75px;
 }
 
-#for-you-tweet{
-    position: absolute;
-    top: 43vh;
-    left: 2vw;
+/* TWEET */
+#all-tweets{
+    position:absolute;
+    top: 174px;
 }
+
+.tweet{
+    display: flex;
+    border-bottom: 1px solid rgb(238,243,244);
+    max-width: 44.5vw;
+    min-width: 44.5vw;
+    padding: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 0px;
+}
+.tweet:hover{
+    background-color: rgb(232,232,233);
+}
+.pfp{
+    border-radius: 9999px;
+    border: 1px solid rgb(238,243,244);
+    height: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    background-color: black;
+    display: flex;
+    margin-right: 8px;
+}
+.name{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(15, 20, 25);
+}
+.name:hover{
+    text-decoration: underline;
+}
+.username{
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(83, 100, 113);
+}
+.content{
+    font-size: 15px;
+    font-weight: 400;
+    color:rgb(15, 20, 25);
+    max-width: 41.3vw;
+}
+
 
 
 .right{
+    position: relative;
     align-items: center;
     height: 100%;
-    max-width:290px;
-    min-width: 290px;
-    
+    max-width:352px;
+    min-width: 352px;
+    display: block;
 }
-#right{
+/* #right{
     height: 1000px;
     width: 53px;
-}
+} */
 
 #search{
     position: fixed;
     top: 4.4px;
-    right: 12.4vw;
+    right: 7.6vw;
     font-size:15px;
     height:44px;
     border-color:rgb(207, 217, 222);
@@ -191,17 +315,20 @@ div{
     border-bottom-left-radius:9999px;
     border-bottom-right-radius:9999px;
     box-sizing:border-box;
+    margin-bottom: 12px;
+    background-color: rgb(255, 255, 255);
 }
-
-#search-box-image{
-    visibility: 50%;
+#megame{
+    position: fixed;
+    left: 0vw;
+    top: 14px;
 }
 
 #search-box{
     border-style: inset;
     border-color: rgb(118, 118, 118);
     margin: 0em 0em 0em 0em;
-    width: 235px;
+    width: 297px;
     height: 40px;
     padding-left: 4px;
     padding-right: 16px;
@@ -211,7 +338,7 @@ div{
     background-color: rgb(255, 255, 255);
     position: fixed;
     top: 6.5px;
-    left: 845px;
+    left: 843px;
     box-sizing:border-box;
     caption-side:top;
     caret-color:rgb(29, 155, 240);
@@ -231,7 +358,6 @@ div{
     caret-color:rgb(29, 155, 240);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    
 }
 
 style{
@@ -239,4 +365,9 @@ style{
     overscroll-behavior-y: none;
     font-size: 15px;
     color-scheme: light;
+}
+#news{
+    position: absolute;
+    top: 65px;
+    left:38vw;
 }

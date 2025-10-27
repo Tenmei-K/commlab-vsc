@@ -111,7 +111,7 @@ p{
     border-bottom-right-radius:9999px;
     position: fixed;
     top: 48.5px;
-    left: 46.7vw;
+    left: 46.8vw;
     display:block;
 }
 
@@ -151,6 +151,12 @@ p{
     font-size:15px;
     font-weight:700;
     color:rgb(15, 20, 25)
+}
+
+#search-tweet{
+    position: absolute;
+    top: 37vh;
+    left: 1.5vw;
 }
 
 /* NEW TWEET */
@@ -296,9 +302,10 @@ p{
 #search{
     position: fixed;
     top: 4.4px;
-    right: 7.6vw;
+    left: 15.6vw;
     font-size:15px;
     height:44px;
+    width: 40vw;
     border-color:rgb(207, 217, 222);
     border-style:solid;
     border-width: 1px;
@@ -308,19 +315,18 @@ p{
     border-bottom-right-radius:9999px;
     box-sizing:border-box;
     margin-bottom: 12px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255,255,255);
 }
 #megame{
     position: fixed;
-    left: 64.65vw;
-    top: 19px;
+    top:19px;
+    left: 16.6vw;
 }
 
 #search-box{
     border-style: inset;
     border-color: rgb(118, 118, 118);
-    margin: 0em 0em 0em 0em;
-    width: 297px;
+    width: 400px;
     height: 40px;
     padding-left: 4px;
     padding-right: 16px;
@@ -330,7 +336,7 @@ p{
     background-color: rgb(255, 255, 255);
     position: fixed;
     top: 6.5px;
-    left: 843px;
+    left: 230px;
     box-sizing:border-box;
     caption-side:top;
     caret-color:rgb(29, 155, 240);
@@ -342,14 +348,7 @@ p{
     outline: none;
     border: 0px;
     background-color: rgb(255, 255, 255);
-    position: fixed;
-    top: 6.5px;
-    left: 845px;
-    box-sizing:border-box;
-    caption-side:top;
     caret-color:rgb(29, 155, 240);
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 style{
@@ -360,6 +359,6 @@ style{
 }
 #news{
     position: absolute;
-    top: 65px;
+    top: 20px;
     left:38vw;
 }

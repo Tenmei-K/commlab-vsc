@@ -91,13 +91,14 @@ p{
 }
 
 #upfixed-wrapper{
-    /* position: fixed;
-    top: 0px; */
+    position: fixed;
+    top: 0px;
     height: 53px;
     max-width: 47vw;
     min-width: 47vw;
     background-color: rgb(255, 255, 255);
     display: flex;
+    border-bottom: 1px solid rgb(238,243,244);
 }
 
 
@@ -111,7 +112,7 @@ p{
     border-bottom-right-radius:9999px;
     position: fixed;
     top: 48.5px;
-    left: 46.7vw;
+    left: 23.29vw;
     display:block;
 }
 
@@ -126,6 +127,10 @@ p{
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(238,243,244);
 }
+#upfixed-head{
+    position: absolute;
+    left: 16px;
+}
 .upfixed:hover{
     background-color: rgb(232,232,233);
 }
@@ -134,10 +139,11 @@ p{
 }
 #For-you{
     align-items: center;
-    font-size: 15px;
-    font-weight: 500;
-    color: rgb(83, 100, 113);
+    
     display: block;
+    font-size:15px;
+    font-weight:700;
+    color:rgb(15, 20, 25)
 }
 
 #Following{
@@ -148,10 +154,17 @@ p{
     display:block;
     font-kerning:auto;
     font-optical-sizing:auto;
-    font-size:15px;
-    font-weight:700;
-    color:rgb(15, 20, 25)
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(83, 100, 113);
 }
+
+#search-tweet{
+    position: absolute;
+    top: 35vh;
+    left: 1.5vw;
+}
+
 
 /* NEW TWEET */
 #new-tweet-wrapper{
@@ -315,6 +328,7 @@ p{
     left: 64.65vw;
     top: 19px;
 }
+
 
 #search-box{
     border-style: inset;
