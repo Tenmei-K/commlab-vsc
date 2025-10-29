@@ -8,9 +8,9 @@
 <br>
 <h3>Projects</h3>
 
-- [midterm](https://tenmei-k.github.io/commlab-vsc/project1/)
+- [Project 1: Apocalypse X](https://tenmei-k.github.io/commlab-vsc/project1/)
 <br>
-Project 1: Shanzhai website
+midterm: Shanzhai website
 
 <br>
 <br>
