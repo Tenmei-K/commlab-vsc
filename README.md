@@ -9,7 +9,6 @@
 <h3>Projects</h3>
 
 - [Project 1: Apocalypse X](https://tenmei-k.github.io/commlab-vsc/project1/)
-<br>
 midterm: Shanzhai website
 
 <br>
@@ -20,6 +19,8 @@ midterm: Shanzhai website
         <br>dedicated to fanart life during 2025.5-2025.7
 - [tutorial](https://tenmei-k.github.io/commlab-vsc/tutorial/)
         <br>confusing project full of ironic jokes about Gaokao
+- [lorem](https://tenmei-k.github.io/commlab-vsc/lorem/)
+        <br>Lorem ipsom dolor sitamet
 
 
 <br>
