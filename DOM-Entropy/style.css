@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    cursor: pointer;
+}
+
+p {
+    color: gray;
+    margin: 0px;
+    position: fixed;
+    cursor:default;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 
+p:hover{
+    color: rgb(57,197,187);
+} */
+
+.click {
+    color: rgb(57, 197, 187);
+}

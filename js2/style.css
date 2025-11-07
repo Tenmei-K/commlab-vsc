@@ -1,0 +1,11 @@
+#container {
+    width: 400px;
+    height: 500px;
+    background-color: antiquewhite;
+    transition: transform 2s ease-out;
+    /* ease-in先慢后快，ease-out先快后慢 */
+}
+
+.move {
+    transform: translate(100px, 0px);
+}

@@ -9,7 +9,7 @@
 <h3>Projects</h3>
 
 - [Project 1: Apocalypse X](https://tenmei-k.github.io/commlab-vsc/project1/)
-midterm: Shanzhai website
+        <br>midterm: Shanzhai website
 
 <br>
 <br>
@@ -21,9 +21,11 @@ midterm: Shanzhai website
         <br>confusing project full of ironic jokes about Gaokao
 - [lorem](https://tenmei-k.github.io/commlab-vsc/lorem/)
         <br>Lorem ipsom dolor sitamet
+- [DOM-Entropy](https://tenmei-k.github.io/commlab-vsc/DBM-Entropy/)
+        <br>「ハローセカイ」
 
 
-<br>
+<!-- <br>
 <br>
 <h3>In class (real) tutorials</h3>
 
@@ -38,4 +40,4 @@ midterm: Shanzhai website
 - [css-layout1](https://tenmei-k.github.io/commlab-vsc/css-layout1/)
         <br>first step into <span style="background-color: black">        </span>
 - [css-layout2](https://tenmei-k.github.io/commlab-vsc/css-layout2/)
-        <br>second step
+        <br>second step -->

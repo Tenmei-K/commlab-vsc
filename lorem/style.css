@@ -63,6 +63,6 @@ body{
     color: rgb(255, 222, 88);
     background-color: rgb(228, 194, 55);
 
-    animation: wind 8s ease-in infinite alternate;
+    animation: wind 8s ease-in-out infinite alternate;
     animation-delay: 0.8s;
 }
