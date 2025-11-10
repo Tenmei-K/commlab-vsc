@@ -21,7 +21,7 @@
         <br>confusing project full of ironic jokes about Gaokao
 - [lorem](https://tenmei-k.github.io/commlab-vsc/lorem/)
         <br>Lorem ipsom dolor sitamet
-- [DOM-Entropy](https://tenmei-k.github.io/commlab-vsc/DBM-Entropy/)
+- [DOM-Entropy](https://tenmei-k.github.io/commlab-vsc/DOM-Entropy/)
         <br>「ハローセカイ」
 
 
