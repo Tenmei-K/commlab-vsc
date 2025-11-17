@@ -42,6 +42,7 @@ myButton.addEventListener("click", function (e) {
             e.target.remove()
             clearInterval(messageInterval)
             messageBoard.innerHTML = ""
+            // messageBoard.querySelector("p").remove()
         }, 100)
     }
 })
