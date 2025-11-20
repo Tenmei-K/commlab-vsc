@@ -10,7 +10,7 @@ body {
     min-height: 10px;
     max-width: 10px;
     max-height: 10px;
-    background-color: rgb(255, 205, 239);
+    background-color: rgb(253, 231, 240);
     position: fixed;
 }
 
@@ -19,7 +19,7 @@ body {
     min-height: 10px;
     max-width: 10px;
     max-height: 10px;
-    background-color: rgb(255, 170, 198);
+    background-color: rgb(255, 199, 237);
     position: fixed;
 }
 
@@ -28,7 +28,7 @@ body {
     min-height: 10px;
     max-width: 10px;
     max-height: 10px;
-    background-color: rgb(241, 125, 163);
+    background-color: rgb(255, 148, 184);
     position: fixed;
 }
 

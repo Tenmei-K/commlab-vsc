@@ -11,6 +11,8 @@
 - [Project 1: Apocalypse X](https://tenmei-k.github.io/commlab-vsc/project1/)
         <br>midterm: Shanzhai website
 
+- [Project 2: まだ名前考えないサイト](https://tenmei-k.github.io/commlab-vsc/project2/)
+        <br>finals: Adapted for the Web
 <br>
 <br>
 <h3>Exercises</h3>
@@ -23,6 +25,8 @@
         <br>Lorem ipsom dolor sitamet
 - [DOM-Entropy](https://tenmei-k.github.io/commlab-vsc/DOM-Entropy/)
         <br>「ハローセカイ」
+- [clock](https://tenmei-k.github.io/commlab-vsc/DOM-Entropy/)
+        <br>スター
 
 
 <!-- <br>

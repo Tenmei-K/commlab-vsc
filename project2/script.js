@@ -36,7 +36,7 @@ function hanaOnePositionThree() {
 }
 repeat(120,hanaOnePositionOne)
 repeat(50,hanaOnePositionTwo)
-repeat(20,hanaOnePositionThree)
+repeat(10,hanaOnePositionThree)
 
 // back
 function hanaTwoPositionOne() {
@@ -62,33 +62,33 @@ function hanaTwoPositionThree() {
 }
 repeat(100,hanaTwoPositionOne)
 repeat(400,hanaTwoPositionTwo)
-repeat(300,hanaTwoPositionThree)
+repeat(200,hanaTwoPositionThree)
 
 
 function hanaThreePositionOne() {
     let hanaCre = document.createElement("div")
     hanaWrapper.append(hanaCre)    
     hanaCre.classList.add("hanaOne")
-    hanaCre.style.top = (Math.random() * 36) + "vh"
+    hanaCre.style.top = (Math.random() * 39) + "vh"
     hanaCre.style.right = (Math.random() * 55) + "vw"
 }
 function hanaThreePositionTwo() {
     let hanaCre = document.createElement("div")
     hanaWrapper.append(hanaCre)    
     hanaCre.classList.add("hanaTwo")
-    hanaCre.style.top = (Math.random() * 36) + "vh"
+    hanaCre.style.top = (Math.random() * 39) + "vh"
     hanaCre.style.right = (Math.random() * 55) + "vw"
 }
 function hanaThreePositionThree() {
     let hanaCre = document.createElement("div")
     hanaWrapper.append(hanaCre)    
     hanaCre.classList.add("hanaThree")
-    hanaCre.style.top = (Math.random() * 36) + "vh"
+    hanaCre.style.top = (Math.random() * 39) + "vh"
     hanaCre.style.right = (Math.random() * 55) + "vw"
 }
 repeat(350,hanaThreePositionOne)
 repeat(120,hanaThreePositionTwo)
-repeat(30,hanaThreePositionThree)
+repeat(20,hanaThreePositionThree)
 
 
 function hanaFourPositionOne() {
@@ -96,22 +96,22 @@ function hanaFourPositionOne() {
     hanaWrapper.append(hanaCre)    
     hanaCre.classList.add("hanaOne")
     hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
-    hanaCre.style.right = (Math.random() * 18) + "vw"
+    hanaCre.style.right = (Math.random() * 10) + "vw"
 }
 function hanaFourPositionTwo() {
     let hanaCre = document.createElement("div")
     hanaWrapper.append(hanaCre)    
     hanaCre.classList.add("hanaTwo")
     hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
-    hanaCre.style.right = (Math.random() * 18) + "vw"
+    hanaCre.style.right = (Math.random() * 10) + "vw"
 }
 function hanaFourPositionThree() {
     let hanaCre = document.createElement("div")
     hanaWrapper.append(hanaCre)    
     hanaCre.classList.add("hanaThree")
     hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
-    hanaCre.style.right = (Math.random() * 18) + "vw"
+    hanaCre.style.right = (Math.random() * 10) + "vw"
 }
-repeat(80,hanaFourPositionOne)
-repeat(60,hanaFourPositionTwo)
-repeat(10,hanaFourPositionThree)
+repeat(50,hanaFourPositionOne)
+repeat(39,hanaFourPositionTwo)
+repeat(5,hanaFourPositionThree)
