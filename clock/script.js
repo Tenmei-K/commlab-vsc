@@ -1,4 +1,10 @@
-let minuteClass = document.querySelector(".minute")
+let minuteWrapper = document.querySelector(".minuteWrapper")
+let minuteClass = document.querySelectorAll(".minute")
+let hourshow = document.querySelector(".hourshow")
+// 下面是按px算的
+let clientHeight = document.documentElement.clientHeight
+let clientWidth = document.documentElement.clientWidth
+
 let audioS = document.createElement("audio")
 audioS.src = "sounds/轻响指.wav"
 let audioM = document.createElement("audio")
@@ -17,15 +23,19 @@ let m = now.getMinutes();    // 0–59
 let s = now.getSeconds();    // 0–59
 
 
-repeat(m, function () {minutes(h);})
+repeat(m, function () { minutes(h); })
 
+// bgcolor setting
 if (h < 12) {
-    document.body.style.backgroundColor = "rgba(13, 42, 55, 1)"
+    document.body.style.backgroundColor = "rgba(17, 49, 93, 1)"
 } else {
-    document.body.style.backgroundColor = "rgba(20, 28, 62, 1)"
+    document.body.style.backgroundColor = "rgba(26, 20, 62, 1)"
 }
 
 
+function remove(e) {
+    e.remove()
+}
 
 function getTime() {
     let now = new Date(); // returns the current moment
@@ -39,18 +49,22 @@ function getTime() {
     //     e.classList.toggle("sparkle")
     // })
     if (s == 0) {
-        document.body.innerHTML = ""
+        minuteWrapper.innerHTML = ""
         repeat(m, function () {
             minutes(h);
         })
+        // audioM.play()
     }
-
+    if (s != 0) {
+        // audioS.play()
+    }
 
     // select all minute stars
     let minuteStars = document.querySelectorAll(".minute")
 
-    // call tiigleSparkle for each of them
+    // call toggleSparkle for each of them
     minuteStars.forEach(toggleSparkle)
+
 }
 
 setInterval(getTime, 1000)
@@ -64,14 +78,15 @@ function toggleSparkle(element) {
 
 function minutes(h) {
 
-
     let minute = document.createElement("div")
     minute.classList.add("minute")
+
     r = Math.floor(Math.random() * 2)
     if (r == 0) {
         minute.classList.add("sparkle")
     }
 
+    // color setting
     if (h == 0) {
         minute.style.backgroundColor = "rgb(255,255,255)"
     } else if (h == 1 || h == 23) {
@@ -99,16 +114,58 @@ function minutes(h) {
     } else {
         minute.style.backgroundColor = "rgb(71,144,255)"
     }
-    document.body.append(minute)
 
-    minute.style.top = Math.random() * 100 + "vh"
-    minute.style.left = Math.random() * 100 + "vw"
-    // setInterval(function () {
-    //     minute.classList.toggle("sparkle")
-    //    audioS.loop == false
-    //    audioS.play()
-    // }, 1000)
+    minuteWrapper.append(minute)
 
+    let rTop = Math.random() * 97 + 1
+    let rLeft = Math.random() * 97 + 1
+    minute.style.top = rTop + "vh"
+    minute.style.left = rLeft + "vw"
+
+    let hourshowTop = ((h - 1) * 9 + 4) * 100 / clientHeight
+    let hourshowLeft = 16 * 100 / clientWidth
+
+
+
+    minute.addEventListener("mouseover", function (e) {
+        hourshow.style.opacity = 1
+        // let styles = { hourshow: { top: 'calc(rTop vh - (h-1)*9 px)' } }
+        hourshow.style.top = (rTop - hourshowTop) + "vh"
+        hourshow.style.left = (rLeft - hourshowLeft) + "vw"
+        console.log("works!")
+    })
+    minute.addEventListener("mouseout", function () {
+        hourshow.style.opacity = 0
+    })
+
+
+
+
+
+
+    // minute.addEventListener("mouseover", hourshow)
+    // minute.addEventListener("mouseout", function () {
+    //     document.querySelector(".hourshow").remove
+    // })
+
+    // function hourshow() {
+    //     let hourShowDiv = document.createElement("div")
+    //     hourShowDiv.classList.add("hourshow")
+
+    //     hourShowDiv.style.top = minute.style.top - ((h - 1) * 8 + "px")
+    //     hourShowDiv.style.left = minute.style.left - (16 + "px")
+
+
+    //     let hourDivZeroOne = document.createElement("div")
+    //     hourDivZeroOne.classList.add("hourdiv")
+    //     hourDivZeroOne.style.backgroundColor = "rgba(13, 41, 55, 1)"
+    //     document.querySelector("#hourshow").append(hourDivZeroOne)
+
+
+
+
+    //     document.body.append(hourShowDiv)
+    // }
 
 }
 

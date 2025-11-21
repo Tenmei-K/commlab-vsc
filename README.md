@@ -25,7 +25,7 @@
         <br>Lorem ipsom dolor sitamet
 - [DOM-Entropy](https://tenmei-k.github.io/commlab-vsc/DOM-Entropy/)
         <br>「ハローセカイ」
-- [clock](https://tenmei-k.github.io/commlab-vsc/DOM-Entropy/)
+- [clock](https://tenmei-k.github.io/commlab-vsc/clock/time.html)
         <br>スター
 
 
