@@ -121,7 +121,7 @@ function minutes(h) {
     minute.style.top = rTop + "vh"
     minute.style.left = rLeft + "vw"
 
-    let hourshowTop = ((h - 1) * 9 + 6.3) * 100 / clientHeight
+    let hourshowTop = ((h - 1) * 9 + 6) * 100 / clientHeight
     let hourshowLeft = 16 * 100 / clientWidth
 
 
