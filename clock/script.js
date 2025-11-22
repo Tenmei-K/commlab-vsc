@@ -131,11 +131,12 @@ function minutes(h) {
         hourshow.style.top = (rTop - hourshowTop) + "vh"
         hourshow.style.left = (rLeft - hourshowLeft) + "vw"
         // console.log("works!")
-        audioCOpen.play()
+        if (minuteWrapper.classList.contains("audioOff") == false) {
+            audioCOpen.play()
+        }
     })
     minute.addEventListener("mouseout", function () {
         hourshow.style.opacity = 0
-        audioCClose.play()
     })
 
 
