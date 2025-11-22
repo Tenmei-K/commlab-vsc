@@ -8,7 +8,9 @@ let clientWidth = document.documentElement.clientWidth
 let audioS = document.createElement("audio")
 audioS.src = "sounds/轻响指.wav"
 let audioM = document.createElement("audio")
-audioM.src = "sounds/噗.wav"
+audioM.src = "sounds/木头咚.wav"
+let audioCOpen = document.createElement("audio")
+audioCOpen.src = "sounds/水滴.wav"
 
 function repeat(n, action) {
     for (let i = 0; i < n; i++) {
@@ -32,11 +34,7 @@ if (h < 12) {
     document.body.style.backgroundColor = "rgba(26, 20, 62, 1)"
 }
 
-
-function remove(e) {
-    e.remove()
-}
-
+// 每秒运行
 function getTime() {
     let now = new Date(); // returns the current moment
 
@@ -45,18 +43,18 @@ function getTime() {
     let s = now.getSeconds();    // 0–59
 
     console.log(h, m, s);
-    // minuteClass.forEach(function (e) {
-    //     e.classList.toggle("sparkle")
-    // })
-    if (s == 0) {
+
+
+    if (s == 0 && minuteWrapper.classList.contains("audioOff") == false) {
         minuteWrapper.innerHTML = ""
         repeat(m, function () {
             minutes(h);
         })
-        // audioM.play()
+        audioM.play()
+        hourshow.style.opacity = 0
     }
-    if (s != 0) {
-        // audioS.play()
+    if (s != 0 && minuteWrapper.classList.contains("audioOff") == false) {
+        audioS.play()
     }
 
     // select all minute stars
@@ -117,55 +115,34 @@ function minutes(h) {
 
     minuteWrapper.append(minute)
 
+    // 色卡设置
     let rTop = Math.random() * 97 + 1
     let rLeft = Math.random() * 97 + 1
     minute.style.top = rTop + "vh"
     minute.style.left = rLeft + "vw"
 
-    let hourshowTop = ((h - 1) * 9 + 4) * 100 / clientHeight
+    let hourshowTop = ((h - 1) * 9 + 6) * 100 / clientHeight
     let hourshowLeft = 16 * 100 / clientWidth
 
 
 
     minute.addEventListener("mouseover", function (e) {
         hourshow.style.opacity = 1
-        // let styles = { hourshow: { top: 'calc(rTop vh - (h-1)*9 px)' } }
         hourshow.style.top = (rTop - hourshowTop) + "vh"
         hourshow.style.left = (rLeft - hourshowLeft) + "vw"
-        console.log("works!")
+        // console.log("works!")
+        audioCOpen.play()
     })
     minute.addEventListener("mouseout", function () {
         hourshow.style.opacity = 0
+        audioCClose.play()
     })
 
 
-
-
-
-
-    // minute.addEventListener("mouseover", hourshow)
-    // minute.addEventListener("mouseout", function () {
-    //     document.querySelector(".hourshow").remove
-    // })
-
-    // function hourshow() {
-    //     let hourShowDiv = document.createElement("div")
-    //     hourShowDiv.classList.add("hourshow")
-
-    //     hourShowDiv.style.top = minute.style.top - ((h - 1) * 8 + "px")
-    //     hourShowDiv.style.left = minute.style.left - (16 + "px")
-
-
-    //     let hourDivZeroOne = document.createElement("div")
-    //     hourDivZeroOne.classList.add("hourdiv")
-    //     hourDivZeroOne.style.backgroundColor = "rgba(13, 41, 55, 1)"
-    //     document.querySelector("#hourshow").append(hourDivZeroOne)
-
-
-
-
-    //     document.body.append(hourShowDiv)
-    // }
+    // audio setting
+    minute.addEventListener("click", function () {
+        minuteWrapper.classList.toggle("audioOff")
+    })
 
 }
 
