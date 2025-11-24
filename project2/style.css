@@ -4,6 +4,10 @@ body {
     width: 100vw;
 }
 
+#backgroundOne{
+    width: 100vw;
+    height: 1000vh;
+}
 
 .hanaOne {
     min-width: 10px;
