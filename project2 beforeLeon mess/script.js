@@ -16,40 +16,24 @@ function getScrollPercentage() {
     return scrollPercentage
 }
 
-
-let hanaWrapper = document.querySelector("#hanaWrapper")
-let treeHeight = hanaWrapper.getBoundingClientRect().height;
-// let hanaWrapperBack = document.querySelector("#hanaWrapperBack")
-
-
-function fall(e, i, p1, p2) {
+function fall(e) {
     // console.log(percentage)
     let rX = 0//- (Math.random() * 50 + 10) * percentage / 100
-    let currentYpix = (Number(e.style.top.substring(0, e.style.top.length - 2)) / 100) * treeHeight;
-    let distToFall = (treeHeight - 10) - currentYpix; //10 is the petal size
-
-    let rY = distToFall * ((percentage - p1) / (p2 - p1));
-
-    if (rY < 0) {
-        rY = 0;
-    } else if (rY > distToFall) {
-        rY = distToFall;
-    }
-
-    if (i == 0) {
-        console.log(e, currentYpix, treeHeight)
-    }
-
+    let yPix = 100 + Number(e.style.top.substring(0, e.style.top.length - 2)) / 100 * window.innerWidth;
+    let distToFall = window.innerHeight - yPix;
+    let rY = distToFall * (percentage/100) - 10; 
     // let rY = Number(e.style.top.substring(0, e.style.top.length - 2)) 
     // let rY = (100 - Number(e.style.top.substring(0, e.style.top.length - 2))) / 100 * document.documentElement.clientHeight * percentage / 100
-
-    e.style.transform = "translate(0px, " + rY + "px)"
+    e.style.transform = "translate(" + rX + "px, " + rY + "px)"
 
     // e.style.opacity = 1 / 100 * (100 - percentage)
     // e.style.transition = "ease-in"
     // setTimeout(this,2000)
 }
 
+
+let hanaWrapper = document.querySelector("#hanaWrapper")
+let hanaWrapperBack = document.querySelector("#hanaWrapperBack")
 
 
 
@@ -58,104 +42,104 @@ function hanaOnePositionOne() {
     let hanaCre = document.createElement("div")
     hanaWrapper.append(hanaCre)
     hanaCre.classList.add("hanaOne")
-    hanaCre.style.top = (Math.random() * 10 + 30) + "%"
-    hanaCre.style.left = (Math.random() * 20 + 8) + "%"
+    hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
+    hanaCre.style.left = (Math.random() * 39 + 20) + "vw"
 }
 function hanaTwoPositionOne() {
     let hanaCre = document.createElement("div")
     hanaWrapper.append(hanaCre)
     hanaCre.classList.add("hanaTwo")
-    hanaCre.style.top = (Math.random() * 10 + 50) + "%"
-    hanaCre.style.left = (Math.random() * 40 + 8) + "%"
+    hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
+    hanaCre.style.left = (Math.random() * 39 + 20) + "vw"
 }
-// function hanaThreePositionOne() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapper.append(hanaCre)
-//     hanaCre.classList.add("hanaThree")
-//     hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
-//     hanaCre.style.left = (Math.random() * 39 + 20) + "vw"
-// }
+function hanaThreePositionOne() {
+    let hanaCre = document.createElement("div")
+    hanaWrapper.append(hanaCre)
+    hanaCre.classList.add("hanaThree")
+    hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
+    hanaCre.style.left = (Math.random() * 39 + 20) + "vw"
+}
 repeat(60, hanaOnePositionOne)
 repeat(25, hanaTwoPositionOne)
-// repeat(5, hanaThreePositionOne)
+repeat(5, hanaThreePositionOne)
 
-// // back
-// function hanaOnePositionTwo() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapperBack.append(hanaCre)
-//     hanaCre.classList.add("hanaOne")
-//     hanaCre.style.top = (Math.random() * 47 + 9) + "vh"
-//     hanaCre.style.left = (Math.random() * 64 + 28) + "vw"
-// }
-// function hanaTwoPositionTwo() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapperBack.append(hanaCre)
-//     hanaCre.classList.add("hanaTwo")
-//     hanaCre.style.top = (Math.random() * 47 + 9) + "vh"
-//     hanaCre.style.left = (Math.random() * 64 + 28) + "vw"
-// }
-// function hanaThreePositionTwo() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapperBack.append(hanaCre)
-//     hanaCre.classList.add("hanaThree")
-//     hanaCre.style.top = (Math.random() * 47 + 9) + "vh"
-//     hanaCre.style.left = (Math.random() * 64 + 28) + "vw"
-// }
-// repeat(50, hanaOnePositionTwo)
-// repeat(200, hanaTwoPositionTwo)
-// repeat(100, hanaThreePositionTwo)
-
-
-// function hanaOnePositionThree() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapper.append(hanaCre)
-//     hanaCre.classList.add("hanaOne")
-//     hanaCre.style.top = (Math.random() * 39) + "vh"
-//     hanaCre.style.right = (Math.random() * 55) + "vw"
-// }
-// function hanaTwoPositionThree() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapper.append(hanaCre)
-//     hanaCre.classList.add("hanaTwo")
-//     hanaCre.style.top = (Math.random() * 39) + "vh"
-//     hanaCre.style.right = (Math.random() * 55) + "vw"
-// }
-// function hanaThreePositionThree() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapper.append(hanaCre)
-//     hanaCre.classList.add("hanaThree")
-//     hanaCre.style.top = (Math.random() * 39) + "vh"
-//     hanaCre.style.right = (Math.random() * 55) + "vw"
-// }
-// repeat(200, hanaOnePositionThree)
-// repeat(60, hanaTwoPositionThree)
-// repeat(20, hanaThreePositionThree)
+// back
+function hanaOnePositionTwo() {
+    let hanaCre = document.createElement("div")
+    hanaWrapperBack.append(hanaCre)
+    hanaCre.classList.add("hanaOne")
+    hanaCre.style.top = (Math.random() * 47 + 9) + "vh"
+    hanaCre.style.left = (Math.random() * 64 + 28) + "vw"
+}
+function hanaTwoPositionTwo() {
+    let hanaCre = document.createElement("div")
+    hanaWrapperBack.append(hanaCre)
+    hanaCre.classList.add("hanaTwo")
+    hanaCre.style.top = (Math.random() * 47 + 9) + "vh"
+    hanaCre.style.left = (Math.random() * 64 + 28) + "vw"
+}
+function hanaThreePositionTwo() {
+    let hanaCre = document.createElement("div")
+    hanaWrapperBack.append(hanaCre)
+    hanaCre.classList.add("hanaThree")
+    hanaCre.style.top = (Math.random() * 47 + 9) + "vh"
+    hanaCre.style.left = (Math.random() * 64 + 28) + "vw"
+}
+repeat(50, hanaOnePositionTwo)
+repeat(200, hanaTwoPositionTwo)
+repeat(100, hanaThreePositionTwo)
 
 
-// function hanaOnePositionFour() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapper.append(hanaCre)
-//     hanaCre.classList.add("hanaOne")
-//     hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
-//     hanaCre.style.right = (Math.random() * 10) + "vw"
-// }
-// function hanaTwoPositionFour() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapper.append(hanaCre)
-//     hanaCre.classList.add("hanaTwo")
-//     hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
-//     hanaCre.style.right = (Math.random() * 10) + "vw"
-// }
-// function hanaThreePositionFour() {
-//     let hanaCre = document.createElement("div")
-//     hanaWrapper.append(hanaCre)
-//     hanaCre.classList.add("hanaThree")
-//     hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
-//     hanaCre.style.right = (Math.random() * 10) + "vw"
-// }
-// repeat(50, hanaOnePositionFour)
-// repeat(39, hanaTwoPositionFour)
-// repeat(5, hanaThreePositionFour)
+function hanaOnePositionThree() {
+    let hanaCre = document.createElement("div")
+    hanaWrapper.append(hanaCre)
+    hanaCre.classList.add("hanaOne")
+    hanaCre.style.top = (Math.random() * 39) + "vh"
+    hanaCre.style.right = (Math.random() * 55) + "vw"
+}
+function hanaTwoPositionThree() {
+    let hanaCre = document.createElement("div")
+    hanaWrapper.append(hanaCre)
+    hanaCre.classList.add("hanaTwo")
+    hanaCre.style.top = (Math.random() * 39) + "vh"
+    hanaCre.style.right = (Math.random() * 55) + "vw"
+}
+function hanaThreePositionThree() {
+    let hanaCre = document.createElement("div")
+    hanaWrapper.append(hanaCre)
+    hanaCre.classList.add("hanaThree")
+    hanaCre.style.top = (Math.random() * 39) + "vh"
+    hanaCre.style.right = (Math.random() * 55) + "vw"
+}
+repeat(200, hanaOnePositionThree)
+repeat(60, hanaTwoPositionThree)
+repeat(20, hanaThreePositionThree)
+
+
+function hanaOnePositionFour() {
+    let hanaCre = document.createElement("div")
+    hanaWrapper.append(hanaCre)
+    hanaCre.classList.add("hanaOne")
+    hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
+    hanaCre.style.right = (Math.random() * 10) + "vw"
+}
+function hanaTwoPositionFour() {
+    let hanaCre = document.createElement("div")
+    hanaWrapper.append(hanaCre)
+    hanaCre.classList.add("hanaTwo")
+    hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
+    hanaCre.style.right = (Math.random() * 10) + "vw"
+}
+function hanaThreePositionFour() {
+    let hanaCre = document.createElement("div")
+    hanaWrapper.append(hanaCre)
+    hanaCre.classList.add("hanaThree")
+    hanaCre.style.top = (Math.random() * 30 + 34) + "vh"
+    hanaCre.style.right = (Math.random() * 10) + "vw"
+}
+repeat(50, hanaOnePositionFour)
+repeat(39, hanaTwoPositionFour)
+repeat(5, hanaThreePositionFour)
 
 
 let hanaOne = document.querySelectorAll(".hanaOne")
@@ -317,23 +301,17 @@ window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
     // leaves scroll animation
-    hanaOne.forEach(function (e, i) {
+    hanaSpring.forEach(function (e, i) {
+        if(i == 0){
+            console.log(e.style.transform == '')
+        }
 
 
         // if(Math.random() < 0.01 || e.style.transform != ''){
-        fall(e, i, 0, 60)
+            fall(e)
         // }
-
-
-    })
-    hanaTwo.forEach(function (e, i) {
-
-
-        // if(Math.random() < 0.01 || e.style.transform != ''){
-        fall(e, i, 20, 80)
-        // }
-
-
+        
+        
     })
 
     // if (percentage > 40) {

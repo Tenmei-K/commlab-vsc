@@ -1,6 +1,5 @@
 body {
     background-color: rgb(163, 201, 255);
-    /* background-color: black; */
     height: 100vh;
     width: 100vw;
 }
@@ -10,29 +9,11 @@ body {
     height: 2000vh;
 }
 
-#hanaWrapper {
+.trunk{
+    height: 90vh;
     position: fixed;
-    outline: red 1px solid;
-    right: 0px;
     bottom: 0px;
-    height: 100%;
-    aspect-ratio: 1842/ 1380;
-    /* height: ; */
-}
-
-#petalBack, #petalFront {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-
-.trunk {
-    width: 100%;
-    /* height: 90vh; */
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    right: 0px;
 }
 
 .hanaOne {
@@ -41,7 +22,7 @@ body {
     max-width: 10px;
     max-height: 10px;
     background-color: rgb(253, 231, 240);
-    position: absolute;
+    position: fixed;
 }
 
 .hanaTwo {
@@ -50,7 +31,7 @@ body {
     max-width: 10px;
     max-height: 10px;
     background-color: rgb(255, 199, 218);
-    position: absolute;
+    position: fixed;
 }
 
 .hanaThree {
@@ -59,7 +40,7 @@ body {
     max-width: 10px;
     max-height: 10px;
     background-color: rgb(255, 148, 184);
-    position: absolute;
+    position: fixed;
 }
 
 /* summer */
@@ -69,7 +50,7 @@ body {
     max-width: 10px;
     max-height: 10px;
     background-color: rgb(178, 254, 146);
-    position: absolute;
+    position: fixed;
 }
 
 .hanaFive {
@@ -78,7 +59,7 @@ body {
     max-width: 10px;
     max-height: 10px;
     background-color: rgb(120, 215, 101);
-    position: absolute;
+    position: fixed;
 }
 
 .hanaSix {
@@ -87,26 +68,24 @@ body {
     max-width: 10px;
     max-height: 10px;
     background-color: rgb(70, 172, 74);
-    position: absolute;
+    position: fixed;
 }
 
-/* 
+
 #hanaWrapper div {
     border: 1.4px solid white
 }
 
 #hanaWrapperBack div {
-    opacity: 0.6;
+    /* opacity: 0.6; */
     border: 1.8px solid rgb(239, 239, 239);
-} */
+}
 
 @keyframes hanaMove {
     from {
         /* transform: translateY(0) translateX(0); */
         opacity: 1;
-    }
-
-    to {
+    }to {
         /* transform: translateY(200px) translateX(-100px); */
         opacity: 0;
     }
