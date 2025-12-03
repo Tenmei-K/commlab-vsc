@@ -47,7 +47,8 @@ body {
 
 /* spring */
 .hanaSpring{
-    border: .6px solid rgb(247, 167, 194);
+    /* border: 1.5px solid rgb(247, 167, 194); */
+    border: 1.5px solid white;
 }
 
 .hanaOne {
@@ -80,6 +81,8 @@ body {
 /* summer */
 .hanaSummer {
     opacity: 0;
+    /* border: 1.5px solid rgb(133, 212, 87); */
+    border: 1.5px solid white;
 }
 
 .hanaFour {
@@ -179,7 +182,7 @@ body {
 .paper{
     position: fixed;
     bottom: 0;
-    height: 80%;
+    height: 85%;
     display: block;
     opacity: 0;
 }

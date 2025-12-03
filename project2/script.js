@@ -1271,7 +1271,7 @@ window.addEventListener("scroll", function () {
     } else {
         STwoP.style.opacity = 0
     }
-    if ((percentage >= 100 / 14 * 5 && percentage < 100 / 28 * 13) || (percentage >= 100 / 14 * 10 && percentage < 100 / 14 * 12)) {
+    if ((percentage >= 100 / 14 * 5 && percentage < 100 / 28 * 13) || (percentage >= 100 / 14 * 10 && percentage < 100 / 14 * 11)) {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
@@ -1279,27 +1279,27 @@ window.addEventListener("scroll", function () {
 
 
 
-    //lines  有问题！！！！！
-    if (percentage == 100 / 14 || percentage == 100 / 14 * 2 || percentage == 100 / 14 * 3 || percentage == 100 / 14 * 4 || percentage == 100 / 14 * 5 || percentage == 100 / 26 * 11 || percentage == 100 / 14 * 6 || percentage == 100 / 14 * 7 || percentage == 100 / 14 * 8 || percentage == 100 / 14 * 9 || percentage == 100 / 14 * 10 || percentage == 100 / 14 * 11 || percentage == 100 / 14 * 12 || percentage == 100 / 14 * 13 || percentage == 100) {
+    // lines
+    if (percentage == 100 / 14 || percentage == 100 / 14 * 2 || percentage == 100 / 14 * 3 || percentage == 100 / 14 * 4 || percentage == 100 / 14 * 5 || percentage == 100 / 26 * 11 || percentage == 100 / 14 * 6 || percentage == 100 / 14 * 7 || percentage == 100 / 14 * 8 || percentage == 100 / 14 * 9 || percentage == 100 / 14 * 10 || percentage == 100 / 14 * 11 || percentage == 100 / 14 * 12 || percentage == 100 / 14 * 13) {
         linesaudio.play()
     }
 
-    if (percentage >= 100 / 14 * 1 && percentage < 100 / 14 * 2) {
+    if (percentage > 100 / 14 * 1 && percentage < 100 / 14 * 2) {
         document.querySelector("#lineOne").style.opacity = 1
     } else {
         document.querySelector("#lineOne").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 2 && percentage < 100 / 14 * 3) {
+    if (percentage > 100 / 14 * 2 && percentage < 100 / 14 * 3) {
         document.querySelector("#lineTwo").style.opacity = 1
     } else {
         document.querySelector("#lineTwo").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 3 && percentage < 100 / 14 * 4) {
+    if (percentage > 100 / 14 * 3 && percentage < 100 / 14 * 4) {
         document.querySelector("#lineThree").style.opacity = 1
     } else {
         document.querySelector("#lineThree").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 4 && percentage < 100 / 14 * 5) {
+    if (percentage > 100 / 14 * 4 && percentage < 100 / 14 * 5) {
         document.querySelector("#lineFour").style.opacity = 1
     } else {
         document.querySelector("#lineFour").style.opacity = 0
@@ -1318,7 +1318,7 @@ window.addEventListener("scroll", function () {
         document.querySelector("#lineSixP").style.opacity = 1
     } else {
         document.querySelector("#lineSixP").style.opacity = 0
-    }
+    }                                                      // 这里应该是没问题的
     if (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 8) {
         document.querySelector("#lineSeven").style.opacity = 1
     } else {
@@ -1349,7 +1349,7 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#lineTwelve").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 13 && percentage < 100) {
+    if (percentage > 100 / 14 * 13) {
         document.querySelector("#lineThirteen").style.opacity = 1
     } else {
         document.querySelector("#lineThirteen").style.opacity = 0
@@ -1358,84 +1358,56 @@ window.addEventListener("scroll", function () {
 
 
 
-    //building
-    if ((percentage >= 0 && percentage < 100 / 14) || (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 8)) {
+    // paper
+    if ((percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) || (percentage > 100 / 14 * 13)) {
+        document.querySelector("#paperOne").style.opacity = 1
+    } else {
+        document.querySelector("#paperOne").style.opacity = 0
+    }
+    if (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 13) {
+        document.querySelector("#paperTwo").style.opacity = 1
+    } else {
+        document.querySelector("#paperTwo").style.opacity = 0
+    }
+
+
+
+
+
+    // building
+    if ((percentage < 100 / 14) || (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 12) || (percentage > 100 / 14 * 13)) {
         document.querySelector("#buildingOne").style.opacity = 1
     } else {
         document.querySelector("#buildingOne").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 1 && percentage < 100 / 14 * 2) {
+    if (percentage > 100 / 14 * 1 && percentage < 100 / 14 * 2) {
         document.querySelector("#buildingTwo").style.opacity = 1
     } else {
         document.querySelector("#buildingTwo").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 2 && percentage < 100 / 14 * 3) {
+    if (percentage > 100 / 14 * 2 && percentage < 100 / 14 * 3) {
         document.querySelector("#buildingThree").style.opacity = 1
     } else {
         document.querySelector("#buildingThree").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 3 && percentage < 100 / 14 * 4) {
+    if (percentage > 100 / 14 * 3 && percentage < 100 / 14 * 4) {
         document.querySelector("#buildingFour").style.opacity = 1
     } else {
         document.querySelector("#buildingFour").style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 4 && percentage < 100 / 14 * 5) {
+    if (percentage > 100 / 14 * 4 && percentage < 100 / 14 * 5) {
         document.querySelector("#buildingFive").style.opacity = 1
     } else {
         document.querySelector("#buildingFive").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 5 && percentage < 100 / 14 * 7) {
+    if ((percentage > 100 / 14 * 5 && percentage < 100 / 14 * 7) || (percentage > 100 / 14 * 12 && percentage < 100 / 14 * 13)) {
         document.querySelector("#buildingSix").style.opacity = 1
     } else {
         document.querySelector("#buildingSix").style.opacity = 0
     }
 
-    if (percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) {
-        document.querySelector("#paperOne").style.opacity = 1
-    } else {
-        document.querySelector("#paperOne").style.opacity = 0
-    }
 
-    if (percentage > 100 / 28 * 11 && percentage < 100 / 14 * 6) {
-        document.querySelector("#lineSix").style.opacity = 1
-    } else {
-        document.querySelector("#lineSix").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) {
-        document.querySelector("#lineSixP").style.opacity = 1
-    } else {
-        document.querySelector("#lineSixP").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 8 && percentage < 100 / 14 * 9) {
-        document.querySelector("#lineEight").style.opacity = 1
-    } else {
-        document.querySelector("#lineEight").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 9 && percentage < 100 / 14 * 10) {
-        document.querySelector("#lineNine").style.opacity = 1
-    } else {
-        document.querySelector("#lineNine").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 10 && percentage < 100 / 14 * 11) {
-        document.querySelector("#lineTen").style.opacity = 1
-    } else {
-        document.querySelector("#lineTen").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 11 && percentage < 100 / 14 * 12) {
-        document.querySelector("#lineEleven").style.opacity = 1
-    } else {
-        document.querySelector("#lineEleven").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 12 && percentage < 100 / 14 * 13) {
-        document.querySelector("#lineTwelve").style.opacity = 1
-    } else {
-        document.querySelector("#lineTwelve").style.opacity = 0
-    }
-    if (percentage >= 100 / 14 * 13 && percentage < 100) {
-        document.querySelector("#lineThirteen").style.opacity = 1
-    } else {
-        document.querySelector("#lineThirteen").style.opacity = 0
-    }
+
 
 })
 
