@@ -16,8 +16,9 @@ function getScrollPercentage() {
     return scrollPercentage
 }
 
+
 let linesaudio = document.createElement("audio")
-linesaudio.src = "sounds/木头咚.wav"
+linesaudio.src = "sounds/咔.wav"
 
 
 let human = document.querySelectorAll(".human")
@@ -1185,6 +1186,20 @@ let hanaSummer = document.querySelectorAll(".hanaSummer")
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
+    // audio
+
+    if (percentage > 100 / 14 || percentage < 100 / 14 || percentage > 100 / 14 * 2 || percentage < 100 / 14 * 2 || percentage > 100 / 14 * 3 || percentage < 100 / 14 * 3 || percentage > 100 / 14 * 4 || percentage < 100 / 14 * 4 || percentage > 100 / 14 * 5 || percentage < 100 / 14 * 5 || percentage > 100 / 14 * 6 || percentage < 100 / 14 * 6 || percentage > 100 / 28 * 13 || percentage < 100 / 28 * 13 || percentage > 100 / 14 * 7 || percentage < 100 / 14 * 7 || percentage > 100 / 14 * 8 || percentage < 100 / 14 * 8 || percentage > 100 / 14 * 9 || percentage < 100 / 14 * 9 || percentage > 100 / 14 * 10 || percentage < 100 / 14 * 10 || percentage > 100 / 14 * 11 || percentage < 100 / 14 * 11 || percentage > 100 / 14 * 12 || percentage < 100 / 14 * 12 || percentage > 100 / 14 * 13 || percentage < 100 / 14 * 13) {
+        linesaudio.pause()
+    }
+    else {
+        linesaudio.play()
+        linesaudio.loop = true
+        console.log("audio playing")
+    }
+
+
+
+
     // spring scroll animation
     FallOne.forEach(function (e, i) {
         fall(e, i, 0, 60)
@@ -1280,9 +1295,6 @@ window.addEventListener("scroll", function () {
 
 
     // lines
-    if (percentage == 100 / 14 || percentage == 100 / 14 * 2 || percentage == 100 / 14 * 3 || percentage == 100 / 14 * 4 || percentage == 100 / 14 * 5 || percentage == 100 / 26 * 11 || percentage == 100 / 14 * 6 || percentage == 100 / 14 * 7 || percentage == 100 / 14 * 8 || percentage == 100 / 14 * 9 || percentage == 100 / 14 * 10 || percentage == 100 / 14 * 11 || percentage == 100 / 14 * 12 || percentage == 100 / 14 * 13) {
-        linesaudio.play()
-    }
 
     if (percentage > 100 / 14 * 1 && percentage < 100 / 14 * 2) {
         document.querySelector("#lineOne").style.opacity = 1
@@ -1364,7 +1376,7 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#paperOne").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 13) {
+    if ((percentage > 100 / 14 * 7 && percentage < 100 / 14 * 9) || (percentage > 100 / 14 * 12 && percentage < 100 / 14 * 13)) {
         document.querySelector("#paperTwo").style.opacity = 1
     } else {
         document.querySelector("#paperTwo").style.opacity = 0
@@ -1375,7 +1387,7 @@ window.addEventListener("scroll", function () {
 
 
     // building
-    if ((percentage < 100 / 14) || (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 12) || (percentage > 100 / 14 * 13)) {
+    if ((percentage < 100 / 14) || (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 12)) {
         document.querySelector("#buildingOne").style.opacity = 1
     } else {
         document.querySelector("#buildingOne").style.opacity = 0
@@ -1400,22 +1412,31 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#buildingFive").style.opacity = 0
     }
-    if ((percentage > 100 / 14 * 5 && percentage < 100 / 14 * 7) || (percentage > 100 / 14 * 12 && percentage < 100 / 14 * 13)) {
+    if ((percentage > 100 / 14 * 5 && percentage < 100 / 14 * 7) || (percentage > 100 / 14 * 12)) {
         document.querySelector("#buildingSix").style.opacity = 1
     } else {
         document.querySelector("#buildingSix").style.opacity = 0
     }
 
+    if (percentage > 100 / 14 * 13) {
+        let newPaper = document.createElement("img")
+        newPaper.src = "assets/paper1.png"
+        newPaper.style.cursor = "pointer"
+        newPaper.style.position = "fixed"
+        newPaper.style.bottom = -5 + "%"
+        newPaper.style.height = 85 + "%"
+        newPaper.style.display = "block"
+        newPaper.addEventListener("click", goToSummer)
 
-
+        document.querySelector("#paperWrapper").append(newPaper)
+    } else {
+        document.querySelector("#paperWrapper").innerText = ""
+    }
 
 })
 
 
-
-// human.forEach(function (e) {
-//     e.style.opacity = 0
-// })
-// lines.forEach(function (e) {
-//     e.style.opacity = 0
-// })
+function goToSummer() {
+    document.location = "pre-summer.html"
+}
+let paperOne = document.querySelector("#paperOne")
