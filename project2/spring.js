@@ -24,6 +24,7 @@ linesaudio.src = "sounds/咔.wav"
 let human = document.querySelectorAll(".human")
 let SOne = document.querySelector("#SOne")
 let SOneP = document.querySelector("#SOneP")
+let SOnePP = document.querySelector("#SOnePP")
 let STwo = document.querySelector("#STwo")
 let SDTwoP = document.querySelector("#SOneP")
 let OOne = document.querySelector("#OOne")
@@ -1188,14 +1189,11 @@ window.addEventListener("scroll", function () {
 
     // audio
 
-    if (percentage > 100 / 14 || percentage < 100 / 14 || percentage > 100 / 14 * 2 || percentage < 100 / 14 * 2 || percentage > 100 / 14 * 3 || percentage < 100 / 14 * 3 || percentage > 100 / 14 * 4 || percentage < 100 / 14 * 4 || percentage > 100 / 14 * 5 || percentage < 100 / 14 * 5 || percentage > 100 / 14 * 6 || percentage < 100 / 14 * 6 || percentage > 100 / 28 * 13 || percentage < 100 / 28 * 13 || percentage > 100 / 14 * 7 || percentage < 100 / 14 * 7 || percentage > 100 / 14 * 8 || percentage < 100 / 14 * 8 || percentage > 100 / 14 * 9 || percentage < 100 / 14 * 9 || percentage > 100 / 14 * 10 || percentage < 100 / 14 * 10 || percentage > 100 / 14 * 11 || percentage < 100 / 14 * 11 || percentage > 100 / 14 * 12 || percentage < 100 / 14 * 12 || percentage > 100 / 14 * 13 || percentage < 100 / 14 * 13) {
-        linesaudio.pause()
-    }
-    else {
-        linesaudio.play()
-        linesaudio.loop = true
-        console.log("audio playing")
-    }
+    // if (percentage < 100 / 14 - 0.1 || percentage > 100 / 14 + 0.1 || percentage < 100 / 14 * 2 - 0.1 || percentage > 100 / 14 * 2 + 0.1 || percentage < 100 / 14 * 3 - 0.1 || percentage > 100 / 14 * 3 + 0.1 || percentage < 100 / 14 * 4 - 0.1 || percentage > 100 / 14 * 4 + 0.1 || percentage < 100 / 14 * 5 - 0.1 || percentage > 100 / 14 * 5 + 0.1 || percentage < 100 / 14 * 6 - 0.1 || percentage > 100 / 14 * 6 + 0.1 || percentage < 100 / 28 * 13 - 0.1 || percentage > 100 / 28 * 13 + 0.1 || percentage < 100 / 14 * 7 - 0.1 || percentage > 100 / 14 * 7 + 0.1 || percentage < 100 / 14 * 8 - 0.1 || percentage > 100 / 14 * 8 + 0.1 || percentage < 100 / 14 * 9 - 0.1 || percentage > 100 / 14 * 9 + 0.1 || percentage < 100 / 14 * 10 - 0.1 || percentage > 100 / 14 * 10 + 0.1 || percentage < 100 / 14 * 11 - 0.1 || percentage > 100 / 14 * 11 + 0.1 || percentage < 100 / 14 * 12 - 0.1 || percentage > 100 / 14 * 12 + 0.1 || percentage < 100 / 14 * 13 - 0.1 || percentage > 100 / 14 * 13 + 0.1) {
+    //     linesaudio.play()
+    //     linesaudio.loop = true
+    //     console.log("audio playing")
+    // }
 
 
 
@@ -1286,10 +1284,15 @@ window.addEventListener("scroll", function () {
     } else {
         STwoP.style.opacity = 0
     }
-    if ((percentage >= 100 / 14 * 5 && percentage < 100 / 28 * 13) || (percentage >= 100 / 14 * 10 && percentage < 100 / 14 * 11)) {
+    if (percentage >= 100 / 14 * 5 && percentage < 100 / 28 * 13) {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
+    }
+    if (percentage >= 100 / 14 * 10 && percentage < 100 / 14 * 11) {
+        SOnePP.style.opacity = 1
+    } else {
+        SOnePP.style.opacity = 0
     }
 
 

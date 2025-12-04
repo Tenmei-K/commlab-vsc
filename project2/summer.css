@@ -32,7 +32,7 @@ body {
     display: block;
     position: fixed;
     height: 70%;
-    width: 48%;
+    width: 49%;
     top: 15%;
 }
 
@@ -69,9 +69,9 @@ body {
     height: 25%;
 }
 #bubbleFive {
-    bottom: -15%;
-    left: 7%;
-    height: 40%;
+    bottom: 18%;
+    left: 25%;
+    height: 18%;
 }
 #bubbleSix {
     bottom: 18%;
@@ -79,7 +79,7 @@ body {
     height: 30%;
 }
 #bubbleSeven {
-    top: 50%;
+    bottom: 4%;
     left: -5%;
     height: 40%;
 }
