@@ -144,8 +144,9 @@ body {
 
 
 .lines {
+    margin: 0;
     position: fixed;
-    bottom: 7vh;
+    bottom: 8%;
     max-width: 90vw;
     color: white;
     font-family: 'Courier New', Courier, monospace;

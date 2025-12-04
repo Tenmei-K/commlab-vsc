@@ -12,7 +12,7 @@ clickOne.addEventListener("click", function () {
     doorbell.loop = false
 
     let clickTwo = document.createElement("h5")
-    clickTwo.innerHTML = '<a href="summer.html" style="color: white; background-color: rgb(90, 90, 90); " id="clickTwo"> "Hi! Could I stay in your house for a few days?" </a>'
+    clickTwo.innerHTML = '<a href="summer.html" style="color: white; background-color: black; " id="clickTwo"> "Hi! Could I stay in your house for a few days?" </a>'
     clickTwo.style.position = "fixed"
     clickTwo.style.bottom = 12 + "%"
     clickTwo.style.fontSize = 16 + "px"

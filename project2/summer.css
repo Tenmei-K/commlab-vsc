@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(99, 127, 80);
+    background-color: rgb(125, 135, 118);
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -7,24 +7,120 @@ body {
     justify-content: center;
 }
 
-.background {
+.hair {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 1400vh;
 }
 
-#backgroundAutumn {
-    background-color: rgb(255, 218, 124);
+#doorButton {
+    height: 5%;
+    width: 7%;
+    position: fixed;
+    bottom: 20%;
+    right: 28%;
+    border-radius: 9999px;
+    background-color: rgb(183, 236, 176);
+    border: 2px solid rgb(69, 69, 69);
     opacity: 0;
 }
 
-.lines {
+.monitor {
+    display: block;
     position: fixed;
-    bottom: 7vh;
+    height: 70%;
+    width: 48%;
+    top: 15%;
+}
+
+#monitorAutumn {
+    opacity: 0;
+}
+
+
+
+.bubble{
+    position: fixed;
+    display: block;
+    opacity: .8;
+}
+
+#bubbleOne {
+    top: 1%;
+    left: 15%;
+    height: 35%;
+}
+#bubbleTwo {
+    top: 25%;
+    right: 5%;
+    height: 25%;
+}
+#bubbleThree {
+    bottom: 20%;
+    right: 20%;
+    height: 20%;
+}
+#bubbleFour {
+    top: 30%;
+    left: 3%;
+    height: 25%;
+}
+#bubbleFive {
+    bottom: -15%;
+    left: 7%;
+    height: 40%;
+}
+#bubbleSix {
+    bottom: 18%;
+    right: -3%;
+    height: 30%;
+}
+#bubbleSeven {
+    top: 50%;
+    left: -5%;
+    height: 40%;
+}
+#bubbleEight {
+    top: -2%;
+    right: -2%;
+    height: 25%;
+}
+#bubbleNine {
+    top: -5%;
+    right: 25%;
+    height: 25%;
+}
+#bubbleTen {
+    top: -8%;
+    left: -5%;
+    height: 35%;
+}
+#bubbleEleven {
+    bottom: -18%;
+    right: -7%;
+    height: 50%;
+}
+
+
+
+
+.lines {
+    margin: 0;
+    display: block;
+    position: fixed;
+    bottom: 8%;
     max-width: 90vw;
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
-    /* opacity: 0; */
+    opacity: 0;
+}
+
+#lineOne {
+    opacity: 1;
 }
 
 .sen {
