@@ -182,7 +182,7 @@ body {
 .paper{
     position: fixed;
     bottom: -5%;
-    height: 85%;
+    width: 36.5%;
     display: block;
     opacity: 0;
 }

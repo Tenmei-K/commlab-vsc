@@ -26,7 +26,7 @@ let SOne = document.querySelector("#SOne")
 let SOneP = document.querySelector("#SOneP")
 let SOnePP = document.querySelector("#SOnePP")
 let STwo = document.querySelector("#STwo")
-let SDTwoP = document.querySelector("#SOneP")
+let STwoP = document.querySelector("#STwoP")
 let OOne = document.querySelector("#OOne")
 let OTwo = document.querySelector("#OTwo")
 
@@ -37,6 +37,8 @@ let hanaWrapper = document.querySelector("#hanaWrapper");
 let treeWrapper = document.querySelector("#TreeWrapper");
 let treeHeight = treeWrapper.getBoundingClientRect().height;
 // let hanaWrapperBack = document.querySelector("#hanaWrapperBack")
+
+let paperWrapper = document.querySelector("#paperWrapper")
 
 
 function fall(e, i, p1, p2) {
@@ -1284,7 +1286,7 @@ window.addEventListener("scroll", function () {
     } else {
         STwoP.style.opacity = 0
     }
-    if (percentage >= 100 / 14 * 5 && percentage < 100 / 28 * 13) {
+    if (percentage >= 100 / 14 * 5 && percentage < 100 / 14 * 6) {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
@@ -1324,15 +1326,10 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#lineFive").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 6 && percentage < 100 / 28 * 13) {
+    if (percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) {
         document.querySelector("#lineSix").style.opacity = 1
     } else {
         document.querySelector("#lineSix").style.opacity = 0
-    }
-    if (percentage > 100 / 28 * 13 && percentage < 100 / 14 * 7) {
-        document.querySelector("#lineSixP").style.opacity = 1
-    } else {
-        document.querySelector("#lineSixP").style.opacity = 0
     }                                                      // 这里应该是没问题的
     if (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 8) {
         document.querySelector("#lineSeven").style.opacity = 1
@@ -1374,7 +1371,7 @@ window.addEventListener("scroll", function () {
 
 
     // paper
-    if ((percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) || (percentage > 100 / 14 * 13)) {
+    if (percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) {
         document.querySelector("#paperOne").style.opacity = 1
     } else {
         document.querySelector("#paperOne").style.opacity = 0
@@ -1421,19 +1418,30 @@ window.addEventListener("scroll", function () {
         document.querySelector("#buildingSix").style.opacity = 0
     }
 
+
+
+    // final add paper
     if (percentage > 100 / 14 * 13) {
         let newPaper = document.createElement("img")
         newPaper.src = "assets/paper1.png"
         newPaper.style.cursor = "pointer"
         newPaper.style.position = "fixed"
         newPaper.style.bottom = -5 + "%"
-        newPaper.style.height = 85 + "%"
+        newPaper.style.width = 36.5 + "%"
         newPaper.style.display = "block"
         newPaper.addEventListener("click", goToSummer)
+        newPaper.addEventListener("mouseover", function () {
+            paperWrapper.style.scale = 1.04
+        })
+        newPaper.addEventListener("mouseout", function () {
+            paperWrapper.style.scale = 1
+        })
 
-        document.querySelector("#paperWrapper").append(newPaper)
+        paperWrapper.append(newPaper)
+
+
     } else {
-        document.querySelector("#paperWrapper").innerText = ""
+        paperWrapper.innerText = ""
     }
 
 })
