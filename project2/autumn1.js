@@ -16,15 +16,11 @@ function getScrollPercentage() {
     return scrollPercentage
 }
 
-let clientHeight = document.body.clientHeight
-let clientWidth = document.body.clientWidth
-console.log(clientHeight, clientWidth)
-
-
-
 let crowdAudio = document.createElement("audio")
 crowdAudio.src = "sounds/crowd.mp3"
 
+let linesaudio = document.createElement("audio")
+linesaudio.src = "sounds/咔.wav"
 
 
 let human = document.querySelectorAll(".human")
@@ -35,9 +31,6 @@ let STwo = document.querySelector("#STwo")
 let STwoP = document.querySelector("#STwoP")
 let OOne = document.querySelector("#OOne")
 let OTwo = document.querySelector("#OTwo")
-
-
-
 
 let lines = document.querySelectorAll(".lines")
 
@@ -87,6 +80,7 @@ function grow(e, i, p1, p2, per) {
     e.style.opacity = opa
 
 }
+
 
 
 
@@ -1199,37 +1193,8 @@ window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
     // audio
-    if ((percentage > 100 / 14 * 5) && (percentage < 100 / 14 * 7)) {
-        crowdAudio.volume = 1 - 0.65 * (percentage - 100 / 14 * 5) / 100 * 14 / 2
-        if (crowdAudio.volume < 0) {
-            crowdAudio.volume = 0
-        }
-        if (crowdAudio.volume > 1) {
-            crowdAudio.volume = 1
-        }
-    }
-    if ((percentage > 100 / 14 * 7) && (percentage < 100 / 14 * 13)) {
-        crowdAudio.volume = 0.35 * (100 / 14 * 13 - percentage) / (100 / 14 * 6)
 
-        if (crowdAudio.volume < 0) {
-            crowdAudio.volume = 0
-        }
-        if (crowdAudio.volume > 0.35) {
-            crowdAudio.volume = 0.35
-        }
-    }
-    if (percentage < 100 / 14 * 5) {
-        crowdAudio.volume = 1
-    }
-    if (percentage > 100 / 14 * 13) {
-        crowdAudio.volume = 0.65 * (percentage - 100 / 14 * 13) / 100 * 14
-        if (crowdAudio.volume < 0) {
-            crowdAudio.volume = 0
-        }
-        if (crowdAudio.volume > 0.65) {
-            crowdAudio.volume = 0.65
-        }
-    }
+
 
 
     // spring scroll animation
@@ -1329,41 +1294,6 @@ window.addEventListener("scroll", function () {
         SOnePP.style.opacity = 0
     }
 
-
-
-    // human hover effect
-    if (((percentage > 100 / 14 * 3) && (percentage < 100 / 14 * 5)) || ((percentage > 100 / 14 * 10) && (percentage < 100 / 14 * 13))) {
-        document.querySelector("#GWrapper").style.maxWidth = clientWidth
-        document.querySelector("#GWrapper").style.minWidth = clientWidth
-        document.addEventListener("mousemove", function (eventInfo) {
-            if (eventInfo.pageY > 0.35 * clientHeight) {
-
-                document.querySelector("#Goverflow").style.opacity = 1
-                document.querySelector("#GWrapper").style.opacity = 1
-                document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
-
-                document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
-            } else {
-                document.querySelector("#Goverflow").style.opacity = 0
-            }
-        })
-    } else {
-        document.addEventListener("mousemove", function () {
-            document.querySelector("#Goverflow").style.opacity = 0
-            document.querySelector("#GWrapper").style.opacity = 0
-        })
-    }
-
-    if ((percentage > 100 / 14 * 3) && (percentage < 100 / 14 * 5)) {
-        document.querySelector("#G1").style.opacity = 1
-    } else {
-        document.querySelector("#G1").style.opacity = 0
-    }
-    if ((percentage > 100 / 14 * 10) && (percentage < 100 / 14 * 13)) {
-        document.querySelector("#G2").style.opacity = 1
-    } else {
-        document.querySelector("#G2").style.opacity = 0
-    }
 
 
     // lines
@@ -1487,8 +1417,8 @@ window.addEventListener("scroll", function () {
 
 
 
-    // final serifu add paper
-    if (percentage >= 100 / 14 * 13) {
+    // final add paper
+    if (percentage > 100 / 14 * 13) {
         let newPaper = document.createElement("img")
         newPaper.src = "assets/paper1.png"
         newPaper.style.cursor = "pointer"
@@ -1496,9 +1426,7 @@ window.addEventListener("scroll", function () {
         newPaper.style.bottom = -5 + "%"
         newPaper.style.width = 36.5 + "%"
         newPaper.style.display = "block"
-        newPaper.addEventListener("click", function () {
-            document.location = "index2.html"
-        })
+        newPaper.addEventListener("click", goToSummer)
         newPaper.addEventListener("mouseover", function () {
             paperWrapper.style.scale = 1.04
         })
@@ -1513,8 +1441,10 @@ window.addEventListener("scroll", function () {
         paperWrapper.innerText = ""
     }
 
-
-
-
-
 })
+
+
+function goToSummer() {
+    document.location = "pre-summer.html"
+}
+let paperOne = document.querySelector("#paperOne")

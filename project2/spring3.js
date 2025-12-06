@@ -1343,8 +1343,6 @@ window.addEventListener("scroll", function () {
                 document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
 
                 document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
-            } else {
-                document.querySelector("#Goverflow").style.opacity = 0
             }
         })
     } else {
@@ -1497,7 +1495,7 @@ window.addEventListener("scroll", function () {
         newPaper.style.width = 36.5 + "%"
         newPaper.style.display = "block"
         newPaper.addEventListener("click", function () {
-            document.location = "index2.html"
+            document.location = "index3.html"
         })
         newPaper.addEventListener("mouseover", function () {
             paperWrapper.style.scale = 1.04

@@ -24,6 +24,19 @@ let bubbleAudio = document.createElement("audio")
 bubbleAudio.src = "sounds/bubble.mp3"
 bubbleAudio.loop = false
 
+let doorOpenAudio = document.createElement("audio")
+doorOpenAudio.src = "sounds/doorOpen.mp3"
+doorOpenAudio.loop = false
+
+let microphoneAudio = document.createElement("audio")
+microphoneAudio.src = "sounds/microphonePlugIn.mp3"
+microphoneAudio.loop = false
+
+
+let clientHeight = document.body.clientHeight
+let clientWidth = document.body.clientWidth
+
+
 let bubbleOne = document.querySelector("#bubbleOne")
 let bubbleTwo = document.querySelector("#bubbleTwo")
 let bubbleThree = document.querySelector("#bubbleThree")
@@ -55,6 +68,7 @@ doorButtonOne.addEventListener("mouseout", function () {
 })
 
 doorButtonOne.addEventListener("click", function () {
+    microphoneAudio.play()
     doorButtonTwo.style.opacity = 1
     document.querySelector("#BMonitorFirst").remove()
     document.querySelector("#lineZero").style.opacity = 0
@@ -79,6 +93,11 @@ doorButtonOne.addEventListener("click", function () {
         document.querySelector("#mS1").style.opacity = 0
         document.querySelector("#mO1").style.opacity = 1
 
+        document.querySelector("#bubbleShadowOne").style.opacity = .25
+        setTimeout(function () {
+            document.querySelector("#bubbleShadowOne").remove()
+        }, 160)
+
         bubbleTwo.style.cursor = "pointer"
         bubbleTwo.addEventListener("mouseover", function () {
             bubbleTwo.style.opacity = 1
@@ -97,6 +116,12 @@ doorButtonOne.addEventListener("click", function () {
             document.querySelector("#mS1P").style.opacity = 1 / 10
             document.querySelector("#backgroundAutumn").style.opacity = 1 - 1 / 10
 
+            document.querySelector("#bubbleShadowTwo").style.opacity = .25
+            setTimeout(function () {
+                document.querySelector("#bubbleShadowTwo").remove()
+            }, 160)
+
+
             bubbleThree.style.cursor = "pointer"
             bubbleThree.addEventListener("mouseover", function () {
                 bubbleThree.style.opacity = 1
@@ -107,12 +132,39 @@ doorButtonOne.addEventListener("click", function () {
                 bubbleThree.style.scale = .9
             })
             bubbleThree.addEventListener("click", function () {
+
+                // 倒影处理
+                document.querySelector("#GWrapper").style.maxWidth = clientWidth
+                document.querySelector("#GWrapper").style.minWidth = clientWidth
+                document.addEventListener("mousemove", function (eventInfo) {
+                    if (eventInfo.pageY > 0.15 * clientHeight && eventInfo.pageY < 0.85 * clientHeight) {
+
+                        document.querySelector("#Goverflow").style.opacity = 1
+                        document.querySelector("#GWrapper").style.opacity = 1
+                        document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
+
+                        document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
+
+                        document.querySelector("#BMonitorTwo").style.opacity = 1
+                    } else {
+                        document.querySelector("#Goverflow").style.opacity = 0
+                    }
+                })
+
+
+
+
                 bubbleAudio.play()
                 document.querySelector("#lineThree").style.opacity = 0
                 document.querySelector("#lineFour").style.opacity = 1
                 document.querySelector("#mS1P").style.opacity = 2 / 10
                 document.querySelector("#backgroundAutumn").style.opacity = 1 - 2 / 10
-                document.querySelector("#backgroundGray").style.opacity = .6
+                document.querySelector("#backgroundGray").style.opacity = .4
+
+                document.querySelector("#bubbleShadowThree").style.opacity = .25
+                setTimeout(function () {
+                    document.querySelector("#bubbleShadowThree").remove()
+                }, 160)
 
 
                 bubbleFour.style.cursor = "pointer"
@@ -131,6 +183,11 @@ doorButtonOne.addEventListener("click", function () {
                     document.querySelector("#mS1P").style.opacity = 3 / 10
                     document.querySelector("#backgroundAutumn").style.opacity = 1 - 3 / 10
 
+                    document.querySelector("#bubbleShadowFour").style.opacity = .25
+                    setTimeout(function () {
+                        document.querySelector("#bubbleShadowFour").remove()
+                    }, 160)
+
                     bubbleFive.style.cursor = "pointer"
                     bubbleFive.addEventListener("mouseover", function () {
                         bubbleFive.style.opacity = 1
@@ -141,6 +198,14 @@ doorButtonOne.addEventListener("click", function () {
                         bubbleFive.style.scale = .9
                     })
                     bubbleFive.addEventListener("click", function () {
+
+
+
+                        document.querySelector("#Goverflow").style.opacity = 0
+                        document.querySelector("#BMonitorTwo").remove()
+
+
+
                         bubbleAudio.play()
                         document.querySelector("#lineFive").style.opacity = 0
                         document.querySelector("#lineSix").style.opacity = 1
@@ -150,6 +215,11 @@ doorButtonOne.addEventListener("click", function () {
                         document.querySelector("#mS2P").style.opacity = 4 / 10
                         document.querySelector("#backgroundAutumn").style.opacity = 1 - 4 / 10
                         document.querySelector("#backgroundGray").style.opacity = 0
+
+                        document.querySelector("#bubbleShadowFive").style.opacity = .25
+                        setTimeout(function () {
+                            document.querySelector("#bubbleShadowFive").remove()
+                        }, 160)
 
                         bubbleSix.style.cursor = "pointer"
                         bubbleSix.addEventListener("mouseover", function () {
@@ -170,6 +240,11 @@ doorButtonOne.addEventListener("click", function () {
                             document.querySelector("#mO2P").style.opacity = 5 / 10
                             document.querySelector("#backgroundAutumn").style.opacity = 1 - 5 / 10
 
+                            document.querySelector("#bubbleShadowSix").style.opacity = .25
+                            setTimeout(function () {
+                                document.querySelector("#bubbleShadowSix").remove()
+                            }, 160)
+
                             bubbleSeven.style.cursor = "pointer"
                             bubbleSeven.addEventListener("mouseover", function () {
                                 bubbleSeven.style.opacity = 1
@@ -180,6 +255,24 @@ doorButtonOne.addEventListener("click", function () {
                                 bubbleSeven.style.scale = .9
                             })
                             bubbleSeven.addEventListener("click", function () {
+
+
+                                document.addEventListener("mousemove", function (eventInfo) {
+                                    if (eventInfo.pageY > 0.15 * clientHeight && eventInfo.pageY < 0.85 * clientHeight) {
+
+                                        document.querySelector("#Goverflow").style.opacity = 1
+                                        document.querySelector("#GWrapper").style.opacity = 1
+                                        document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
+
+                                        document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
+
+                                        document.querySelector("#BMonitorThree").style.opacity = 1
+                                    } else {
+                                        document.querySelector("#Goverflow").style.opacity = 0
+                                    }
+                                })
+
+
                                 bubbleAudio.play()
                                 document.querySelector("#lineSeven").style.opacity = 0
                                 document.querySelector("#lineEight").style.opacity = 1
@@ -188,7 +281,12 @@ doorButtonOne.addEventListener("click", function () {
                                 document.querySelector("#mS2").style.opacity = 1
                                 document.querySelector("#mS2P").style.opacity = 6 / 10
                                 document.querySelector("#backgroundAutumn").style.opacity = 1 - 6 / 10
-                                document.querySelector("#backgroundGray").style.opacity = .6
+                                document.querySelector("#backgroundGray").style.opacity = .4
+
+                                document.querySelector("#bubbleShadowSeven").style.opacity = .25
+                                setTimeout(function () {
+                                    document.querySelector("#bubbleShadowSeven").remove()
+                                }, 160)
 
                                 bubbleEight.style.cursor = "pointer"
                                 bubbleEight.addEventListener("mouseover", function () {
@@ -209,6 +307,11 @@ doorButtonOne.addEventListener("click", function () {
                                     document.querySelector("#mS1P").style.opacity = 7 / 10
                                     document.querySelector("#backgroundAutumn").style.opacity = 1 - 7 / 10
 
+                                    document.querySelector("#bubbleShadowEight").style.opacity = .25
+                                    setTimeout(function () {
+                                        document.querySelector("#bubbleShadowEight").remove()
+                                    }, 160)
+
                                     bubbleNine.style.cursor = "pointer"
                                     bubbleNine.addEventListener("mouseover", function () {
                                         bubbleNine.style.opacity = 1
@@ -219,6 +322,14 @@ doorButtonOne.addEventListener("click", function () {
                                         bubbleNine.style.scale = .9
                                     })
                                     bubbleNine.addEventListener("click", function () {
+
+
+
+                                        document.querySelector("#Goverflow").style.opacity = 0
+                                        document.querySelector("#BMonitorThree").remove()
+
+
+
                                         bubbleAudio.play()
                                         document.querySelector("#lineNine").style.opacity = 0
                                         document.querySelector("#lineTen").style.opacity = 1
@@ -228,6 +339,11 @@ doorButtonOne.addEventListener("click", function () {
                                         document.querySelector("#mS2P").style.opacity = 8 / 10
                                         document.querySelector("#backgroundAutumn").style.opacity = 1 - 8 / 10
                                         document.querySelector("#backgroundGray").style.opacity = 0
+
+                                        document.querySelector("#bubbleShadowNine").style.opacity = .25
+                                        setTimeout(function () {
+                                            document.querySelector("#bubbleShadowNine").remove()
+                                        }, 160)
 
                                         bubbleTen.style.cursor = "pointer"
                                         bubbleTen.addEventListener("mouseover", function () {
@@ -248,6 +364,11 @@ doorButtonOne.addEventListener("click", function () {
                                             document.querySelector("#mO1P").style.opacity = 9 / 10
                                             document.querySelector("#backgroundAutumn").style.opacity = 1 - 9 / 10
 
+                                            document.querySelector("#bubbleShadowTen").style.opacity = .25
+                                            setTimeout(function () {
+                                                document.querySelector("#bubbleShadowTen").remove()
+                                            }, 160)
+
                                             bubbleEleven.style.cursor = "pointer"
                                             bubbleEleven.addEventListener("mouseover", function () {
                                                 bubbleEleven.style.opacity = 1
@@ -259,12 +380,18 @@ doorButtonOne.addEventListener("click", function () {
                                             })
                                             bubbleEleven.addEventListener("click", function () {
                                                 bubbleAudio.play()
+                                                doorOpenAudio.play()
                                                 document.querySelector("#lineEleven").style.opacity = 0
                                                 document.querySelector("#lineTwelve").style.opacity = 1
                                                 document.querySelector("#mO1").style.opacity = 0
                                                 document.querySelector("#mO1P").style.opacity = 0
                                                 document.querySelector("#BMonitorLast").style.opacity = 1
                                                 document.querySelector("#backgroundAutumn").style.opacity = 0
+
+                                                document.querySelector("#bubbleShadowEleven").style.opacity = .25
+                                                setTimeout(function () {
+                                                    document.querySelector("#bubbleShadowEleven").remove()
+                                                }, 160)
 
 
                                                 doorButtonTwo.remove()
@@ -278,7 +405,7 @@ doorButtonOne.addEventListener("click", function () {
                                                     doorButtonThree.style.scale = 1
                                                 })
                                                 doorButtonThree.addEventListener("click", function () {
-                                                    document.location = "pre-autumn.html"
+                                                    document.location = "index3.html"
                                                 })
 
                                                 bubbleEleven.remove()

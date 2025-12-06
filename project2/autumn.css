@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(166, 203, 255);
+    background-color: rgb(208, 231, 255);
     /* background-color: black; */
     height: 100vh;
     width: 100vw;
@@ -20,10 +20,12 @@ body {
 
 #TreeWrapper {
     position: fixed;
+    /* outline: red 1px solid; */
     right: 0px;
     bottom: 0px;
     height: 100%;
     aspect-ratio: 1842/ 1380;
+    /* height: ; */
 }
 
 #petalBack, #petalFront {
@@ -122,31 +124,12 @@ body {
 
 
 
-#Goverflow {
-    opacity: 0;
-    /* background-color: black; */
+/* #humanWapper{
     position: fixed;
-    display: inline-block;
     bottom: 0;
-    overflow: hidden;
-    height: 100%;
-    width: 8.5%;
-    transform: skew(8deg,0deg);
-    margin-left: -4.25%;
-}
-#GWrapper {
-    margin-left: 220%;
-    opacity: 1;
-    width: 850%;
-    height: 100%;
-    position: fixed;
-    bottom: 0;    
-    transform: skew(-8deg,0deg);
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-}
+    right: 0;
+    width: 100vw;
+} */
 
 .human {
     display: block;
