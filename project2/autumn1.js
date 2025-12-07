@@ -19,6 +19,8 @@ function getScrollPercentage() {
 
 let human = document.querySelectorAll(".human")
 let AutumnOne = document.querySelector("#AutumnOne")
+let AutumnTwo = document.querySelector("#AutumnTwo")
+
 
 let lines = document.querySelectorAll(".lines")
 
@@ -59,7 +61,6 @@ function fall(e, i, p1, p2) {
 let ink = document.querySelectorAll(".ink")
 let inkOne = document.querySelector("#inkOne")
 let inkTwo = document.querySelector("#inkTwo")
-let inkThree = document.querySelector("#inkThree")
 
 
 
@@ -735,46 +736,27 @@ window.addEventListener("scroll", function () {
     }
 
 
-    ink.forEach(function (e) {
-        e.addEventListener("mouseover", function () {
-            e.style.scale = 1.05
+    if (percentage >= 100 / 3 * 2) {
+        let inkThree = document.createElement("img")
+        inkThree.src = "assets/inkThree.png"
+        inkThree.classList.add("ink")
+        inkThree.style.height = 30 + "%"
+
+        inkThree.style.cursor = "pointer"
+        inkThree.addEventListener("mouseover", function () {
+            inkThree.style.scale = 1.2
         })
-        e.addEventListener("mouseout", function () {
-            e.style.scale = 1
+        inkThree.addEventListener("mouseout", function () {
+            inkThree.style.scale = 1
         })
-    })
-    if (percentage < 100 / 3 * 2) {
-        ink.forEach(function (e) {
-            e.addEventListener("click", function () {
-                // let hintWrapper = document.createElement("div")
-                // hintWrapper.style.position = "fixed"
-                // hintWrapper.style.bottom = 0
-                // hintWrapper.style.left = 0
-                // hintWrapper.style.maxWidth = 100 + "%"
-                // hintWrapper.style.minWidth = 100 + "%"
-                // hintWrapper.style.maxHeight = 100 + "%"
-                // hintWrapper.style.minHeight = 100 + "%"
-                // hintWrapper.style.justifyContent = "center"
-                // hintWrapper.style.justifyItems = "center"
-
-
-                // 把note图片改了
-
-                let note = document.createElement("img")
-                note.src = "assets/Autumn1Hint.png"
-                note.style.height = 100 + "%"
-                note.style.position = "fixed"
-                note.style.bottom = 0
-
-                hintWrapper.append(note)
-
-                setTimeout(function () {
-                    note.remove()
-                },1000)
-            })
+        inkThree.addEventListener("click", function () {
+            document.location = "autumn2.html"
         })
+
+        hintWrapper.append(inkThree)
+    } else {
+        hintWrapper.innerText = ""
     }
-
 
 
 
