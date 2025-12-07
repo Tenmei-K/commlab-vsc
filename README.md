@@ -11,7 +11,7 @@
 - [Project 1: Apocalypse X](https://tenmei-k.github.io/commlab-vsc/project1/)
         <br>midterm: Shanzhai website
 
-- [Project 2: まだ名前考えないサイト](https://tenmei-k.github.io/commlab-vsc/project2/)
+- [Project 2: ハローミューズ (Hello Muse)](https://tenmei-k.github.io/commlab-vsc/project2/)
         <br>finals: Adapted for the Web
 <br>
 <br>

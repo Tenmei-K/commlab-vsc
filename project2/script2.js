@@ -20,7 +20,7 @@ let springbgm = document.createElement("audio")
 springbgm.src = "sounds/springbgm.mp3"
 
 
-
+springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
     springbgm.play()
@@ -34,6 +34,7 @@ springWrapper.addEventListener("click", function () {
     document.location = "spring.html"
 })
 
+summerWrapper.style.cursor = "pointer"
 summerWrapper.addEventListener("mouseover", function () {
     summerWrapper.style.scale = 1.05
 })

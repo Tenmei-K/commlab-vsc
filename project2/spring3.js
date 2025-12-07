@@ -1222,12 +1222,12 @@ window.addEventListener("scroll", function () {
         crowdAudio.volume = 1
     }
     if (percentage > 100 / 14 * 13) {
-        crowdAudio.volume = 0.65 * (percentage - 100 / 14 * 13) / 100 * 14
+        crowdAudio.volume = 1 * (percentage - 100 / 14 * 13) / 100 * 14
         if (crowdAudio.volume < 0) {
             crowdAudio.volume = 0
         }
-        if (crowdAudio.volume > 0.65) {
-            crowdAudio.volume = 0.65
+        if (crowdAudio.volume > 1) {
+            crowdAudio.volume = 1
         }
     }
 

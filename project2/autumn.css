@@ -13,8 +13,8 @@ body {
     height: 1400vh;
 }
 
-#backgroundSummer {
-    background-color: rgb(114, 170, 248);
+#backgroundWinter {
+    background-color: rgb(212, 226, 229);
     opacity: 0;
 }
 
@@ -44,9 +44,9 @@ body {
 }
 
 
-/* spring */
-.hanaSpring{
-    border: .97px solid rgb(247, 167, 194);
+/* Autumn */
+.hanaAutumn{
+    border: .97px solid rgb(249, 187, 130);
     /* border: .95px solid rgb(215, 110, 110); */
 }
 
@@ -55,7 +55,7 @@ body {
     min-height: 10px;
     max-width: 10px;
     max-height: 10px;
-    background-color: rgb(253, 231, 240);
+    background-color: rgb(255, 209, 180);
     position: absolute;
 }
 
@@ -64,7 +64,7 @@ body {
     min-height: 10px;
     max-width: 10px;
     max-height: 10px;
-    background-color: rgb(255, 199, 218);
+    background-color: rgb(249, 170, 110);
     position: absolute;
 }
 
@@ -73,49 +73,15 @@ body {
     min-height: 10px;
     max-width: 10px;
     max-height: 10px;
-    background-color: rgb(255, 148, 184);
+    background-color: rgb(215, 107, 49);
     position: absolute;
 }
 
-/* summer */
-.hanaSummer {
-    opacity: 0;
-    border: .97px solid rgb(133, 212, 87);
-    /* border: 1.5px solid white; */
-}
-
-.hanaFour {
-    min-width: 10px;
-    min-height: 10px;
-    max-width: 10px;
-    max-height: 10px;
-    background-color: rgb(178, 254, 146);
-    position: absolute;
-}
-
-.hanaFive {
-    min-width: 10px;
-    min-height: 10px;
-    max-width: 10px;
-    max-height: 10px;
-    background-color: rgb(120, 215, 101);
-    position: absolute;
-}
-
-.hanaSix {
-    min-width: 10px;
-    min-height: 10px;
-    max-width: 10px;
-    max-height: 10px;
-    background-color: rgb(70, 172, 74);
-    position: absolute;
-}
-
-#trunkSummer {
+#trunkWinter {
     opacity: 0;
 }
 
-#hanaWrapperBack .hanaSpring {
+#hanaWrapperBack .hanaAutumn {
     opacity: 0.5;
 }
 

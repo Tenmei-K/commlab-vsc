@@ -23,7 +23,7 @@ let summerbgm = document.createElement("audio")
 summerbgm.src = "sounds/summerbgm.mp3"
 
 
-
+springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
     springbgm.play()
@@ -37,6 +37,7 @@ springWrapper.addEventListener("click", function () {
     document.location = "spring3.html"
 })
 
+summerWrapper.style.cursor = "pointer"
 summerWrapper.addEventListener("mouseover", function () {
     summerWrapper.style.scale = 1.05
     summerbgm.play()
@@ -50,6 +51,7 @@ summerWrapper.addEventListener("click", function () {
     document.location = "summer.html"
 })
 
+autumnWrapper.style.cursor = "pointer"
 autumnWrapper.addEventListener("mouseover", function () {
     autumnWrapper.style.scale = 1.05
 })

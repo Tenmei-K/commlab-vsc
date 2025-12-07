@@ -16,7 +16,7 @@ let wrapper = document.querySelectorAll(".wrapper")
 let springWrapper = document.querySelector("#springWrapper")
 
 
-
+springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
 })
