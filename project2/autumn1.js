@@ -16,21 +16,9 @@ function getScrollPercentage() {
     return scrollPercentage
 }
 
-let crowdAudio = document.createElement("audio")
-crowdAudio.src = "sounds/crowd.mp3"
-
-let linesaudio = document.createElement("audio")
-linesaudio.src = "sounds/咔.wav"
-
 
 let human = document.querySelectorAll(".human")
-let SOne = document.querySelector("#SOne")
-let SOneP = document.querySelector("#SOneP")
-let SOnePP = document.querySelector("#SOnePP")
-let STwo = document.querySelector("#STwo")
-let STwoP = document.querySelector("#STwoP")
-let OOne = document.querySelector("#OOne")
-let OTwo = document.querySelector("#OTwo")
+let AutumnOne = document.querySelector("#AutumnOne")
 
 let lines = document.querySelectorAll(".lines")
 
@@ -65,31 +53,18 @@ function fall(e, i, p1, p2) {
 
 }
 
-function grow(e, i, p1, p2, per) {
 
 
-    let opa = per * ((percentage - p1) / (p2 - p1));
 
-    if (opa < 0) {
-        opa = 0;
-    } else if (opa > 1) {
-        opa = 1;
-    }
-
-
-    e.style.opacity = opa
-
-}
+let ink = document.querySelectorAll(".ink")
+let inkOne = document.querySelector("#inkOne")
+let inkTwo = document.querySelector("#inkTwo")
+let inkThree = document.querySelector("#inkThree")
 
 
 
 
-
-crowdAudio.play()
-crowdAudio.loop = true
-
-
-// spring
+// autumn
 
 // ! position one
 //fall one
@@ -709,6 +684,7 @@ let hanaAutumn = document.querySelectorAll(".hanaAutumn")
 
 
 
+document.querySelector(".background").style.height = 300 + "vh"
 
 
 window.addEventListener("scroll", function () {
@@ -721,28 +697,16 @@ window.addEventListener("scroll", function () {
 
     // spring scroll animation
     FallOne.forEach(function (e, i) {
-        fall(e, i, 0, 60)
-    })
-    FallTwo.forEach(function (e, i) {
-        fall(e, i, 20, 60)
-    })
-    FallThree.forEach(function (e, i) {
-        fall(e, i, 30, 70)
-    })
-    FallFour.forEach(function (e, i) {
-        fall(e, i, 40, 80)
-    })
-    FallFive.forEach(function (e, i) {
-        fall(e, i, 50, 90)
+        fall(e, i, 0, 100)
     })
 
 
-    
+
 
     // trunk & sky scroll animation
     if (percentage > 45) {
-        document.querySelector("#trunkWinter").style.opacity = (percentage - 45) / 55
-        document.querySelector("#backgroundWinter").style.opacity = (percentage - 45) / 55
+        document.querySelector("#trunkWinter").style.opacity = (percentage - 45) / 55 * 0.2
+        document.querySelector("#backgroundWinter").style.opacity = (percentage - 45) / 55 * 0.2
     } else {
         document.querySelector("#trunkWinter").style.opacity = 0
         document.querySelector("#backgroundWinter").style.opacity = 0
@@ -752,108 +716,64 @@ window.addEventListener("scroll", function () {
 
 
 
-    // human scroll animation
-    if ((percentage >= 100 / 14 * 3 && percentage < 100 / 14 * 4) || (percentage >= 100 / 14 * 11 && percentage < 100 / 14 * 12)) {
-        OTwo.style.opacity = 1
-    } else {
-        OTwo.style.opacity = 0
-    }
-    if ((percentage >= 100 / 14 * 4 && percentage < 100 / 14 * 5) || (percentage >= 100 / 14 * 12 && percentage < 100 / 14 * 13)) {
-        OOne.style.opacity = 1
-    } else {
-        OOne.style.opacity = 0
-    }
-    if (percentage >= 100 / 14 * 8 && percentage < 100 / 14 * 9) {
-        SOneP.style.opacity = 1
-    } else {
-        SOneP.style.opacity = 0
-    }
-    if (percentage >= 100 / 14 * 9 && percentage < 100 / 14 * 10) {
-        STwoP.style.opacity = 1
-    } else {
-        STwoP.style.opacity = 0
-    }
-    if (percentage >= 100 / 14 * 5 && percentage < 100 / 14 * 6) {
-        SOne.style.opacity = 1
-    } else {
-        SOne.style.opacity = 0
-    }
-    if (percentage >= 100 / 14 * 10 && percentage < 100 / 14 * 11) {
-        SOnePP.style.opacity = 1
-    } else {
-        SOnePP.style.opacity = 0
-    }
-
-
-
     // lines
 
-    if (percentage > 100 / 14 * 1 && percentage < 100 / 14 * 2) {
+    if (percentage < 100 / 3) {
         document.querySelector("#lineOne").style.opacity = 1
     } else {
         document.querySelector("#lineOne").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 2 && percentage < 100 / 14 * 3) {
+    if (percentage > 100 / 3 && percentage < 100 / 3 * 2) {
         document.querySelector("#lineTwo").style.opacity = 1
     } else {
         document.querySelector("#lineTwo").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 3 && percentage < 100 / 14 * 4) {
+    if (percentage > 100 / 3 * 2) {
         document.querySelector("#lineThree").style.opacity = 1
     } else {
         document.querySelector("#lineThree").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 4 && percentage < 100 / 14 * 5) {
-        document.querySelector("#lineFour").style.opacity = 1
-    } else {
-        document.querySelector("#lineFour").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 5 && percentage < 100 / 14 * 6) {
-        document.querySelector("#lineFive").style.opacity = 1
-    } else {
-        document.querySelector("#lineFive").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) {
-        document.querySelector("#lineSix").style.opacity = 1
-    } else {
-        document.querySelector("#lineSix").style.opacity = 0
-    }                                                      // 这里应该是没问题的
-    if (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 8) {
-        document.querySelector("#lineSeven").style.opacity = 1
-    } else {
-        document.querySelector("#lineSeven").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 8 && percentage < 100 / 14 * 9) {
-        document.querySelector("#lineEight").style.opacity = 1
-    } else {
-        document.querySelector("#lineEight").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 9 && percentage < 100 / 14 * 10) {
-        document.querySelector("#lineNine").style.opacity = 1
-    } else {
-        document.querySelector("#lineNine").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 10 && percentage < 100 / 14 * 11) {
-        document.querySelector("#lineTen").style.opacity = 1
-    } else {
-        document.querySelector("#lineTen").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 11 && percentage < 100 / 14 * 12) {
-        document.querySelector("#lineEleven").style.opacity = 1
-    } else {
-        document.querySelector("#lineEleven").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 12 && percentage < 100 / 14 * 13) {
-        document.querySelector("#lineTwelve").style.opacity = 1
-    } else {
-        document.querySelector("#lineTwelve").style.opacity = 0
-    }
-    if (percentage > 100 / 14 * 13) {
-        document.querySelector("#lineThirteen").style.opacity = 1
-    } else {
-        document.querySelector("#lineThirteen").style.opacity = 0
-    }
 
+
+    ink.forEach(function (e) {
+        e.addEventListener("mouseover", function () {
+            e.style.scale = 1.05
+        })
+        e.addEventListener("mouseout", function () {
+            e.style.scale = 1
+        })
+    })
+    if (percentage < 100 / 3 * 2) {
+        ink.forEach(function (e) {
+            e.addEventListener("click", function () {
+                // let hintWrapper = document.createElement("div")
+                // hintWrapper.style.position = "fixed"
+                // hintWrapper.style.bottom = 0
+                // hintWrapper.style.left = 0
+                // hintWrapper.style.maxWidth = 100 + "%"
+                // hintWrapper.style.minWidth = 100 + "%"
+                // hintWrapper.style.maxHeight = 100 + "%"
+                // hintWrapper.style.minHeight = 100 + "%"
+                // hintWrapper.style.justifyContent = "center"
+                // hintWrapper.style.justifyItems = "center"
+
+
+                // 把note图片改了
+
+                let note = document.createElement("img")
+                note.src = "assets/Autumn1Hint.png"
+                note.style.height = 100 + "%"
+                note.style.position = "fixed"
+                note.style.bottom = 0
+
+                hintWrapper.append(note)
+
+                setTimeout(function () {
+                    note.remove()
+                },1000)
+            })
+        })
+    }
 
 
 
