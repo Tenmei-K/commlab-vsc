@@ -68,34 +68,6 @@ let inkTwo = document.querySelector("#inkTwo")
 // autumn
 
 // ! position one
-//fall one
-function hanaOnePositionOneFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 42 + 25) + "%"
-    hanaCre.style.left = (Math.random() * 55 + 0) + "%"
-}
-function hanaTwoPositionOneFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 42 + 25) + "%"
-    hanaCre.style.left = (Math.random() * 55 + 0) + "%"
-}
-function hanaThreePositionOneFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 42 + 25) + "%"
-    hanaCre.style.left = (Math.random() * 55 + 0) + "%"
-}
-repeat(10, hanaOnePositionOneFallOne)
-repeat(5, hanaTwoPositionOneFallOne)
-repeat(3, hanaThreePositionOneFallOne)
 
 //fall two
 function hanaOnePositionOneFallTwo() {
@@ -215,34 +187,7 @@ repeat(3, hanaThreePositionOneFallFive)
 
 
 // ! position two
-//fall one
-function hanaOnePositionTwoFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 47 + 0) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 25) + "%"
-}
-function hanaTwoPositionTwoFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 47 + 0) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 25) + "%"
-}
-function hanaThreePositionTwoFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 47 + 0) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 25) + "%"
-}
-repeat(20, hanaOnePositionTwoFallOne)
-repeat(15, hanaTwoPositionTwoFallOne)
-repeat(5, hanaThreePositionTwoFallOne)
+
 
 //fall two
 function hanaOnePositionTwoFallTwo() {
@@ -363,34 +308,6 @@ repeat(5, hanaThreePositionTwoFallFive)
 
 // ! position three
 // ! back
-// fall one
-function hanaOnePositionThreeFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapperBack.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 55 + 8) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 10) + "%"
-}
-function hanaTwoPositionThreeFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapperBack.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 55 + 8) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 10) + "%"
-}
-function hanaThreePositionThreeFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapperBack.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 55 + 8) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 10) + "%"
-}
-repeat(10, hanaOnePositionThreeFallOne)
-repeat(5, hanaTwoPositionThreeFallOne)
-repeat(3, hanaThreePositionThreeFallOne)
 
 //fall two
 function hanaOnePositionThreeFallTwo() {
@@ -510,34 +427,6 @@ repeat(3, hanaThreePositionThreeFallFive)
 
 
 // ! position four
-//fall one
-function hanaOnePositionFourFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 30 + 42) + "%"
-    hanaCre.style.left = (Math.random() * 10 + 90) + "%"
-}
-function hanaTwoPositionFourFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 30 + 42) + "%"
-    hanaCre.style.left = (Math.random() * 10 + 90) + "%"
-}
-function hanaThreePositionFourFallOne() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallOne")
-    hanaCre.style.top = (Math.random() * 30 + 42) + "%"
-    hanaCre.style.left = (Math.random() * 10 + 90) + "%"
-}
-repeat(2, hanaOnePositionFourFallOne)
-repeat(1, hanaTwoPositionFourFallOne)
-repeat(1, hanaThreePositionFourFallOne)
 
 //fall two
 function hanaOnePositionFourFallTwo() {
@@ -684,8 +573,46 @@ let hanaAutumn = document.querySelectorAll(".hanaAutumn")
 
 
 
-
+// background height setting
 document.querySelector(".background").style.height = 300 + "vh"
+
+let gossipOne = document.querySelector("#gossipOne")
+
+let elmAll = document.querySelectorAll(".elm")
+let elmone = document.querySelector("#one"); 
+let elmtwo = document.querySelector("#two"); 
+let elmthree = document.querySelector("#three"); 
+let elmfour = document.querySelector("#four"); 
+let elmfive = document.querySelector("#five"); 
+let elmsix = document.querySelector("#six"); 
+let elmseven = document.querySelector("#seven"); 
+let elmeight = document.querySelector("#eight"); 
+let elmnine = document.querySelector("#nine"); 
+let elmten = document.querySelector("#ten"); 
+let elmeleven = document.querySelector("#eleven"); 
+let elmtwelve = document.querySelector("#twelve"); 
+let elmthirteen = document.querySelector("#thirteen"); 
+let elmfourteen = document.querySelector("#fourteen"); 
+
+function changeOpacity(e) {
+    console.log("change opacity running")
+    e.style.opacity = 1
+    setTimeout(function () {
+        e.style.opacity = 0
+        setTimeout(function () {
+            e.style.opacity = 1
+            setTimeout(function () {
+                e.style.opacity = 1
+                setTimeout(function () {
+                    e.style.opacity = 0
+                }, 50)
+            }, 50)
+        }, 50)
+    }, 100)
+}
+
+changeOpacity(gossipOne)
+
 
 
 window.addEventListener("scroll", function () {
@@ -697,7 +624,7 @@ window.addEventListener("scroll", function () {
 
 
     // scroll animation
-    FallOne.forEach(function (e, i) {
+    FallTwo.forEach(function (e, i) {
         fall(e, i, 0, 100)
     })
 
@@ -706,11 +633,11 @@ window.addEventListener("scroll", function () {
 
     // trunk & sky scroll animation
     if (percentage > 45) {
-        document.querySelector("#trunkWinter").style.opacity = (percentage - 45) / 55 * 0.2
-        document.querySelector("#backgroundWinter").style.opacity = (percentage - 45) / 55 * 0.2
+        document.querySelector("#trunkWinter").style.opacity = 0.2 + percentage / 100 * 0.2
+        document.querySelector("#backgroundWinter").style.opacity = 0.2 + percentage / 100 * 0.2
     } else {
-        document.querySelector("#trunkWinter").style.opacity = 0
-        document.querySelector("#backgroundWinter").style.opacity = 0
+        document.querySelector("#trunkWinter").style.opacity = 0.2
+        document.querySelector("#backgroundWinter").style.opacity = 0.2
     }
 
 
@@ -719,57 +646,54 @@ window.addEventListener("scroll", function () {
 
     // lines
 
-    if (percentage < 100 / 3) {
-        document.querySelector("#lineOne").style.opacity = 1
-    } else {
-        document.querySelector("#lineOne").style.opacity = 0
-    }
-    if (percentage > 100 / 3 && percentage < 100 / 3 * 2) {
-        document.querySelector("#lineTwo").style.opacity = 1
-    } else {
-        document.querySelector("#lineTwo").style.opacity = 0
-    }
-    if (percentage > 100 / 3 * 2) {
-        document.querySelector("#lineThree").style.opacity = 1
-    } else {
-        document.querySelector("#lineThree").style.opacity = 0
-    }
 
 
-    if (percentage >= 100 / 6 * 5) {
+
+    if (percentage >= 100 / 3 * 2) {
         let newInk = document.createElement("img")
-        newInk.src = "assets/inkThree.png"
+        newInk.src = "assets/inkTwo.png"
         newInk.classList.add("ink")
-        newInk.style.height = 35 + "%"
-
+        newInk.style.height = 54 + "%"
 
         hintWrapper.append(newInk)
     } else {
         hintWrapper.innerText = ""
     }
-    if (percentage >= 100 / 3 * 2) {
-        inkThree.style.cursor = "pointer"
-        inkThree.addEventListener("mouseover", function () {
-            inkThree.style.scale = 1.15
+
+    if (percentage >= 100 / 6 * 5) {
+        inkTwo.style.cursor = "pointer"
+        inkTwo.addEventListener("mouseover", function () {
+            inkTwo.style.scale = 1.1
         })
-        inkThree.addEventListener("mouseout", function () {
-            inkThree.style.scale = 1
+        inkTwo.addEventListener("mouseout", function () {
+            inkTwo.style.scale = 1
         })
-        inkThree.addEventListener("click", function () {
-            document.location = "autumn2.html"
+        inkTwo.addEventListener("click", function () {
+            document.location = "autumn3.html"
         })
     } else {
-        inkThree.style.cursor = "arrow"
-        inkThree.addEventListener("mouseover", function () {
-            inkThree.style.scale = 1
+        inkTwo.style.cursor = "arrow"
+        inkTwo.addEventListener("mouseover", function () {
+            inkTwo.style.scale = 1
         })
-        inkThree.addEventListener("click", function () {
-            document.location = "autumn1.html"
+        inkTwo.addEventListener("click", function () {
+            document.location = "autumn2.html"
         })
     }
 
 
 
+
+
+    // text animation
+
+    elmAll.forEach(function (e) {  // 在运作但没完全运作 神经病啊！
+        gossipOne.style.opacity = 1
+        e.style.scale = 1 + 19 * (percentage) / 15
+        if (percentage > 15) {
+            e.remove()
+        }
+    })
 
 })
 
