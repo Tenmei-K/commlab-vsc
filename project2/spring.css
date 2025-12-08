@@ -154,7 +154,7 @@ p {
 }
 
 #GWrapper {
-    margin-left: 214%;
+    margin-left: 213.5%;
     opacity: 1;
     width: 850%;
     height: 100%;
@@ -181,12 +181,13 @@ p {
 
 .lines {
     margin: 0;
+    display: block;
     position: fixed;
     bottom: 8%;
     max-width: 90vw;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 3vh;
     font-weight: 600;
     opacity: 0;
 }

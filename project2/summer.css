@@ -18,6 +18,10 @@ body {
     opacity: 1;
     background-color: rgb(255, 206, 187);
 }
+#backgroundWinter {
+    opacity: 1;
+    background-color: rgb(212, 226, 229);
+}
 #backgroundGray {
     opacity: 0;
     background-color: gray;
@@ -61,6 +65,11 @@ body {
 #BMonitorFirst{
     opacity: 1;
 }
+#BMoniStW {
+    opacity: 1;
+}
+
+
 
 #Goverflow {
     opacity: 0;

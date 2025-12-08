@@ -1336,7 +1336,7 @@ window.addEventListener("scroll", function () {
         document.querySelector("#GWrapper").style.maxWidth = clientWidth
         document.querySelector("#GWrapper").style.minWidth = clientWidth
         document.addEventListener("mousemove", function (eventInfo) {
-            if (eventInfo.pageY > 0.35 * clientHeight) {
+            if (eventInfo.clientY > 0.32 * clientHeight) {
 
                 document.querySelector("#Goverflow").style.opacity = 1
                 document.querySelector("#GWrapper").style.opacity = 1

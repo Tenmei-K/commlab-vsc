@@ -62,6 +62,16 @@ let ink = document.querySelectorAll(".ink")
 let inkOne = document.querySelector("#inkOne")
 let inkTwo = document.querySelector("#inkTwo")
 
+// ink start animation
+inkOne.style.opacity = 0
+inkTwo.style.opacity = 0
+setTimeout(function () {
+    inkTwo.style.opacity = 1
+    setTimeout(function () {
+        inkOne.style.opacity = 1
+    }, 150)
+}, 200)
+
 
 
 
@@ -685,7 +695,7 @@ let hanaAutumn = document.querySelectorAll(".hanaAutumn")
 
 
 
-document.querySelector(".background").style.height = 300 + "vh"
+document.querySelector(".background").style.height = 150 + "vh"
 
 
 window.addEventListener("scroll", function () {
@@ -741,8 +751,6 @@ window.addEventListener("scroll", function () {
         newInk.src = "assets/inkThree.png"
         newInk.classList.add("ink")
         newInk.style.height = 35 + "%"
-
-
         hintWrapper.append(newInk)
     } else {
         hintWrapper.innerText = ""
@@ -758,8 +766,9 @@ window.addEventListener("scroll", function () {
         inkThree.addEventListener("click", function () {
             document.location = "autumn2.html"
         })
-    } else {
-        inkThree.style.cursor = "arrow"
+    }
+    if ( percentage < 100 / 3 * 2) {
+        inkThree.style.cursor = "default"
         inkThree.addEventListener("mouseover", function () {
             inkThree.style.scale = 1
         })
