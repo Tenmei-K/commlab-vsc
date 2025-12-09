@@ -708,7 +708,10 @@ window.addEventListener("scroll", function () {
 
     // scroll animation
     FallOne.forEach(function (e, i) {
-        fall(e, i, 0, 100)
+        fall(e, i, 0, 60)
+    })
+    FallTwo.forEach(function (e, i) {
+        fall(e, i, 30, 90)
     })
 
 
@@ -716,8 +719,8 @@ window.addEventListener("scroll", function () {
 
     // trunk & sky scroll animation
     if (percentage > 45) {
-        document.querySelector("#trunkWinter").style.opacity = (percentage - 45) / 55 * 0.2
-        document.querySelector("#backgroundWinter").style.opacity = (percentage - 45) / 55 * 0.2
+        document.querySelector("#trunkWinter").style.opacity = (percentage - 45) / 55 * 0.6
+        document.querySelector("#backgroundWinter").style.opacity = (percentage - 45) / 55 * 0.6
     } else {
         document.querySelector("#trunkWinter").style.opacity = 0
         document.querySelector("#backgroundWinter").style.opacity = 0

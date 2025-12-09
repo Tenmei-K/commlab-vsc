@@ -20,6 +20,7 @@ function getScrollPercentage() {
 let human = document.querySelectorAll(".human")
 let AutumnOne = document.querySelector("#AutumnOne")
 let AutumnTwo = document.querySelector("#AutumnTwo")
+let hiddenhuman = document.querySelector("#hiddenhuman")
 
 
 let lines = document.querySelectorAll(".lines")
@@ -31,6 +32,7 @@ let treeHeight = treeWrapper.getBoundingClientRect().height;
 // let hanaWrapperBack = document.querySelector("#hanaWrapperBack")
 
 let paperWrapper = document.querySelector("#paperWrapper")
+let NewimgWrapper = document.querySelector("#NewimgWrapper")
 
 
 function fall(e, i, p1, p2) {
@@ -56,11 +58,18 @@ function fall(e, i, p1, p2) {
 }
 
 
-
+let inkaudio = document.createElement("audio")
+inkaudio.src = "sounds/microphonePlugIn.mp3"
+inkaudio.loop = false
 
 let ink = document.querySelectorAll(".ink")
 let inkOne = document.querySelector("#inkOne")
 let inkTwo = document.querySelector("#inkTwo")
+
+
+
+document.querySelector("#trunkWinter").style.opacity = 0.7
+document.querySelector("#backgroundWinter").style.opacity = 0.7
 
 
 
@@ -70,35 +79,6 @@ let inkTwo = document.querySelector("#inkTwo")
 // ! position one
 
 
-
-//fall three
-function hanaOnePositionOneFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 42 + 25) + "%"
-    hanaCre.style.left = (Math.random() * 55 + 0) + "%"
-}
-function hanaTwoPositionOneFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 42 + 25) + "%"
-    hanaCre.style.left = (Math.random() * 55 + 0) + "%"
-}
-function hanaThreePositionOneFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 42 + 25) + "%"
-    hanaCre.style.left = (Math.random() * 55 + 0) + "%"
-}
-repeat(10, hanaOnePositionOneFallThree)
-repeat(5, hanaTwoPositionOneFallThree)
-repeat(3, hanaThreePositionOneFallThree)
 
 //fall four
 function hanaOnePositionOneFallFour() {
@@ -161,37 +141,6 @@ repeat(3, hanaThreePositionOneFallFive)
 
 // ! position two
 
-
-
-
-//fall three
-function hanaOnePositionTwoFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 47 + 0) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 25) + "%"
-}
-function hanaTwoPositionTwoFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 47 + 0) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 25) + "%"
-}
-function hanaThreePositionTwoFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 47 + 0) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 25) + "%"
-}
-repeat(20, hanaOnePositionTwoFallThree)
-repeat(15, hanaTwoPositionTwoFallThree)
-repeat(5, hanaThreePositionTwoFallThree)
 
 //fall four
 function hanaOnePositionTwoFallFour() {
@@ -256,36 +205,6 @@ repeat(5, hanaThreePositionTwoFallFive)
 // ! back
 
 
-
-//fall three
-function hanaOnePositionThreeFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapperBack.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 55 + 8) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 10) + "%"
-}
-function hanaTwoPositionThreeFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapperBack.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 55 + 8) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 10) + "%"
-}
-function hanaThreePositionThreeFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapperBack.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 55 + 8) + "%"
-    hanaCre.style.left = (Math.random() * 75 + 10) + "%"
-}
-repeat(10, hanaOnePositionThreeFallThree)
-repeat(5, hanaTwoPositionThreeFallThree)
-repeat(3, hanaThreePositionThreeFallThree)
-
 //fall four
 function hanaOnePositionThreeFallFour() {
     let hanaCre = document.createElement("div")
@@ -348,35 +267,6 @@ repeat(3, hanaThreePositionThreeFallFive)
 // ! position four
 
 
-
-//fall three
-function hanaOnePositionFourFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaOne")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 30 + 42) + "%"
-    hanaCre.style.left = (Math.random() * 10 + 90) + "%"
-}
-function hanaTwoPositionFourFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaTwo")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 30 + 42) + "%"
-    hanaCre.style.left = (Math.random() * 10 + 90) + "%"
-}
-function hanaThreePositionFourFallThree() {
-    let hanaCre = document.createElement("div")
-    hanaWrapper.append(hanaCre)
-    hanaCre.classList.add("hanaThree")
-    hanaCre.classList.add("FallThree")
-    hanaCre.style.top = (Math.random() * 30 + 42) + "%"
-    hanaCre.style.left = (Math.random() * 10 + 90) + "%"
-}
-repeat(2, hanaOnePositionFourFallThree)
-repeat(1, hanaTwoPositionFourFallThree)
-repeat(1, hanaThreePositionFourFallThree)
 
 //fall Four
 function hanaOnePositionFourFallFour() {
@@ -466,78 +356,231 @@ let hanaAutumn = document.querySelectorAll(".hanaAutumn")
 
 
 // background height setting
-document.querySelector(".background").style.height = 200 + "vh"
+document.querySelector(".background").style.height = 100 + "vh"
+
+
+
+function createInkOne() {   // 0-20
+
+    let inkCOne = document.createElement("img")
+    inkCOne.src = "assets/ink.png"
+
+    rTopOne = Math.floor(Math.random() * 20) - 20
+    rLeftOne = Math.floor(Math.random() * 90) - 5
+
+    inkCOne.style.top = rTopOne + "%"
+    inkCOne.style.left = rLeftOne + "%"
+
+    inkCOne.classList.add("inkC")
+    NewimgWrapper.append(inkCOne)
+
+}
+
+function createInkTwo() {   // 0-20
+
+    let inkCTwo = document.createElement("img")
+    inkCTwo.src = "assets/ink.png"
+
+    rTopTwo = Math.floor(Math.random() * 20)
+    rLeftTwo = Math.floor(Math.random() * 90) - 5
+
+    inkCTwo.style.top = rTopTwo + "%"
+    inkCTwo.style.left = rLeftTwo + "%"
+
+    inkCTwo.classList.add("inkC")
+    NewimgWrapper.append(inkCTwo)
+
+}
+
+function createInkThree() {   // 0-20
+
+    let inkCThree = document.createElement("img")
+    inkCThree.src = "assets/ink.png"
+
+    rTopThree = Math.floor(Math.random() * 20) + 20
+    rLeftThree = Math.floor(Math.random() * 90) - 5
+
+    inkCThree.style.top = rTopThree + "%"
+    inkCThree.style.left = rLeftThree + "%"
+
+    inkCThree.classList.add("inkC")
+    NewimgWrapper.append(inkCThree)
+
+}
+
+function createInkFour() {   // 0-20
+
+    let inkCFour = document.createElement("img")
+    inkCFour.src = "assets/ink.png"
+
+    rTopFour = Math.floor(Math.random() * 20) + 40
+    rLeftFour = Math.floor(Math.random() * 90) - 5
+
+    inkCFour.style.top = rTopFour + "%"
+    inkCFour.style.left = rLeftFour + "%"
+
+    inkCFour.classList.add("inkC")
+    NewimgWrapper.append(inkCFour)
+
+}
+
+function createInkFive() {   // 0-20
+
+    let inkCFive = document.createElement("img")
+    inkCFive.src = "assets/ink.png"
+
+    rTopFive = Math.floor(Math.random() * 20) + 60
+    rLeftFive = Math.floor(Math.random() * 90) - 5
+
+    inkCFive.style.top = rTopFive + "%"
+    inkCFive.style.left = rLeftFive + "%"
+
+    inkCFive.classList.add("inkC")
+    NewimgWrapper.append(inkCFive)
+
+}
+
+
+function createInk() {
+    createInkOne()
+    setTimeout(function () {
+        createInkOne()
+        setTimeout(function () {
+            createInkOne()
+            setTimeout(function () {
+                createInkOne()
+                setTimeout(function () {
+                    createInkOne()
+                    setTimeout(function () {
+                        createInkOne()
+                        // two start fr here
+                        setTimeout(function () {
+                            document.querySelector("#lineDLTT").remove()
+                            document.querySelector("#lineDLTT2").style.opacity = 1
+                            createInkTwo()
+                            setTimeout(function () {
+                                createInkTwo()
+                                setTimeout(function () {
+                                    createInkTwo()
+                                    setTimeout(function () {
+                                        createInkTwo()
+                                        setTimeout(function () {
+                                            createInkTwo()
+                                            setTimeout(function () {
+                                                createInkTwo()
+                                                setTimeout(function () {
+                                                    createInkTwo()
+                                                    setTimeout(function () {
+                                                        createInkTwo()
+                                                        setTimeout(function () {
+                                                            createInkTwo()
+                                                            setTimeout(function () {
+                                                                createInkTwo()
+                                                                setTimeout(function () {
+                                                                    document.querySelector("#lineDLTT2").remove()
+                                                                    document.querySelector("#lineDLTT3").style.opacity = 1
+                                                                    document.querySelector("#lineDLTT3").style.fontSize = 4 + "vh"
+                                                                    createInkThree()
+                                                                    setTimeout(function () {
+                                                                        createInkThree()
+                                                                        setTimeout(function () {
+                                                                            createInkThree()
+                                                                            setTimeout(function () {
+                                                                                createInkThree()
+                                                                                setTimeout(function () {
+                                                                                    createInkThree()
+                                                                                    setTimeout(function () {
+                                                                                        createInkThree()
+                                                                                        setTimeout(function () {
+                                                                                            createInkThree()
+                                                                                            setTimeout(function () {
+                                                                                                createInkThree()
+
+                                                                                                document.querySelector("#lineDLTT3").remove()
+                                                                                                document.querySelector("#lineDLTT4").style.opacity = 1
+                                                                                                document.querySelector("#lineDLTT4").style.fontSize = 6 + "vh"
+                                                                                                setTimeout(function () {
+                                                                                                    createInkThree()
+                                                                                                    setTimeout(function () {
+                                                                                                        createInkThree()
+                                                                                                        // four start fr here
+                                                                                                        setTimeout(function () {
+
+                                                                                                            createInkFour()
+                                                                                                            createInkFour()
+                                                                                                            setTimeout(function () {
+                                                                                                                createInkFour()
+                                                                                                                createInkFour()
+                                                                                                                setTimeout(function () {
+                                                                                                                    createInkFour()
+                                                                                                                    createInkFour()
+                                                                                                                    createInkFour()
+                                                                                                                    createInkFour()
+                                                                                                                    document.querySelector("#lineDLTT4").remove()
+                                                                                                                    setTimeout(function () {
+                                                                                                                        createInkFive()
+                                                                                                                        createInkFive()
+                                                                                                                        createInkFive()
+                                                                                                                        setTimeout(function () {
+                                                                                                                            let blackpage = document.createElement("div")
+                                                                                                                            blackpage.classList.add("wrapper")
+                                                                                                                            blackpage.style.backgroundColor = "black"
+                                                                                                                            blackpage.style.cursor = "pointer"
+                                                                                                                            blackpage.addEventListener("click", function () {
+                                                                                                                                document.location = "autumn4.html"
+                                                                                                                            })
+                                                                                                                            document.querySelector("#blackpageWrapper").append(blackpage)
+                                                                                                                            inkaudio.play()
+                                                                                                                        }, 100)
+                                                                                                                    }, 100)
+                                                                                                                }, 100)
+                                                                                                            }, 100)
+                                                                                                        }, 100)
+                                                                                                    }, 100)
+                                                                                                }, 100)
+                                                                                            }, 100)
+                                                                                        }, 100)
+                                                                                    }, 100)
+                                                                                }, 100)
+                                                                            }, 100)
+                                                                        }, 100)
+                                                                    }, 100)
+                                                                }, 100)
+                                                            }, 100)
+                                                        }, 100)
+                                                    }, 100)
+                                                }, 100)
+                                            }, 100)
+                                        }, 100)
+                                    }, 100)
+                                }, 100)
+                            }, 100)
+                        }, 100)
+                    }, 100)
+                }, 100)
+            }, 100)
+        }, 100)
+    }, 100)
+}
+
+
+createInk()
+createInk()
+createInk()
+createInk()
 
 
 
 
-window.addEventListener("scroll", function () {
-    percentage = getScrollPercentage() // 0-100
-
-    // audio
-
-
-
-
-    // scroll animation
-    FallThree.forEach(function (e, i) {
-        fall(e, i, 0, 100)
-    })
-
-
-
-
-    // trunk & sky scroll animation
-    if (percentage > 0) {
-        document.querySelector("#trunkWinter").style.opacity = 0.4 + percentage / 100 * 0.2
-        document.querySelector("#backgroundWinter").style.opacity = 0.4 + percentage / 100 * 0.2
-    } else {
-        document.querySelector("#trunkWinter").style.opacity = 0.4
-        document.querySelector("#backgroundWinter").style.opacity = 0.4
-    }
-
-
-
-
-
-    // lines
-
-
-    if (percentage >= 100 / 3 * 2) {
-        let newInk = document.createElement("img")
-        newInk.src = "assets/inkOne.png"
-        newInk.classList.add("ink")
-        newInk.style.height = 75 + "%"
-
-        hintWrapper.append(newInk)
-    } else {
-        hintWrapper.innerText = ""
-    }
-
-    if (percentage >= 100 / 6 * 5) {
-        inkOne.style.cursor = "pointer"
-        inkOne.addEventListener("mouseover", function () {
-            inkOne.style.scale = 1.1
-        })
-        inkOne.addEventListener("mouseout", function () {
-            inkOne.style.scale = 1
-        })
-        inkOne.addEventListener("click", function () {
-            document.location = "autumn4.html"
-        })
-    }
-    if (percentage < 100 / 6 * 5) {
-        inkOne.style.cursor = "default"
-        inkOne.addEventListener("mouseover", function () {
-            inkOne.style.scale = 1
-        })
-        inkOne.addEventListener("click", function () {
-            document.location = "autumn3.html"
-        })
-    }
-
-
-
-
+hiddenhuman.style.cursor = "pointer"
+hiddenhuman.addEventListener("mouseover", function () {
+    hiddenhuman.style.scale = 1.04
+    AutumnOne.style.scale = 1.04
 })
-
+hiddenhuman.addEventListener("mouseout", function () {
+    hiddenhuman.style, scale = 1
+    AutumnOne.style.scale = 1
+})
+hiddenhuman.addEventListener("click", function () {
+    document.location = "autumn5.html"
+})

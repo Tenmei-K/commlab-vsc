@@ -64,6 +64,10 @@ let inkTwo = document.querySelector("#inkTwo")
 
 
 
+document.querySelector("#trunkWinter").style.opacity = 0.6
+document.querySelector("#backgroundWinter").style.opacity = 0.6
+
+
 
 // autumn
 
@@ -466,7 +470,7 @@ let hanaAutumn = document.querySelectorAll(".hanaAutumn")
 
 
 // background height setting
-document.querySelector(".background").style.height = 200 + "vh"
+document.querySelector(".background").style.height = 160 + "vh"
 
 
 
@@ -481,7 +485,10 @@ window.addEventListener("scroll", function () {
 
     // scroll animation
     FallThree.forEach(function (e, i) {
-        fall(e, i, 0, 100)
+        fall(e, i, 0, 60)
+    })
+    FallFour.forEach(function (e, i) {
+        fall(e, i, 30, 90)
     })
 
 
@@ -489,11 +496,11 @@ window.addEventListener("scroll", function () {
 
     // trunk & sky scroll animation
     if (percentage > 0) {
-        document.querySelector("#trunkWinter").style.opacity = 0.4 + percentage / 100 * 0.2
-        document.querySelector("#backgroundWinter").style.opacity = 0.4 + percentage / 100 * 0.2
+        document.querySelector("#trunkWinter").style.opacity = 0.6 + percentage / 100 * 0.2
+        document.querySelector("#backgroundWinter").style.opacity = 0.6 + percentage / 100 * 0.2
     } else {
-        document.querySelector("#trunkWinter").style.opacity = 0.4
-        document.querySelector("#backgroundWinter").style.opacity = 0.4
+        document.querySelector("#trunkWinter").style.opacity = 0.6
+        document.querySelector("#backgroundWinter").style.opacity = 0.6
     }
 
 
@@ -503,7 +510,7 @@ window.addEventListener("scroll", function () {
     // lines
 
 
-    if (percentage >= 100 / 3 * 2) {
+    if (percentage >= 100 / 2) {
         let newInk = document.createElement("img")
         newInk.src = "assets/inkOne.png"
         newInk.classList.add("ink")

@@ -112,6 +112,13 @@ body {
     height: 35%;
 }
 
+.inkC {
+    position: fixed;
+    height: 55%;
+}
+
+
+
 #hintWrapper {
     /* position: fixed; */
     /* bottom: 0; */
