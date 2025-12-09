@@ -23,12 +23,9 @@ springbgm.src = "sounds/springbgm.mp3"
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
-    springbgm.play()
-    springbgm.loop = true
 })
 springWrapper.addEventListener("mouseout", function () {
     springWrapper.style.scale = 1
-    springbgm.pause()
 })
 springWrapper.addEventListener("click", function () {
     document.location = "spring.html"
@@ -44,6 +41,29 @@ summerWrapper.addEventListener("mouseout", function () {
 summerWrapper.addEventListener("click", function () {
     document.location = "summer.html"
 })
+
+autumnWrapper.style.cursor = "pointer"
+autumnWrapper.addEventListener("mouseover", function () {
+    autumnWrapper.style.scale = 1.05
+})
+autumnWrapper.addEventListener("mouseout", function () {
+    autumnWrapper.style.scale = 1
+})
+autumnWrapper.addEventListener("click", function () {
+    document.location = "autumn-unclicked.html"
+})
+
+winterWrapper.style.cursor = "pointer"
+winterWrapper.addEventListener("mouseover", function () {
+    winterWrapper.style.scale = 1.05
+})
+winterWrapper.addEventListener("mouseout", function () {
+    winterWrapper.style.scale = 1
+})
+winterWrapper.addEventListener("click", function () {
+    document.location = "winter-unclicked.html"
+})
+
 
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100

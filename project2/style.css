@@ -45,14 +45,14 @@ img {
     top: 39.4%;
     right: -12%;
     rotate: -30deg;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 #winterWrapper {
     top: 55.6%;
     right: -26.1%;
     rotate: -45deg;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }
 
 #finalWrapper {

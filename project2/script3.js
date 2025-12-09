@@ -23,32 +23,27 @@ let summerbgm = document.createElement("audio")
 summerbgm.src = "sounds/summerbgm.mp3"
 
 
+
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
-    springbgm.play()
-    springbgm.loop = true
 })
 springWrapper.addEventListener("mouseout", function () {
     springWrapper.style.scale = 1
-    springbgm.pause()
 })
 springWrapper.addEventListener("click", function () {
-    document.location = "spring3.html"
+    document.location = "spring.html"
 })
 
 summerWrapper.style.cursor = "pointer"
 summerWrapper.addEventListener("mouseover", function () {
     summerWrapper.style.scale = 1.05
-    summerbgm.play()
-    summerbgm.loop = true
 })
 summerWrapper.addEventListener("mouseout", function () {
     summerWrapper.style.scale = 1
-    summerbgm.pause()
 })
 summerWrapper.addEventListener("click", function () {
-    document.location = "summer.html"
+    document.location = "summer-toWinter.html"
 })
 
 autumnWrapper.style.cursor = "pointer"
@@ -60,6 +55,17 @@ autumnWrapper.addEventListener("mouseout", function () {
 })
 autumnWrapper.addEventListener("click", function () {
     document.location = "autumn1.html"
+})
+
+winterWrapper.style.cursor = "pointer"
+winterWrapper.addEventListener("mouseover", function () {
+    winterWrapper.style.scale = 1.05
+})
+winterWrapper.addEventListener("mouseout", function () {
+    winterWrapper.style.scale = 1
+})
+winterWrapper.addEventListener("click", function () {
+    document.location = "winter-unclicked.html"
 })
 
 window.addEventListener("scroll", function () {

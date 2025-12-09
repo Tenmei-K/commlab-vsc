@@ -26,6 +26,6 @@ button.addEventListener("mouseout", function () {
     button.style.scale = 1
 })
 button.addEventListener("click", function () {
-    document.location = "index.html"
+    history.go(-1)
 }
 )
