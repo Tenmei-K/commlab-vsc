@@ -695,7 +695,7 @@ let hanaAutumn = document.querySelectorAll(".hanaAutumn")
 
 
 
-document.querySelector(".background").style.height = 150 + "vh"
+document.querySelector(".background").style.height = 300 + "vh"
 
 
 window.addEventListener("scroll", function () {
