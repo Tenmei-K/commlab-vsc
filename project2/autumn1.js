@@ -749,7 +749,7 @@ window.addEventListener("scroll", function () {
     }
 
 
-    if (percentage >= 100 / 6 * 5) {
+    if (percentage >= 100 / 4 * 3) {
         let newInk = document.createElement("img")
         newInk.src = "assets/inkThree.png"
         newInk.classList.add("ink")

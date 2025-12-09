@@ -69,6 +69,12 @@ let inkOne = document.querySelector("#inkOne")
 let inkTwo = document.querySelector("#inkTwo")
 
 
+let wind = document.createElement("audio")
+wind.src = "sounds/wind.mp3"
+wind.loop = true
+wind.volume = 0
+wind.play()
+
 
 
 document.querySelector("#trunkWinter").style.opacity = 0.4
@@ -363,7 +369,7 @@ window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
     // audio
-
+    wind.volume = 1 * percentage / 100
 
 
 
@@ -427,7 +433,7 @@ window.addEventListener("scroll", function () {
     // human hover effect
 
     if (percentage < 100 / 5 * 4 && percentage > 100 / 5) {
-        
+
 
         document.querySelector("#GWrapper").style.maxWidth = clientWidth
         document.querySelector("#GWrapper").style.minWidth = clientWidth
@@ -460,7 +466,7 @@ window.addEventListener("scroll", function () {
             document.querySelector("#NewimgWrapper").style.scale = 1.04
         })
         AutumnAppend.addEventListener("mouseout", function () {
-           document.querySelector("#NewimgWrapper").style.scale = 1
+            document.querySelector("#NewimgWrapper").style.scale = 1
         })
         AutumnAppend.addEventListener("click", function () {
             document.location = "summer-toWinter.html"

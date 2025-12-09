@@ -102,7 +102,7 @@ winterWrapper.addEventListener("mouseout", function () {
     finalbgm.volume = 0.65
 })
 winterWrapper.addEventListener("click", function () {
-    document.location = "winter.html"
+    document.location = "winter1.html"
 })
 
 finalWrapper.style.cursor = "pointer"

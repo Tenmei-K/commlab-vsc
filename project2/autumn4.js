@@ -62,6 +62,10 @@ let inkaudio = document.createElement("audio")
 inkaudio.src = "sounds/microphonePlugIn.mp3"
 inkaudio.loop = false
 
+let lineaudio = document.createElement("audio")
+lineaudio.src = "sounds/轻响指.wav"
+lineaudio.loop = false
+
 let ink = document.querySelectorAll(".ink")
 let inkOne = document.querySelector("#inkOne")
 let inkTwo = document.querySelector("#inkTwo")
@@ -455,6 +459,7 @@ function createInk() {
                         createInkOne()
                         // two start fr here
                         setTimeout(function () {
+                            lineaudio.play()
                             document.querySelector("#lineDLTT").remove()
                             document.querySelector("#lineDLTT2").style.opacity = 1
                             createInkTwo()
@@ -477,6 +482,7 @@ function createInk() {
                                                             setTimeout(function () {
                                                                 createInkTwo()
                                                                 setTimeout(function () {
+                                                                    lineaudio.play()
                                                                     document.querySelector("#lineDLTT2").remove()
                                                                     document.querySelector("#lineDLTT3").style.opacity = 1
                                                                     document.querySelector("#lineDLTT3").style.fontSize = 4 + "vh"
@@ -495,7 +501,7 @@ function createInk() {
                                                                                             createInkThree()
                                                                                             setTimeout(function () {
                                                                                                 createInkThree()
-
+                                                                                                lineaudio.play()
                                                                                                 document.querySelector("#lineDLTT3").remove()
                                                                                                 document.querySelector("#lineDLTT4").style.opacity = 1
                                                                                                 document.querySelector("#lineDLTT4").style.fontSize = 6 + "vh"
@@ -505,19 +511,22 @@ function createInk() {
                                                                                                         createInkThree()
                                                                                                         // four start fr here
                                                                                                         setTimeout(function () {
-
+                                                                                                            lineaudio.play()
                                                                                                             createInkFour()
                                                                                                             createInkFour()
                                                                                                             setTimeout(function () {
+                                                                                                                lineaudio.play()
                                                                                                                 createInkFour()
                                                                                                                 createInkFour()
                                                                                                                 setTimeout(function () {
+                                                                                                                    lineaudio.play()
                                                                                                                     createInkFour()
                                                                                                                     createInkFour()
                                                                                                                     createInkFour()
                                                                                                                     createInkFour()
                                                                                                                     document.querySelector("#lineDLTT4").remove()
                                                                                                                     setTimeout(function () {
+                                                                                                                        lineaudio.play()
                                                                                                                         createInkFive()
                                                                                                                         createInkFive()
                                                                                                                         createInkFive()

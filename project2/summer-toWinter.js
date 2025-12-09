@@ -23,9 +23,11 @@ door.addEventListener("mouseout", function () {
     door.style.scale = 1
 })
 door.addEventListener("click", function () {
-    document.location = "winter.html"
+    document.location = "winter1.html"
 }
 )
+
+document.querySelector("#Goverflow").style.opacity = 0
 
 document.addEventListener("mousemove", function (eventInfo) {
     if (eventInfo.pageY > 0.15 * clientHeight && eventInfo.pageY < 0.85 * clientHeight) {
