@@ -6,6 +6,14 @@ let clientWidth = document.body.clientWidth
 console.log(clientHeight, clientWidth)
 
 
+let dooraudio = document.createElement("audio")
+dooraudio.src = "sounds/doorOpen.mp3"
+dooraudio.loop = false
+
+
+
+dooraudio.play()
+
 
 door.style.cursor = "pointer"
 door.addEventListener("mouseover", function () {
