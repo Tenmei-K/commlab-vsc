@@ -704,6 +704,6 @@ if ((paperVisited == 1) && (broochVisited == 1)) {
         OTwo.style.scale = 1
     })
     OTwo.addEventListener("click", function () {
-        document.location = "hello-muse-final.html"
+        document.location = "index-final.html"
     })
 }
