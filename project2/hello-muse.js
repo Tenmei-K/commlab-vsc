@@ -26,6 +26,14 @@ window.addEventListener("scroll", function () {
 
 
     if (percentage > 100 / 8 * 1 && percentage < 100 / 8 * 2) {
+        document.querySelector("#SOne").style.opacity = 1
+    } else {
+        document.querySelector("#SOne").style.opacity = 1
+    }
+
+
+
+    if (percentage > 100 / 8 * 1 && percentage < 100 / 8 * 2) {
         document.querySelector("#lineOne").style.opacity = 1
     } else {
         document.querySelector("#lineOne").style.opacity = 0
