@@ -50,10 +50,10 @@ forkOne.addEventListener("click", function () {
 forkTwo.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "you are still trying to find some reason to persuade her. miriculously, she isn't anxious to cut you off."
+    hint.innerText = "*you are still trying to find some reason to persuade her. miriculously, she isn't anxious to cut you off.*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "you are still trying to find some reason to persuade her. miriculously, she isn't anxious to cut you off."
+    hint1.innerText = "*you are still trying to find some reason to persuade her. miriculously, she isn't anxious to cut you off.*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

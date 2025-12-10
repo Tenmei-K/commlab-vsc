@@ -32,10 +32,10 @@ forkOne.addEventListener("click", function () {
     
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "you are sure that your sentence makes sense. however, your tone is so weak that you hardly even believe yourself."
+    hint.innerText = "*you are sure that your sentence makes sense. however, your tone is so weak that you hardly even believe yourself.*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "you are sure that your sentence makes sense. however, your tone is so weak that you hardly even believe yourself."
+    hint1.innerText = "*you are sure that your sentence makes sense. however, your tone is so weak that you hardly even believe yourself.*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

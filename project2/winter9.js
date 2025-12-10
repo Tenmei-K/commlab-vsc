@@ -32,10 +32,10 @@ forkOne.addEventListener("click", function () {
     
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "she swallowed that piece of pear"
+    hint.innerText = "*she swallowed that piece of pear*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "she swallowed that piece of pear"
+    hint1.innerText = "*she swallowed that piece of pear*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

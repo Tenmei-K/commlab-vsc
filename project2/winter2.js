@@ -29,10 +29,10 @@ fork.forEach(function (e) {
 forkOne.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "you are polite, maybe a little too polite, and you waited for her to take a bite"
+    hint.innerText = "*you are polite, maybe a little too polite, and you waited for her to take a bite*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "you are polite, maybe a little too polite, and you waited for her to take a bite"
+    hint1.innerText = "*you are polite, maybe a little too polite, and you waited for her to take a bite*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

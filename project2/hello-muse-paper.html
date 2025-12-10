@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>不是你为什么出bug了</title>
+    <title>scale变了吗、如变</title>
     <link rel="stylesheet" href="hello-muse.css">
     <script src="hello-muse-paper.js" defer></script>
 </head>
@@ -12,7 +12,7 @@
 <body>
 
 
-    <div id="backgroundSpring" class="background" style="height: 500vh;"></div>
+    <div id="backgroundSpring" class="background" style="height: 500vh; opacity: 0.2;"></div>
 
 
     <img src="assets/building1.png" class="building" id="buildingOne">
@@ -23,7 +23,7 @@
         </div>
 
         <img src="assets/trunkWinter.png" id="trunkWinter" class="trunk" alt="">
-
+        <img src="assets/trunkSpring.png" id="trunkSpring" class="trunk" alt="" style="opacity: 0.2;">
         <div id="hanaWrapper">
 
         </div>
@@ -40,8 +40,9 @@
 
         <img src="assets/grS1.png" class="human" id="SOne">
         <img src="assets/grS1P.png" class="human" id="SOneP">
+        <img src="assets/grS1PP.png" class="human" id="SOnePP">
         <img src="assets/grS2.png" class="human" id="STwo">
-        <img src="assets/grO1.png" class="human" id="OOne">
+        <img src="assets/grO1.png" class="human" id="OOne" style="opacity: 1;">
         <img src="assets/grO2.png" class="human" id="OTwo">
 
         <div id="Goverflow">
@@ -51,11 +52,12 @@
             </div>
         </div>
 
-        <img src="assets/brooch.png" id="brooch" style="opacity: 0;">
+        <img src="assets/brooch.png" id="brooch" style="left: 52%; bottom: 5%;">
 
 
-        <!-- <div id="paperWrapper" style="justify-items: center; width: 100%; position: fixed; bottom: 0; height: 100%;">
-        </div> -->
+        <div id="paperWrapper" style="justify-items: center; width: 100%; position: fixed; bottom: 0; height: 100%;">
+            <img src="assets/paper2.png" class="paper" id="paperThree">
+        </div>
 
 
 

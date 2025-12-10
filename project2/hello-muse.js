@@ -49,8 +49,23 @@ function grow(e, i, p1, p2, per) {
 
 
 
+let crowdAudio = document.createElement("audio")
+crowdAudio.src = "sounds/crowd.mp3"
+crowdAudio.loop = true
+crowdAudio.play()
+
+let windbellAudio = document.createElement("audio")
+windbellAudio.src = "sounds/windbell.mp3"
+windbellAudio.loop = false
+// windbellAudio.play()
+// windbellAudio.volume = 0
+
+let hintaudio = document.createElement("audio")
+hintaudio.src = "sounds/木头咚.wav"
+hintaudio.loop = false
 
 
+// for condition clickable element  其实我真的没招了。我到底在干什么？太过于神秘了。
 let urlString = window.location.search;
 let urlParams = new URLSearchParams(urlString);
 let paperVisited = urlParams.get('paperVisited') || 0;
@@ -541,34 +556,90 @@ let paper = document.querySelector("#paperOne")
 let brooch = document.querySelector("#brooch")
 
 
-
+let soundPlayed = false
+let hintOnePlayed = false
+let hintTwoPlayed = false
 
 
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
 
-
+    // bg
     document.querySelector("#backgroundSpring").style.opacity = percentage / 100 * 0.4
 
+    // audio
+
+    if (percentage > 100 / 10 * 2 && percentage < 100 / 10 * 3) {
+        crowdAudio.volume = 1 - (percentage - 100 / 10 * 2) / 100 * 10 * 0.65
+    }
+    if (percentage > 100 / 10 * 3 && percentage < 100 / 10 * 7) {
+        crowdAudio.volume = 0.35 - 0.35 * (percentage - 100 / 10 * 3) / 100 * 10 / 4
+    }
+    if (percentage > 100 / 10 * 7 && percentage < 100 / 10 * 9) {
+        crowdAudio.volume = 1 * (percentage - 100 / 10 * 7) / 100 * 10 / 2
+    }
+    if (percentage > 100 / 10 * 9 && percentage < 100 / 10 * 9 + 5) {
+        crowdAudio.volume = 1 - (percentage - 100 / 10 * 9) / 5
+    }
 
 
-    if ((percentage > 100 / 9 * 1 && percentage < 100 / 9 * 2) || (percentage > 100 / 9 * 8)) {
+
+    if (percentage > 100 / 10 * 9 - 2) {
+        shouldPlaySound = true
+    } else {
+        shouldPlaySound = false
+    }
+    if (shouldPlaySound == true && soundPlayed == false) {
+        windbellAudio.play()
+        soundPlayed = true
+    }
+
+
+    if (percentage > 100 / 10 * 3 && percentage < 100 / 10 * 5) {
+        hintOnePlay = true
+    } else {
+        hintOnePlay = false
+    }
+    if (hintOnePlay == true && hintOnePlayed == false) {
+        hintaudio.play()
+        hintOnePlayed = true
+    }
+    if (percentage > 100 / 10 * 5) {
+        hintTwoPlay = true
+    } else {
+        hintTwoPlay = false
+    }
+    if (hintTwoPlay == true && hintTwoPlayed == false) {
+        hintaudio.play()
+        hintTwoPlayed = true
+    }
+
+
+
+    // human
+
+    if ((percentage > 100 / 10 * 1 && percentage < 100 / 10 * 2) || (percentage > 100 / 10 * 6 && percentage < 100 / 10 * 7) || percentage > 100 / 20 * 19) {
         OOne.style.opacity = 1
     } else {
         OOne.style.opacity = 0
     }
-    if ((percentage > 100 / 9 * 2 && percentage < 100 / 9 * 4) || (percentage > 100 / 9 * 7 && percentage < 100 / 9 * 8)) {
+    if (percentage > 100 / 10 * 2 && percentage < 100 / 10 * 4) {
+        SOnePP.style.opacity = 1
+    } else {
+        SOnePP.style.opacity = 0
+    }
+    if ((percentage > 100 / 10 * 4 && percentage < 100 / 10 * 5) || (percentage > 100 / 10 * 8 && percentage < 100 / 10 * 9)) {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
     }
-    if (percentage > 100 / 9 * 4 && percentage < 100 / 9 * 5) {
+    if (percentage > 100 / 10 * 5 && percentage < 100 / 10 * 6) {
         SOneP.style.opacity = 1
     } else {
         SOneP.style.opacity = 0
     }
-    if (percentage > 100 / 9 * 5 && percentage < 100 / 9 * 6) {
+    if ((percentage > 100 / 10 * 9 && percentage < 100 / 20 * 19)) {
         OTwo.style.opacity = 1
     } else {
         OTwo.style.opacity = 0
@@ -577,58 +648,71 @@ window.addEventListener("scroll", function () {
 
 
 
-    if (percentage > 100 / 9 * 1 && percentage < 100 / 9 * 2) {
+    if (percentage > 100 / 10 * 1 && percentage < 100 / 10 * 2) {
         document.querySelector("#lineOne").style.opacity = 1
     } else {
         document.querySelector("#lineOne").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 2 && percentage < 100 / 9 * 3) {
+    if (percentage > 100 / 10 * 2 && percentage < 100 / 10 * 3) {
         document.querySelector("#lineTwo").style.opacity = 1
     } else {
         document.querySelector("#lineTwo").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 3 && percentage < 100 / 9 * 4) {
+    if (percentage > 100 / 10 * 3 && percentage < 100 / 10 * 4) {
         document.querySelector("#lineThree").style.opacity = 1
     } else {
         document.querySelector("#lineThree").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 4 && percentage < 100 / 9 * 5) {
+    if (percentage > 100 / 10 * 4 && percentage < 100 / 10 * 5) {
         document.querySelector("#lineFour").style.opacity = 1
     } else {
         document.querySelector("#lineFour").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 5 && percentage < 100 / 9 * 6) {
+    if (percentage > 100 / 10 * 5 && percentage < 100 / 10 * 6) {
         document.querySelector("#lineFive").style.opacity = 1
     } else {
         document.querySelector("#lineFive").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 6 && percentage < 100 / 9 * 7) {
+    if (percentage > 100 / 10 * 6 && percentage < 100 / 10 * 7) {
         document.querySelector("#lineSix").style.opacity = 1
     } else {
         document.querySelector("#lineSix").style.opacity = 0
     }                                                      // 这里应该是没问题的
-    if (percentage > 100 / 9 * 7 && percentage < 100 / 9 * 8) {
+    if (percentage > 100 / 10 * 7 && percentage < 100 / 10 * 8) {
         document.querySelector("#lineSeven").style.opacity = 1
     } else {
         document.querySelector("#lineSeven").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 8) {
+    if (percentage > 100 / 10 * 8 && percentage < 100 / 10 * 9) {
         document.querySelector("#lineEight").style.opacity = 1
     } else {
         document.querySelector("#lineEight").style.opacity = 0
     }
+    if (percentage > 100 / 10 * 9) {
+        document.querySelector("#lineNine").style.opacity = 1
+    } else {
+        document.querySelector("#lineNine").style.opacity = 0
+    }
 
 
 
-    if (percentage > 100 / 9 * 7) {
+    if (percentage > 100 / 10 * 3 && percentage < 100 / 10 * 5) {
         document.querySelector("#brooch").style.opacity = 1
+        brooch.style.scale = 2
+        brooch.style.bottom = - 3 + "%"
+        brooch.style.left = "null"
+    } else if (percentage > 100 / 10 * 8) {
+        document.querySelector("#brooch").style.opacity = 1
+        brooch.style.scale = 1
+        brooch.style.bottom = 5 + "%"
+        brooch.style.left = 52 + "%"
     } else {
         document.querySelector("#brooch").style.opacity = 0
     }
 
 
 
-    if (percentage > 100 / 9 * 8) {
+    if (percentage > 100 / 20 * 19) {
         document.querySelector("#paperOne").style.opacity = 1
         paper.style.cursor = "pointer"
         paper.addEventListener("mouseover", function () {
@@ -673,17 +757,17 @@ window.addEventListener("scroll", function () {
 
 
     GrowOne.forEach(function (e, i) {
-        grow(e, i, 0, 60, 1)
-    })
-    GrowTwo.forEach(function (e, i) {
         grow(e, i, 40, 100, 1)
     })
+    // GrowTwo.forEach(function (e, i) {
+    //     grow(e, i, 40, 100, 1)
+    // })
     GrowOneBack.forEach(function (e, i) {
-        grow(e, i, 0, 60, 0.5)
-    })
-    GrowTwoBack.forEach(function (e, i) {
         grow(e, i, 40, 100, 0.5)
     })
+    // GrowTwoBack.forEach(function (e, i) {
+    //     grow(e, i, 40, 100, 0.5)
+    // })
 
 
 
@@ -704,6 +788,6 @@ if ((paperVisited == 1) && (broochVisited == 1)) {
         OTwo.style.scale = 1
     })
     OTwo.addEventListener("click", function () {
-        document.location = "index-final.html"
+        document.location = "hello-muse-final.html"
     })
 }

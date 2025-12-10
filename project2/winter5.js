@@ -18,10 +18,10 @@ biteaudio.play()
 
 
 let hint = document.createElement("p")
-hint.innerText = "she took a bite of pear, and stared at your face. invisible pressure crawled up your leg."
+hint.innerText = "*she took a bite of pear, and stared at your face. invisible pressure crawled up your leg.*"
 hint.classList.add("hint")
 let hint1 = document.createElement("p")
-hint1.innerText = "she took a bite of pear, and stared at your face. invisible pressure crawled up your leg."
+hint1.innerText = "*she took a bite of pear, and stared at your face. invisible pressure crawled up your leg.*"
 hint1.classList.add("hint")
 
 document.body.append(hint)
@@ -50,10 +50,10 @@ forkOne.addEventListener("click", function () {
 forkTwo.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "she took a bite of pear, and stared at your face. invisible pressure crawled up your leg."
+    hint.innerText = "*she took a bite of pear, and stared at your face. invisible pressure crawled up your leg.*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "she took a bite of pear, and stared at your face. invisible pressure crawled up your leg."
+    hint1.innerText = "*she took a bite of pear, and stared at your face. invisible pressure crawled up your leg.*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

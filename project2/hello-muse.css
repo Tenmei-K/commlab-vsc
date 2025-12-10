@@ -10,6 +10,9 @@ body {
 }
 
 .background {
+    /* position: fixed;
+    top: 0;
+    left: 0; */
     width: 100%;
     height: 900vh;
 }
@@ -18,6 +21,16 @@ body {
     background-color: rgb(166, 203, 255);
     opacity: 0;
 }
+#backgroundAutumn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(208, 231, 255);
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+}
+
 
 p {
     display: block;
@@ -60,6 +73,16 @@ p {
     justify-items: center;
 }
 
+.monitor{
+    display: block;
+    position: fixed;
+    height: 70%;
+    /* width: 50.5%; */
+    top: 15%;
+    opacity: 0;
+}
+
+
 /* spring */
 .hanaSummer {
     border: .97px solid rgb(247, 167, 194);
@@ -92,6 +115,40 @@ p {
     background-color: rgb(255, 148, 184);
     position: absolute;
 }
+
+
+.hanaAutumn{
+    border: .97px solid rgb(249, 187, 130);
+    /* border: .95px solid rgb(215, 110, 110); */
+}
+
+.hanaOne {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(255, 223, 202);
+    position: absolute;
+}
+
+.hanaTwo {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(249, 170, 110);
+    position: absolute;
+}
+
+.hanaThree {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(215, 107, 49);
+    position: absolute;
+}
+
 
 #hanaWrapperBack .hanaSpring {
     opacity: 0.5;
@@ -189,8 +246,7 @@ p {
 
 
 #brooch {
+    display: block;
     position: fixed;
-    bottom: 5%;
     height: 20%;
-    left: 52%;
 }

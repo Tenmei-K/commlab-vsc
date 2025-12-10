@@ -1,6 +1,6 @@
 let urlString = window.location.search;
 let urlParams = new URLSearchParams(urlString);
-let broochVisited = Number(urlParams.get('broochVisited')) + 1; //(this one)
+let broochVisited = Number(urlParams.get('broochVisited'))
 
 
 
@@ -55,7 +55,11 @@ function grow(e, i, p1, p2, per) {
 
 }
 
-
+let windbellAudio = document.createElement("audio")
+windbellAudio.src = "sounds/windbell.mp3"
+windbellAudio.loop = false
+// windbellAudio.play()
+// windbellAudio.volume = 0
 
 
 
@@ -538,18 +542,51 @@ let hanaSummer = document.querySelectorAll(".hanaSummer")
 
 
 
+
+
+
+
+
 let paperOne = document.querySelector("#paperOne")
 let paperTwo = document.querySelector("#paperTwo")
+let paperThree = document.querySelector("#paperThree")
+
+let paperWrapper = document.querySelector("#paperWrapper")
+
+let soundPlayed = false
+
+
+
+
+
+
 
 
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() //
 
     document.querySelector("#backgroundSpring").style.opacity = 0.2 + percentage / 100 * 0.4
+    document.querySelector("#trunkSpring").style.opacity = 0.2 + percentage / 100 * 0.4
 
 
 
-    if ((percentage < 100 / 5) || (percentage > 100 / 5 * 2 && percentage < 100 / 5 * 3)) {
+
+    if (percentage > 100 / 5 * 3 - 10) {
+        shouldPlaySound = true
+    } else {
+        shouldPlaySound = false
+    }
+    if (shouldPlaySound == true && soundPlayed == false) {
+        windbellAudio.play()
+        soundPlayed = true
+    }
+
+
+
+
+
+
+    if (percentage < 100 / 5) {
         OOne.style.opacity = 1
     } else {
         OOne.style.opacity = 0
@@ -559,38 +596,53 @@ window.addEventListener("scroll", function () {
     } else {
         SOne.style.opacity = 0
     }
+    if (percentage > 100 / 5 * 2 && percentage < 100 / 5 * 3) {
+        SOnePP.style.opacity = 1
+    } else {
+        SOnePP.style.opacity = 0
+    }
     if (percentage > 100 / 5 * 3 && percentage < 100 / 5 * 4) {
         OTwo.style.opacity = 1
     } else {
         OTwo.style.opacity = 0
     }
 
+    if (percentage > 100 / 5) {
+        paperOne.style.opacity = 0
+    } else {
+        paperOne.style.opacity = 1
+    }
     if (percentage > 100 / 5 * 3) {
         paperTwo.style.opacity = 1
     } else {
         paperTwo.style.opacity = 0
+    }
+    if (percentage > 100 / 5 * 4) {
+        paperThree.style.opacity = 1
+    } else {
+        paperThree.style.opacity = 0
     }
 
 
 
 
     if (percentage > 100 / 5 * 4) {
-        paperTwo.style.cursor = "pointer"
-        paperTwo.addEventListener("mouseover", function () {
-            paperTwo.style.scale = 1.04
+        paperThree.style.cursor = "pointer"
+        paperThree.addEventListener("mouseover", function () {
+            paperThree.style.scale = 1.04
         })
-        paperTwo.addEventListener("mouseout", function () {
-            paperTwo.style.scale = 1
+        paperThree.addEventListener("mouseout", function () {
+            paperThree.style.scale = 1
         })
-        paperTwo.addEventListener("click", function () {
+        paperThree.addEventListener("click", function () {
             OOne.classList.add("paperCLicked")
-            document.location = "hello-muse-paper-final.html"
+            document.location = "hello-muse.html?paperVisited=1&broochVisited=" + broochVisited
         })
     }
     else {
-        paperTwo.style.cursor = "default"
-        paperTwo.addEventListener("mouseover", function () {
-            paperTwo.style.scale = 1
+        paperThree.style.cursor = "default"
+        paperThree.addEventListener("mouseover", function () {
+            paperThree.style.scale = 1
         })
     }
 
