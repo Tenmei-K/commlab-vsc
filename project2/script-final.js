@@ -54,7 +54,7 @@ springWrapper.addEventListener("mouseout", function () {
     finalbgm.volume = 0.65
 })
 springWrapper.addEventListener("click", function () {
-    document.location = "spring3.html"
+    document.location = "spring-final.html"
 })
 
 summerWrapper.style.cursor = "pointer"
@@ -70,7 +70,7 @@ summerWrapper.addEventListener("mouseout", function () {
     finalbgm.volume = 0.65
 })
 summerWrapper.addEventListener("click", function () {
-    document.location = "summer.html"
+    document.location = "summer-final.html"
 })
 
 autumnWrapper.style.cursor = "pointer"

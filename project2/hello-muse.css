@@ -1,0 +1,196 @@
+body {
+    background-color: rgb(212, 226, 229);
+    /* background-color: black; */
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    justify-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.background {
+    width: 100%;
+    height: 800vh;
+}
+
+#backgroundSpring {
+    background-color: rgb(166, 203, 255);
+    opacity: 0;
+}
+
+p {
+    display: block;
+}
+
+#TreeWrapper {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    aspect-ratio: 1842/ 1380;
+}
+
+#petalBack,
+#petalFront {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+.trunk {
+    width: 100%;
+    /* height: 90vh; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* spring */
+.hanaSpring {
+    border: .97px solid rgb(247, 167, 194);
+    /* border: .95px solid rgb(215, 110, 110); */
+}
+
+.hanaOne {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(253, 231, 240);
+    position: absolute;
+}
+
+.hanaTwo {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(255, 199, 218);
+    position: absolute;
+}
+
+.hanaThree {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(255, 148, 184);
+    position: absolute;
+}
+
+#hanaWrapperBack .hanaSpring {
+    opacity: 0.5;
+}
+
+
+#Goverflow {
+    opacity: 0;
+    /* background-color: black; */
+    position: fixed;
+    display: inline-block;
+    bottom: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 8.5%;
+    transform: skew(8deg, 0deg);
+    margin-left: -4.25%;
+}
+
+#GWrapper {
+    margin-left: 213.5%;
+    opacity: 1;
+    width: 850%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    transform: skew(-8deg, 0deg);
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.human {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    height: 68%;
+    opacity: 0;
+}
+
+
+
+
+
+.lines {
+    margin: 0;
+    display: block;
+    position: fixed;
+    bottom: 8%;
+    max-width: 90vw;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3vh;
+    font-weight: 600;
+    opacity: 0;
+}
+
+.sen {
+    background-color: black;
+}
+
+.me {
+    background-color: rgb(90, 90, 90);
+}
+
+
+
+
+
+.building {
+    position: fixed;
+    bottom: -5%;
+    left: 0;
+    width: 100%;
+    display: block;
+    opacity: 0;
+}
+
+#buildingOne {
+    opacity: 1;
+}
+
+.paper {
+    position: fixed;
+    bottom: -5%;
+    width: 36.5%;
+    display: block;
+    opacity: 0;
+}
+
+
+
+
+
+
+#brooch {
+    position: fixed;
+    bottom: 20%;
+    height: 15%;
+    left: 50%;
+}

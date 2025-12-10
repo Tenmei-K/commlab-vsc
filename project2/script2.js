@@ -18,14 +18,17 @@ let summerWrapper = document.querySelector("#summerWrapper")
 
 let springbgm = document.createElement("audio")
 springbgm.src = "sounds/springbgm.mp3"
+springbgm.loop = true
 
 
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
+    springbgm.play()
 })
 springWrapper.addEventListener("mouseout", function () {
     springWrapper.style.scale = 1
+    springbgm.pause()
 })
 springWrapper.addEventListener("click", function () {
     document.location = "spring.html"

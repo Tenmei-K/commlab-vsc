@@ -11,6 +11,11 @@ let treeWrapper = document.querySelector("#TreeWrapper");
 
 let paperWrapper = document.querySelector("#paperWrapper")
 
+let windaudio = document.createElement("audio")
+windaudio.src = "sounds/wind.mp3"
+windaudio.loop = true
+windaudio.play()
+windaudio.volume = 0.6
 
 
 
