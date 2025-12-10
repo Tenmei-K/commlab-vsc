@@ -1,3 +1,9 @@
+let urlString = window.location.search;
+let urlParams = new URLSearchParams(urlString);
+let broochVisited = Number(urlParams.get('broochVisited')) + 1; //(this one)
+
+
+
 function repeat(n, action) {
     for (let i = 0; i < n; i++) {
         action(i);
@@ -15,6 +21,8 @@ function getScrollPercentage() {
 
     return scrollPercentage
 }
+
+
 
 let clientHeight = document.body.clientHeight
 let clientWidth = document.body.clientWidth
@@ -48,13 +56,6 @@ function grow(e, i, p1, p2, per) {
 }
 
 
-
-
-
-let urlString = window.location.search;
-let urlParams = new URLSearchParams(urlString);
-let paperVisited = urlParams.get('paperVisited') || 0;
-let broochVisited = urlParams.get('broochVisited') || 0;
 
 
 
@@ -537,173 +538,92 @@ let hanaSummer = document.querySelectorAll(".hanaSummer")
 
 
 
-let paper = document.querySelector("#paperOne")
-let brooch = document.querySelector("#brooch")
-
-
-
+let paperOne = document.querySelector("#paperOne")
+let paperTwo = document.querySelector("#paperTwo")
 
 
 window.addEventListener("scroll", function () {
-    percentage = getScrollPercentage() // 0-100
+    percentage = getScrollPercentage() //
+
+    document.querySelector("#backgroundSpring").style.opacity = 0.2 + percentage / 100 * 0.4
 
 
 
-    document.querySelector("#backgroundSpring").style.opacity = percentage / 100 * 0.4
-
-
-
-    if ((percentage > 100 / 9 * 1 && percentage < 100 / 9 * 2) || (percentage > 100 / 9 * 8)) {
+    if ((percentage < 100 / 5) || (percentage > 100 / 5 * 2 && percentage < 100 / 5 * 3)) {
         OOne.style.opacity = 1
     } else {
         OOne.style.opacity = 0
     }
-    if ((percentage > 100 / 9 * 2 && percentage < 100 / 9 * 4) || (percentage > 100 / 9 * 7 && percentage < 100 / 9 * 8)) {
+    if (percentage > 100 / 5 && percentage < 100 / 5 * 2) {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
     }
-    if (percentage > 100 / 9 * 4 && percentage < 100 / 9 * 5) {
-        SOneP.style.opacity = 1
-    } else {
-        SOneP.style.opacity = 0
-    }
-    if (percentage > 100 / 9 * 5 && percentage < 100 / 9 * 6) {
+    if (percentage > 100 / 5 * 3 && percentage < 100 / 5 * 4) {
         OTwo.style.opacity = 1
     } else {
         OTwo.style.opacity = 0
     }
 
+    if (percentage > 100 / 5 * 3) {
+        paperTwo.style.opacity = 1
+    } else {
+        paperTwo.style.opacity = 0
+    }
 
 
 
-    if (percentage > 100 / 9 * 1 && percentage < 100 / 9 * 2) {
+
+    if (percentage > 100 / 5 * 4) {
+        paperTwo.style.cursor = "pointer"
+        paperTwo.addEventListener("mouseover", function () {
+            paperTwo.style.scale = 1.04
+        })
+        paperTwo.addEventListener("mouseout", function () {
+            paperTwo.style.scale = 1
+        })
+        paperTwo.addEventListener("click", function () {
+            OOne.classList.add("paperCLicked")
+            document.location = "hello-muse-paper-final.html"
+        })
+    }
+    else {
+        paperTwo.style.cursor = "default"
+        paperTwo.addEventListener("mouseover", function () {
+            paperTwo.style.scale = 1
+        })
+    }
+
+
+
+
+
+
+
+    if (percentage < 100 / 5) {
         document.querySelector("#lineOne").style.opacity = 1
     } else {
         document.querySelector("#lineOne").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 2 && percentage < 100 / 9 * 3) {
+    if (percentage > 100 / 5 && percentage < 100 / 5 * 2) {
         document.querySelector("#lineTwo").style.opacity = 1
     } else {
         document.querySelector("#lineTwo").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 3 && percentage < 100 / 9 * 4) {
+    if (percentage > 100 / 5 * 2 && percentage < 100 / 5 * 3) {
         document.querySelector("#lineThree").style.opacity = 1
     } else {
         document.querySelector("#lineThree").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 4 && percentage < 100 / 9 * 5) {
+    if (percentage > 100 / 5 * 3 && percentage < 100 / 5 * 4) {
         document.querySelector("#lineFour").style.opacity = 1
     } else {
         document.querySelector("#lineFour").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 5 && percentage < 100 / 9 * 6) {
+    if (percentage > 100 / 5 * 4) {
         document.querySelector("#lineFive").style.opacity = 1
     } else {
         document.querySelector("#lineFive").style.opacity = 0
     }
-    if (percentage > 100 / 9 * 6 && percentage < 100 / 9 * 7) {
-        document.querySelector("#lineSix").style.opacity = 1
-    } else {
-        document.querySelector("#lineSix").style.opacity = 0
-    }                                                      // 这里应该是没问题的
-    if (percentage > 100 / 9 * 7 && percentage < 100 / 9 * 8) {
-        document.querySelector("#lineSeven").style.opacity = 1
-    } else {
-        document.querySelector("#lineSeven").style.opacity = 0
-    }
-    if (percentage > 100 / 9 * 8) {
-        document.querySelector("#lineEight").style.opacity = 1
-    } else {
-        document.querySelector("#lineEight").style.opacity = 0
-    }
-
-
-
-    if (percentage > 100 / 9 * 7) {
-        document.querySelector("#brooch").style.opacity = 1
-    } else {
-        document.querySelector("#brooch").style.opacity = 0
-    }
-
-
-
-    if (percentage > 100 / 9 * 8) {
-        document.querySelector("#paperOne").style.opacity = 1
-        paper.style.cursor = "pointer"
-        paper.addEventListener("mouseover", function () {
-            paper.style.scale = 1.04
-        })
-        paper.addEventListener("mouseout", function () {
-            paper.style.scale = 1
-        })
-        paper.addEventListener("click", function () {
-            OOne.classList.add("paperCLicked")
-            document.location = "hello-muse-paper.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
-        })
-
-        brooch.style.cursor = "pointer"
-        brooch.addEventListener("mouseover", function () {
-            brooch.style.scale = 1.15
-        })
-        brooch.addEventListener("mouseout", function () {
-            brooch.style.scale = 1
-        })
-        brooch.addEventListener("click", function () {
-            OOne.classList.add("broochCLicked")
-            document.location = "hello-muse-brooch.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
-        })
-    } else {
-        document.querySelector("#paperOne").style.opacity = 0
-        paper.style.cursor = "default"
-        paper.addEventListener("mouseover", function () {
-            paper.style.scale = 1
-        })
-
-        brooch.style.cursor = "default"
-        brooch.addEventListener("mouseover", function () {
-            brooch.style.scale = 1
-        })
-    }
-
-
-
-
-
-
-
-    GrowOne.forEach(function (e, i) {
-        grow(e, i, 0, 60, 1)
-    })
-    GrowTwo.forEach(function (e, i) {
-        grow(e, i, 40, 100, 1)
-    })
-    GrowOneBack.forEach(function (e, i) {
-        grow(e, i, 0, 60, 0.5)
-    })
-    GrowTwoBack.forEach(function (e, i) {
-        grow(e, i, 40, 100, 0.5)
-    })
-
-
 
 })
-
-
-
-
-
-if ((paperVisited == 1) && (broochVisited == 1)) {
-    OTwp.style.cursor = "pointer"
-    OTwo.addEventListener("mouseover", function () {
-        OOne.style.scale = 1.04
-        OTwo.style.scale = 1.04
-    })
-    OTwo.addEventListener("mouseout", function () {
-        OOne.style.scale = 1
-        OTwo.style.scale = 1
-    })
-    OTwo.addEventListener("click", function () {
-        document.location = "hello-muse-final.html"
-    })
-}

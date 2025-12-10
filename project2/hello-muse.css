@@ -11,7 +11,7 @@ body {
 
 .background {
     width: 100%;
-    height: 800vh;
+    height: 900vh;
 }
 
 #backgroundSpring {
@@ -61,12 +61,12 @@ p {
 }
 
 /* spring */
-.hanaSpring {
+.hanaSummer {
     border: .97px solid rgb(247, 167, 194);
-    /* border: .95px solid rgb(215, 110, 110); */
+    opacity: 0;
 }
 
-.hanaOne {
+.hanaFour {
     min-width: 10px;
     min-height: 10px;
     max-width: 10px;
@@ -75,7 +75,7 @@ p {
     position: absolute;
 }
 
-.hanaTwo {
+.hanaFive {
     min-width: 10px;
     min-height: 10px;
     max-width: 10px;
@@ -84,7 +84,7 @@ p {
     position: absolute;
 }
 
-.hanaThree {
+.hanaSix {
     min-width: 10px;
     min-height: 10px;
     max-width: 10px;
@@ -190,7 +190,7 @@ p {
 
 #brooch {
     position: fixed;
-    bottom: 10%;
-    height: 15%;
+    bottom: 5%;
+    height: 20%;
     left: 52%;
 }
