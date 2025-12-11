@@ -25,6 +25,7 @@ console.log(clientHeight, clientWidth)
 let human = document.querySelectorAll(".human")
 let SOne = document.querySelector("#SOne")
 let SOneP = document.querySelector("#SOneP")
+let SOnePP = document.querySelector("#SOnePP")
 let STwo = document.querySelector("#STwo")
 let OOne = document.querySelector("#OOne")
 let OTwo = document.querySelector("#OTwo")
@@ -578,69 +579,95 @@ window.addEventListener("scroll", function () {
 
 
 
-    if (percentage > 100 / 14 * 1 && percentage < 100 / 14 * 2) {
+    if (percentage > 100 / 17 && percentage < 100 / 17 * 1) {
         document.querySelector("#lineOne").style.opacity = 1
     } else {
         document.querySelector("#lineOne").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 2 && percentage < 100 / 14 * 3) {
+    if (percentage > 100 / 17 * 1 && percentage < 100 / 17 * 2) {
         document.querySelector("#lineTwo").style.opacity = 1
     } else {
         document.querySelector("#lineTwo").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 3 && percentage < 100 / 14 * 4) {
+    if (percentage > 100 / 17 * 2 && percentage < 100 / 17 * 3) {
         document.querySelector("#lineThree").style.opacity = 1
     } else {
         document.querySelector("#lineThree").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 4 && percentage < 100 / 14 * 5) {
+    if (percentage > 100 / 17 * 3 && percentage < 100 / 17 * 4) {
         document.querySelector("#lineFour").style.opacity = 1
     } else {
         document.querySelector("#lineFour").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 5 && percentage < 100 / 14 * 6) {
+    if (percentage > 100 / 17 * 4 && percentage < 100 / 17 * 5) {
         document.querySelector("#lineFive").style.opacity = 1
     } else {
         document.querySelector("#lineFive").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 6 && percentage < 100 / 14 * 7) {
+    if (percentage > 100 / 17 * 5 && percentage < 100 / 17 * 6) {
         document.querySelector("#lineSix").style.opacity = 1
     } else {
         document.querySelector("#lineSix").style.opacity = 0
-    }                                                      // 这里应该是没问题的
-    if (percentage > 100 / 14 * 7 && percentage < 100 / 14 * 8) {
+    }
+    if (percentage > 100 / 17 * 6 && percentage < 100 / 17 * 7) {
         document.querySelector("#lineSeven").style.opacity = 1
     } else {
         document.querySelector("#lineSeven").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 8 && percentage < 100 / 14 * 9) {
+    if (percentage > 100 / 17 * 7 && percentage < 100 / 17 * 8) {
         document.querySelector("#lineEight").style.opacity = 1
     } else {
         document.querySelector("#lineEight").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 9 && percentage < 100 / 14 * 10) {
+    if (percentage > 100 / 17 * 9 && percentage < 100 / 17 * 10) {    // 全彩发力了！
         document.querySelector("#lineNine").style.opacity = 1
     } else {
         document.querySelector("#lineNine").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 10 && percentage < 100 / 14 * 11) {
+    if (percentage > 100 / 17 * 10 && percentage < 100 / 17 * 11) {
         document.querySelector("#lineTen").style.opacity = 1
     } else {
         document.querySelector("#lineTen").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 11 && percentage < 100 / 14 * 12) {
+    if (percentage > 100 / 17 * 11 && percentage < 100 / 17 * 12) {
         document.querySelector("#lineEleven").style.opacity = 1
     } else {
         document.querySelector("#lineEleven").style.opacity = 0
     }
-    if (percentage > 100 / 14 * 12 && percentage < 100 / 14 * 13) {
+    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
         document.querySelector("#lineTwelve").style.opacity = 1
     } else {
         document.querySelector("#lineTwelve").style.opacity = 0
     }
+    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+        document.querySelector("#lineThirteen").style.opacity = 1
+    } else {
+        document.querySelector("#lineThirteen").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+        document.querySelector("#lineFourteen").style.opacity = 1
+    } else {
+        document.querySelector("#lineFourteen").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+        document.querySelector("#lineFifteen").style.opacity = 1
+    } else {
+        document.querySelector("#lineFifteen").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+        document.querySelector("#lineSixteen").style.opacity = 1
+    } else {
+        document.querySelector("#lineSixteen").style.opacity = 0
+    }
+
+
+
 
 
     document.querySelector("#brooch").style.opacity = 1
+
+
+
 
 
 

@@ -541,6 +541,13 @@ hanaSix.forEach(function (e) {
 let hanaSummer = document.querySelectorAll(".hanaSummer")
 
 
+GrowOne.forEach(function (e) {
+    e.style.opacity = 1
+})
+GrowOneBack.forEach(function (e) {
+    e.style.opacity = 1
+})
+
 
 
 
@@ -677,5 +684,21 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#lineFive").style.opacity = 0
     }
+
+
+
+
+    GrowTwo.forEach(function (e, i) {
+        grow(e, i, 0, 60, 1)
+    })
+    GrowTwoBack.forEach(function (e, i) {
+        grow(e, i, 0, 60, 0.5)
+    })
+    GrowThree.forEach(function (e, i) {
+        grow(e, i, 40, 100, 1)
+    })
+    GrowThreeBack.forEach(function (e, i) {
+        grow(e, i, 40, 100, 0.5)
+    })
 
 })

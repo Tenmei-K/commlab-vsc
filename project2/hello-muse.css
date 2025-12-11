@@ -78,7 +78,7 @@ p {
     position: fixed;
     height: 70%;
     /* width: 50.5%; */
-    top: 15%;
+    bottom: 5%;
     opacity: 0;
 }
 

@@ -35,9 +35,13 @@ console.log(clientHeight, clientWidth)
 let human = document.querySelectorAll(".human")
 let SOne = document.querySelector("#SOne")
 let SOneP = document.querySelector("#SOneP")
+let SOnePP = document.querySelector("#SOnePP")
 let STwo = document.querySelector("#STwo")
 let OOne = document.querySelector("#OOne")
 let OTwo = document.querySelector("#OTwo")
+let G = document.querySelector("#G")
+
+let brooch = document.querySelector("#brooch")
 
 
 
@@ -543,7 +547,15 @@ hanaSix.forEach(function (e) {
 let hanaSummer = document.querySelectorAll(".hanaSummer")
 
 
+GrowOne.forEach(function (e) {
+    e.style.opacity = 1
+})
+GrowOneBack.forEach(function (e) {
+    e.style.opacity = 1
+})
 
+
+let soundPlayed = false
 
 
 window.addEventListener("scroll", function () {
@@ -554,31 +566,109 @@ window.addEventListener("scroll", function () {
 
 
 
-
-
-    if (percentage < 100 / 5) {
-        OOne.style.opacity = 1
+    if (percentage > 100 / 8 * 6 - 5) {
+        shouldPlaySound = true
     } else {
-        OOne.style.opacity = 0
+        shouldPlaySound = false
     }
-    if (percentage > 100 / 5 && percentage < 100 / 5 * 2) {
+    if (shouldPlaySound == true && soundPlayed == false) {
+        windbellAudio.play()
+        soundPlayed = true
+    }
+
+
+
+
+    if (percentage < 100 / 8) {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
     }
-    if (percentage > 100 / 5 * 2 && percentage < 100 / 5 * 3) {
+    if (percentage > 100 / 8 && percentage < 100 / 8 * 2) {
         SOnePP.style.opacity = 1
     } else {
         SOnePP.style.opacity = 0
     }
-    if (percentage > 100 / 5 * 3 && percentage < 100 / 5 * 4) {
+    if ((percentage > 100 / 8 * 2 && percentage < 100 / 8 * 3) || (percentage > 100 / 8 * 4 && percentage < 100 / 8 * 5)) {
+        OOne.style.opacity = 1
+    } else {
+        OOne.style.opacity = 0
+    }
+    if (percentage > 100 / 8 * 3 && percentage < 100 / 8 * 4) {
+        STwo.style.opacity = 1
+    } else {
+        STwo.style.opacity = 0
+    }
+    if (percentage > 100 / 8 * 5 && percentage < 100 / 8 * 6) {
         OTwo.style.opacity = 1
     } else {
         OTwo.style.opacity = 0
     }
+    if (percentage > 100 / 8 * 7) {
+        G.style.opacity = 1
+    } else {
+        G.style.opacity = 0
+    }
 
 
 
+
+
+    if (percentage > 100 / 8 * 3 && percentage < 100 / 8 * 4) {
+        document.querySelector("#monitorFront").style.opacity = 1
+        document.querySelector("#monitorBack").style.opacity = 1
+    } else {
+        document.querySelector("#monitorFront").style.opacity = 0
+        document.querySelector("#monitorBack").style.opacity = 0
+    }
+
+    if (percentage > 100 / 8 * 4 && percentage < 100 / 8 * 7) {
+        document.querySelector("#backgroundAutumn").style.opacity = (percentage - 100 / 8 * 4) / (100 / 8 * 3)
+        document.querySelector("#trunkAutumn").style.opacity = (percentage - 100 / 8 * 4) / (100 / 8 * 3)
+        hanaFour.forEach(function (e) {
+            e.style.backgroundColor = "rgb(255, 223, 202)"
+            e.style.border = ".97px solid rgb(249, 187, 130)"
+        })
+    } else {
+        document.querySelector("#backgroundAutumn").style.opacity = 0
+        document.querySelector("#trunkAutumn").style.opacity = 0
+        hanaFour.forEach(function (e) {
+            e.style.backgroundColor = "rgb(253, 231, 240)"
+            e.style.border = ".97px solid rgb(247, 167, 194)"
+        })
+    }
+    if (percentage > 100 / 8 * 5 && percentage < 100 / 8 * 7) {
+        hanaFive.forEach(function (e) {
+            e.style.backgroundColor = "rgb(249, 170, 110)"
+            e.style.border = ".97px solid rgb(249, 187, 130)"
+        })
+    } else {
+        hanaFive.forEach(function (e) {
+            e.style.backgroundColor = "rgb(255, 199, 218)"
+            e.style.border = ".97px solid rgb(247, 167, 194)"
+        })
+    }
+    if (percentage > 100 / 8 * 6 && percentage < 100 / 8 * 7) {
+        hanaSix.forEach(function (e) {
+            e.style.backgroundColor = "rgb(215, 107, 49)"
+            e.style.border = ".97px solid rgb(249, 187, 130)"
+        })
+    } else {
+        hanaSix.forEach(function (e) {
+            e.style.backgroundColor = "rgb(255, 148, 184)"
+            e.style.border = ".97px solid rgb(247, 167, 194)"
+        })
+    }
+
+
+
+
+
+    if (percentage > 100 / 8 * 6 && percentage < 100 / 8 * 7) {
+        brooch.style.opacity = 0
+    } else {
+        brooch.style.opacity = 1
+    }
 
 
 
@@ -624,6 +714,47 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#lineEight").style.opacity = 0
     }
+
+
+
+
+    if (percentage > 100 / 8 * 7) {
+        document.querySelector("#monitorFront").remove()
+        brooch.style.cursor = "pointer"
+        brooch.addEventListener("mouseover", function () {
+            brooch.style.scale = 1.15
+        })
+        brooch.addEventListener("mouseout", function () {
+            brooch.style.scale = 1
+        })
+        brooch.addEventListener("click", function () {
+            document.location = "hello-muse.html?paperVisited=" + paperVisited + "&broochVisited=1"
+        })
+    } else {
+        brooch.style.cursor = "default"
+        brooch.addEventListener("mouseover", function () {
+            brooch.style.scale = 1
+        })
+    }
+
+
+
+
+
+
+
+    GrowTwo.forEach(function (e, i) {
+        grow(e, i, 0, 60, 1)
+    })
+    GrowTwoBack.forEach(function (e, i) {
+        grow(e, i, 0, 60, 0.5)
+    })
+    GrowThree.forEach(function (e, i) {
+        grow(e, i, 40, 100, 1)
+    })
+    GrowThreeBack.forEach(function (e, i) {
+        grow(e, i, 40, 100, 0.5)
+    })
 
 
 })

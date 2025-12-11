@@ -777,8 +777,8 @@ window.addEventListener("scroll", function () {
 
 
 
-if ((paperVisited == 1) && (broochVisited == 1)) {
-    OTwp.style.cursor = "pointer"
+if (paperVisited >= 1 && broochVisited >= 1) {
+    OTwo.style.cursor = "pointer"
     OTwo.addEventListener("mouseover", function () {
         OOne.style.scale = 1.04
         OTwo.style.scale = 1.04
