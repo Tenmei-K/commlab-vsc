@@ -21,6 +21,7 @@ body {
     background-color: rgb(166, 203, 255);
     opacity: 0;
 }
+
 #backgroundAutumn {
     position: fixed;
     top: 0;
@@ -73,7 +74,7 @@ p {
     justify-items: center;
 }
 
-.monitor{
+.monitor {
     display: block;
     position: fixed;
     height: 70%;
@@ -117,7 +118,7 @@ p {
 }
 
 
-.hanaAutumn{
+.hanaAutumn {
     border: .97px solid rgb(249, 187, 130);
     /* border: .95px solid rgb(215, 110, 110); */
 }
@@ -190,6 +191,13 @@ p {
     opacity: 0;
 }
 
+.humanFinal {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    height: 48%;
+    opacity: 0;
+}
 
 
 

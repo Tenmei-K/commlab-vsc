@@ -29,6 +29,8 @@ let SOnePP = document.querySelector("#SOnePP")
 let STwo = document.querySelector("#STwo")
 let OOne = document.querySelector("#OOne")
 let OTwo = document.querySelector("#OTwo")
+let OThree = document.querySelector("#OThree")
+let humanFinal = document.querySelector("#humanFinal")
 
 
 
@@ -550,36 +552,73 @@ window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
 
+    if (percentage > 100 / 17 * 3 && percentage < 100 / 17 * 9) {
+        document.querySelector("#backgroundSpring").style.opacity = (percentage - 100 / 17 * 3) / (100 / 17 * 6)
+    }
+    if (percentage > 100 / 17 * 9) {
+        document.querySelector("#backgroundSpring").style.opacity = 1
+    }
 
-    document.querySelector("#backgroundSpring").style.opacity = percentage / 100 * 0.4
-
-
-
-    if ((percentage > 100 / 9 * 1 && percentage < 100 / 9 * 2) || (percentage > 100 / 9 * 8)) {
+    //human
+    if ((percentage > 100 / 17 * 1 && percentage < 100 / 17 * 2) || (percentage > 100 / 17 * 6 && percentage < 100 / 17 * 7) || (percentage > 100 / 17 * 9 && percentage < 100 / 17 * 10)) {
         OOne.style.opacity = 1
     } else {
         OOne.style.opacity = 0
     }
-    if ((percentage > 100 / 9 * 2 && percentage < 100 / 9 * 4) || (percentage > 100 / 9 * 7 && percentage < 100 / 9 * 8)) {
+    if ((percentage > 100 / 17 * 2 && percentage < 100 / 17 * 4) || (percentage > 100 / 17 * 10 && percentage < 100 / 17 * 11)) {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
     }
-    if (percentage > 100 / 9 * 4 && percentage < 100 / 9 * 5) {
+    if ((percentage > 100 / 17 * 3 && percentage < 100 / 17 * 6)) {
         SOneP.style.opacity = 1
     } else {
         SOneP.style.opacity = 0
     }
-    if (percentage > 100 / 9 * 5 && percentage < 100 / 9 * 6) {
+    if ((percentage < 100 / 17) || (percentage > 100 / 17 * 2 && percentage < 100 / 17 * 3) || (percentage > 100 / 17 * 13 && percentage < 100 / 17 * 14)) {
+        SOnePP.style.opacity = 1
+    } else {
+        SOnePP.style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 8 && percentage < 100 / 17 * 9) {
+        STwo.style.opacity = 1
+    } else {
+        STwo.style.opacity = 0
+    }
+    if ((percentage > 100 / 17 * 7 && percentage < 100 / 17 * 8) || (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13)) {
         OTwo.style.opacity = 1
     } else {
         OTwo.style.opacity = 0
     }
+    if (percentage > 100 / 17 * 14 && percentage < 100 / 17 * 15) {
+        OThree.style.opacity = 1
+    } else {
+        OThree.style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 16) {
+        humanFinal.style.opacity = 1
+        humanFinal.style.cursor = "pointer"
+        humanFinal.addEventListener("mouseover", function () {
+            humanFinal.style.scale = 1.04
+        })
+        humanFinal.addEventListener("mouseout", function () {
+            humanFinal.style.scale = 1
+        })
+        humanFinal.addEventListener("click", function () {
+            document.location = "index-final.html"
+        })
+    } else {
+        humanFinal.style.opacity = 0
+        humanFinal.style.cursor = "default"
+        humanFinal.addEventListener("mouseover", function () {
+            humanFinal.style.scale = 1
+        })
+    }
 
 
 
-
-    if (percentage > 100 / 17 && percentage < 100 / 17 * 1) {
+    // line
+    if (percentage < 100 / 17 * 1) {
         document.querySelector("#lineOne").style.opacity = 1
     } else {
         document.querySelector("#lineOne").style.opacity = 0
@@ -639,22 +678,22 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#lineTwelve").style.opacity = 0
     }
-    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+    if (percentage > 100 / 17 * 13 && percentage < 100 / 17 * 14) {
         document.querySelector("#lineThirteen").style.opacity = 1
     } else {
         document.querySelector("#lineThirteen").style.opacity = 0
     }
-    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+    if (percentage > 100 / 17 * 14 && percentage < 100 / 17 * 15) {
         document.querySelector("#lineFourteen").style.opacity = 1
     } else {
         document.querySelector("#lineFourteen").style.opacity = 0
     }
-    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+    if (percentage > 100 / 17 * 15 && percentage < 100 / 17 * 16) {
         document.querySelector("#lineFifteen").style.opacity = 1
     } else {
         document.querySelector("#lineFifteen").style.opacity = 0
     }
-    if (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 13) {
+    if (percentage > 100 / 17 * 16) {
         document.querySelector("#lineSixteen").style.opacity = 1
     } else {
         document.querySelector("#lineSixteen").style.opacity = 0
@@ -664,55 +703,37 @@ window.addEventListener("scroll", function () {
 
 
 
-    document.querySelector("#brooch").style.opacity = 1
 
-
-
-
-
-
-    if (percentage > 100 / 9 * 8) {
-        document.querySelector("#paperOne").style.opacity = 1
-        paper.style.cursor = "pointer"
-        paper.addEventListener("mouseover", function () {
-            paper.style.scale = 1.04
-        })
-        paper.addEventListener("mouseout", function () {
-            paper.style.scale = 1
-        })
-        paper.addEventListener("click", function () {
-            OOne.classList.add("paperCLicked")
-            document.location = "hello-muse-paper.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
-        })
-
-        brooch.style.cursor = "pointer"
-        brooch.addEventListener("mouseover", function () {
-            brooch.style.scale = 1.15
-        })
-        brooch.addEventListener("mouseout", function () {
-            brooch.style.scale = 1
-        })
-        brooch.addEventListener("click", function () {
-            OOne.classList.add("broochCLicked")
-            document.location = "hello-muse-brooch.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
-        })
+    // building
+    // if (percentage > 100 / 17 *  && percentage < 100 / 17 * 12) {
+    //     document.querySelector("#buildingOne").style.opacity = 1
+    // } else {
+    //     document.querySelector("#buildingOne").style.opacity = 0
+    // }
+    if (percentage > 100 / 17 * 2 && percentage < 100 / 17 * 3) {
+        document.querySelector("#buildingTwo").style.opacity = 1
     } else {
-        document.querySelector("#paperOne").style.opacity = 0
-        paper.style.cursor = "default"
-        paper.addEventListener("mouseover", function () {
-            paper.style.scale = 1
-        })
-
-        brooch.style.cursor = "default"
-        brooch.addEventListener("mouseover", function () {
-            brooch.style.scale = 1
-        })
+        document.querySelector("#buildingTwo").style.opacity = 0
     }
-
-    if (percentage > 100 / 14 * 13) {
-        paperOne.style.opacity = 1
+    if (percentage > 100 / 17 * 3 && percentage < 100 / 17 * 4) {
+        document.querySelector("#buildingThree").style.opacity = 1
     } else {
-        paperOne.style.opacity = 0
+        document.querySelector("#buildingThree").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 4 && percentage < 100 / 17 * 5) {
+        document.querySelector("#buildingFour").style.opacity = 1
+    } else {
+        document.querySelector("#buildingFour").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 5 && percentage < 100 / 17 * 7) {
+        document.querySelector("#buildingFive").style.opacity = 1
+    } else {
+        document.querySelector("#buildingFive").style.opacity = 0
+    }
+    if ((percentage > 100 / 17 * 7 && percentage < 100 / 17 * 9) || (percentage > 100 / 17 * 14)) {
+        document.querySelector("#buildingSix").style.opacity = 1
+    } else {
+        document.querySelector("#buildingSix").style.opacity = 0
     }
 
 
@@ -720,18 +741,105 @@ window.addEventListener("scroll", function () {
 
 
 
+    if ((percentage < 100 / 17 * 11) || (percentage > 100 / 17 * 12 && percentage < 100 / 17 * 15)) {
+        document.querySelector("#brooch").style.opacity = 1
+    } else {
+        document.querySelector("#brooch").style.opacity = 0
+    }
 
-    GrowFour.forEach(function (e, i) {
-        grow(e, i, 0, 60, 1)
+
+
+
+
+
+    // human hover effect
+    if (percentage < 100 / 17 * 7) {
+        document.querySelector("#GWrapper").style.maxWidth = clientWidth
+        document.querySelector("#GWrapper").style.minWidth = clientWidth
+        document.addEventListener("mousemove", function (eventInfo) {
+            if (eventInfo.clientY > 0.32 * clientHeight) {
+
+                document.querySelector("#Goverflow").style.opacity = 1
+                document.querySelector("#GWrapper").style.opacity = 1
+                document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
+
+                document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
+            } else {
+                document.querySelector("#Goverflow").style.opacity = 0
+            }
+        })
+    } else {
+        document.addEventListener("mousemove", function () {
+            document.querySelector("#Goverflow").style.opacity = 0
+            document.querySelector("#GWrapper").style.opacity = 0
+        })
+    }
+
+    if (percentage < 100 / 17 * 2) {
+        document.querySelector("#G1").style.opacity = 1
+    } else {
+        document.querySelector("#G1").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 2 && percentage < 100 / 17 * 3) {
+        document.querySelector("#G2").style.opacity = 1
+    } else {
+        document.querySelector("#G2").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 3 && percentage < 100 / 17 * 4) {
+        document.querySelector("#G3").style.opacity = 1
+    } else {
+        document.querySelector("#G3").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 4 && percentage < 100 / 17 * 5) {
+        document.querySelector("#G4").style.opacity = 1
+    } else {
+        document.querySelector("#G4").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 5 && percentage < 100 / 17 * 6) {
+        document.querySelector("#G5").style.opacity = 1
+    } else {
+        document.querySelector("#G5").style.opacity = 0
+    }
+    if (percentage > 100 / 17 * 6 && percentage < 100 / 17 * 7) {
+        document.querySelector("#G6").style.opacity = 1
+    } else {
+        document.querySelector("#G6").style.opacity = 0
+    }
+
+
+
+
+
+
+    GrowOne.forEach(function (e, i) {
+        grow(e, i, 15, 30, 1)
     })
-    GrowFive.forEach(function (e, i) {
-        grow(e, i, 40, 100, 1)
+    GrowOneBack.forEach(function (e, i) {
+        grow(e, i, 15, 30, 0.5)
+    })
+    GrowTwo.forEach(function (e, i) {
+        grow(e, i, 20, 35, 1)
+    })
+    GrowTwoBack.forEach(function (e, i) {
+        grow(e, i, 20, 35, 0.5)
+    })
+    GrowThree.forEach(function (e, i) {
+        grow(e, i, 25, 40, 1)
+    })
+    GrowThreeBack.forEach(function (e, i) {
+        grow(e, i, 25, 40, 0.5)
+    })
+    GrowFour.forEach(function (e, i) {
+        grow(e, i, 30, 45, 1)
     })
     GrowFourBack.forEach(function (e, i) {
-        grow(e, i, 0, 60, 0.5)
+        grow(e, i, 30, 45, 0.5)
+    })
+    GrowFive.forEach(function (e, i) {
+        grow(e, i, 35, 50, 1)
     })
     GrowFiveBack.forEach(function (e, i) {
-        grow(e, i, 40, 100, 0.5)
+        grow(e, i, 35, 50, 0.5)
     })
 
 
