@@ -719,6 +719,8 @@ window.addEventListener("scroll", function () {
 
 
 
+
+
     GrowFour.forEach(function (e, i) {
         grow(e, i, 0, 60, 1)
     })
@@ -737,20 +739,3 @@ window.addEventListener("scroll", function () {
 })
 
 
-
-
-
-if ((paperVisited == 1) && (broochVisited == 1)) {
-    OTwp.style.cursor = "pointer"
-    OTwo.addEventListener("mouseover", function () {
-        OOne.style.scale = 1.04
-        OTwo.style.scale = 1.04
-    })
-    OTwo.addEventListener("mouseout", function () {
-        OOne.style.scale = 1
-        OTwo.style.scale = 1
-    })
-    OTwo.addEventListener("click", function () {
-        document.location = "hello-muse-final.html"
-    })
-}
