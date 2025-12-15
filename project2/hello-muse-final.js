@@ -22,6 +22,12 @@ console.log(clientHeight, clientWidth)
 
 
 
+let crowdaudio = document.createElement("audio")
+crowdaudio.src = "sounds/crowd.mp3"
+crowdaudio.volume = 0
+
+
+
 let human = document.querySelectorAll(".human")
 let SOne = document.querySelector("#SOne")
 let SOneP = document.querySelector("#SOneP")
@@ -558,6 +564,27 @@ window.addEventListener("scroll", function () {
     if (percentage > 100 / 17 * 9) {
         document.querySelector("#backgroundSpring").style.opacity = 1
     }
+
+
+
+
+    // audio
+    if (percentage > 100 / 17 * 10 && percentage < 100 / 17 * 13) {
+        crowdaudio.volume = 0.5 * (percentage - 100 / 17 * 10) / (100 / 17 * 3)
+    }
+    if (percentage > 100 / 17 * 13 && percentage < 100 / 17 * 14) {
+        crowdaudio.volume = 0.5 - 0.5 * (percentage - 100 / 17 * 13) / (100 / 17)
+    }
+    if (percentage > 100 / 17 * 14) {
+        crowdaudio.volume = 1 * (percentage - 100 / 17 * 14) / (100 / 17 * 3)
+    }
+    if (percentage < 100 / 17 * 10) {
+        crowdaudio.volume = 0
+    }
+
+
+
+
 
     //human
     if ((percentage > 100 / 17 * 1 && percentage < 100 / 17 * 2) || (percentage > 100 / 17 * 6 && percentage < 100 / 17 * 7) || (percentage > 100 / 17 * 9 && percentage < 100 / 17 * 10)) {
