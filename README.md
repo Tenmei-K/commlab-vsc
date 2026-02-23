@@ -8,25 +8,28 @@
 <br>
 <h3>Projects</h3>
 
+- [Project 2: ハローミューズ (Hello Muse)](https://tenmei-k.github.io/commlab-vsc/project2/)
+        <br>finals: Adapted for the Web
+
 - [Project 1: Apocalypse X](https://tenmei-k.github.io/commlab-vsc/project1/)
         <br>midterm: Shanzhai website
 
-- [Project 2: ハローミューズ (Hello Muse)](https://tenmei-k.github.io/commlab-vsc/project2/)
-        <br>finals: Adapted for the Web
 <br>
 <br>
 <h3>Exercises</h3>
 
-- [third project](https://tenmei-K.github.io/commlab-vsc/250918/)
-        <br>dedicated to fanart life during 2025.5-2025.7
-- [tutorial](https://tenmei-k.github.io/commlab-vsc/tutorial/)
-        <br>confusing project full of ironic jokes about Gaokao
-- [lorem](https://tenmei-k.github.io/commlab-vsc/lorem/)
-        <br>Lorem ipsom dolor sitamet
-- [DOM-Entropy](https://tenmei-k.github.io/commlab-vsc/DOM-Entropy/)
-        <br>「ハローセカイ」
 - [clock](https://tenmei-k.github.io/commlab-vsc/clock/time.html)
         <br>スター
+- [DOM-Entropy](https://tenmei-k.github.io/commlab-vsc/DOM-Entropy/)
+        <br>「ハローセカイ」
+- [lorem](https://tenmei-k.github.io/commlab-vsc/lorem/)
+        <br>Lorem ipsom dolor sitamet
+- [third project](https://tenmei-K.github.io/commlab-vsc/250918/)
+        <br>fanart
+
+
+
+
 
 
 <!-- <br>
@@ -44,4 +47,7 @@
 - [css-layout1](https://tenmei-k.github.io/commlab-vsc/css-layout1/)
         <br>first step into <span style="background-color: black">        </span>
 - [css-layout2](https://tenmei-k.github.io/commlab-vsc/css-layout2/)
-        <br>second step -->
+        <br>second step 
+        
+- [tutorial](https://tenmei-k.github.io/commlab-vsc/tutorial/)
+        <br>confusing project full of ironic jokes about Gaokao-->
