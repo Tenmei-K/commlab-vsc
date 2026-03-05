@@ -15,7 +15,6 @@
         <br>midterm: Shanzhai website
 
 <br>
-<br>
 <h3>Exercises</h3>
 
 - [clock](https://tenmei-k.github.io/commlab-vsc/clock/time.html)
