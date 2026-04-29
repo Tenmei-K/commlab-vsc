@@ -469,7 +469,7 @@ window.addEventListener("scroll", function () {
             document.querySelector("#AutumnOneP").style.scale = 1
         })
         AutumnTwo.addEventListener("click", function () {
-            document.location = "summer-toWinter.html"
+            document.location = "summer-toWinter-1.html"
         })
     } else {
         AutumnTwo.style.cursor = "default"

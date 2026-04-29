@@ -86,7 +86,7 @@ autumnWrapper.addEventListener("mouseout", function () {
     finalbgm.volume = 0.8
 })
 autumnWrapper.addEventListener("click", function () {
-    document.location = "autumn1.html"
+    document.location = "autumn1-1.html"
 })
 
 winterWrapper.style.cursor = "pointer"
@@ -102,7 +102,7 @@ winterWrapper.addEventListener("mouseout", function () {
     finalbgm.volume = 0.8
 })
 winterWrapper.addEventListener("click", function () {
-    document.location = "winter1.html"
+    document.location = "winter1-1.html"
 })
 
 finalWrapper.style.cursor = "pointer"

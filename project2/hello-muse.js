@@ -698,9 +698,9 @@ window.addEventListener("scroll", function () {
 
     if (percentage > 100 / 10 * 3 && percentage < 100 / 10 * 5) {
         document.querySelector("#brooch").style.opacity = 1
-        brooch.style.scale = 2
-        brooch.style.bottom = - 3 + "%"
-        brooch.style.left = "null"
+        brooch.style.scale = 1.7
+        brooch.style.bottom = 5 + "%"
+        brooch.style.left = 52 + "%"
     } else if (percentage > 100 / 10 * 8) {
         document.querySelector("#brooch").style.opacity = 1
         brooch.style.scale = 1
@@ -745,10 +745,10 @@ window.addEventListener("scroll", function () {
             paper.style.scale = 1
         })
 
-        brooch.style.cursor = "default"
-        brooch.addEventListener("mouseover", function () {
-            brooch.style.scale = 1
-        })
+        // brooch.style.cursor = "default"
+        // brooch.addEventListener("mouseover", function () {
+        //     brooch.style.scale = 1
+        // })
     }
 
 
