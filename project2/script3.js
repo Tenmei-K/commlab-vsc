@@ -63,21 +63,10 @@ autumnWrapper.addEventListener("click", function () {
     document.location = "autumn1.html"
 })
 
-winterWrapper.style.cursor = "pointer"
-winterWrapper.addEventListener("mouseover", function () {
-    winterWrapper.style.scale = 1.05
-})
-winterWrapper.addEventListener("mouseout", function () {
-    winterWrapper.style.scale = 1
-})
-winterWrapper.addEventListener("click", function () {
-    document.location = "summer-toWinter.html"
-})
-
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
-    console.log("scrolling")
+    // console.log("scrolling")
 
 
     mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"

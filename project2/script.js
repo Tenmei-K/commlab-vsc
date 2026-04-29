@@ -10,10 +10,17 @@ function getScrollPercentage() {
     return scrollPercentage
 }
 
+let finalbgm = document.createElement("audio")
+finalbgm.src = "sounds/hellomuseinst.mp3"
 
 let mainWrapper = document.querySelector("#mainWrapper")
 let wrapper = document.querySelectorAll(".wrapper")
 let springWrapper = document.querySelector("#springWrapper")
+
+
+finalbgm.play()
+finalbgm.loop = true
+finalbgm.volume = 0.8
 
 
 springWrapper.style.cursor = "pointer"
@@ -27,38 +34,38 @@ springWrapper.addEventListener("click", function () {
     document.location = "spring.html"
 })
 
-summerWrapper.style.cursor = "pointer"
-summerWrapper.addEventListener("mouseover", function () {
-    summerWrapper.style.scale = 1.05
-})
-summerWrapper.addEventListener("mouseout", function () {
-    summerWrapper.style.scale = 1
-})
-summerWrapper.addEventListener("click", function () {
-    document.location = "summer-unclicked.html"
-})
+// summerWrapper.style.cursor = "pointer"
+// summerWrapper.addEventListener("mouseover", function () {
+//     summerWrapper.style.scale = 1.05
+// })
+// summerWrapper.addEventListener("mouseout", function () {
+//     summerWrapper.style.scale = 1
+// })
+// summerWrapper.addEventListener("click", function () {
+//     document.location = "summer-unclicked.html"
+// })
 
-autumnWrapper.style.cursor = "pointer"
-autumnWrapper.addEventListener("mouseover", function () {
-    autumnWrapper.style.scale = 1.05
-})
-autumnWrapper.addEventListener("mouseout", function () {
-    autumnWrapper.style.scale = 1
-})
-autumnWrapper.addEventListener("click", function () {
-    document.location = "autumn-unclicked.html"
-})
+// autumnWrapper.style.cursor = "pointer"
+// autumnWrapper.addEventListener("mouseover", function () {
+//     autumnWrapper.style.scale = 1.05
+// })
+// autumnWrapper.addEventListener("mouseout", function () {
+//     autumnWrapper.style.scale = 1
+// })
+// autumnWrapper.addEventListener("click", function () {
+//     document.location = "autumn-unclicked.html"
+// })
 
-winterWrapper.style.cursor = "pointer"
-winterWrapper.addEventListener("mouseover", function () {
-    winterWrapper.style.scale = 1.05
-})
-winterWrapper.addEventListener("mouseout", function () {
-    winterWrapper.style.scale = 1
-})
-winterWrapper.addEventListener("click", function () {
-    document.location = "winter-unclicked.html"
-})
+// winterWrapper.style.cursor = "pointer"
+// winterWrapper.addEventListener("mouseover", function () {
+//     winterWrapper.style.scale = 1.05
+// })
+// winterWrapper.addEventListener("mouseout", function () {
+//     winterWrapper.style.scale = 1
+// })
+// winterWrapper.addEventListener("click", function () {
+//     document.location = "winter-unclicked.html"
+// })
 
 
 

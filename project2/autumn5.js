@@ -26,6 +26,7 @@ let AutumnOne = document.querySelector("#AutumnOne")
 let AutumnOneP = document.querySelector("#AutumnOneP")
 let AutumnOnePP = document.querySelector("#AutumnOnePP")
 let AutumnOnePPP = document.querySelector("#AutumnOnePPP")
+let AutumnTwo = document.querySelector("#AutumnTwo")
 
 
 let lines = document.querySelectorAll(".lines")
@@ -434,7 +435,6 @@ window.addEventListener("scroll", function () {
 
     if (percentage < 100 / 5 * 4 && percentage > 100 / 5) {
 
-
         document.querySelector("#GWrapper").style.maxWidth = clientWidth
         document.querySelector("#GWrapper").style.minWidth = clientWidth
         document.addEventListener("mousemove", function (eventInfo) {
@@ -452,30 +452,49 @@ window.addEventListener("scroll", function () {
 
     } else {
         document.querySelector("#Goverflow").style.opacity = 0
+        document.querySelector("#GWrapper").style.opacity = 0
     }
 
     // final hover
-    if (percentage > 100 / 5 * 4) {
-        AutumnOne.style.opacity = 0
 
-        let AutumnAppend = document.createElement("img")
-        AutumnAppend.src = "assets/Autumn1.1.png"
-        AutumnAppend.classList.add("human")
-        AutumnAppend.style.cursor = "pointer"
-        AutumnAppend.addEventListener("mouseover", function () {
-            document.querySelector("#NewimgWrapper").style.scale = 1.04
+    // if (percentage > 100 / 5 * 4) {
+    //     AutumnOne.style.opacity = 0
+
+    //     let AutumnAppend = document.createElement("img")
+    //     AutumnAppend.src = "assets/Autumn1.1.png"
+    //     AutumnAppend.classList.add("human")
+    //     AutumnAppend.style.cursor = "pointer"
+    //     AutumnAppend.addEventListener("mouseover", function () {
+    //         document.querySelector("#NewimgWrapper").style.scale = 1.04
+    //     })
+    //     AutumnAppend.addEventListener("mouseout", function () {
+    //         document.querySelector("#NewimgWrapper").style.scale = 1
+    //     })
+    //     AutumnAppend.addEventListener("click", function () {
+    //         document.location = "summer-toWinter.html"
+    //     })
+
+    //     document.querySelector("#NewimgWrapper").append(AutumnAppend)
+    // } else {
+    //     document.querySelector("#NewimgWrapper").innerHTML = ""
+    //     AutumnOne.style.opacity = 1
+    // }
+
+    if (percentage > 100 / 5 * 4) {
+        AutumnOneP.style.cursor = "pointer"
+        AutumnOneP.addEventListener("mouseover", function () {
+            document.querySelector("#AutumnOneP").style.scale = 1.04
         })
-        AutumnAppend.addEventListener("mouseout", function () {
-            document.querySelector("#NewimgWrapper").style.scale = 1
+        AutumnOneP.addEventListener("mouseout", function () {
+            document.querySelector("#AutumnOneP").style.scale = 1
         })
-        AutumnAppend.addEventListener("click", function () {
+        AutumnOneP.addEventListener("click", function () {
             document.location = "summer-toWinter.html"
         })
-
-        document.querySelector("#NewimgWrapper").append(AutumnAppend)
     } else {
-        document.querySelector("#NewimgWrapper").innerHTML = ""
-        AutumnOne.style.opacity = 1
+        AutumnOneP.addEventListener("mouseover", function () {
+            document.querySelector("#AutumnOneP").style.scale = 1
+        })
     }
 
 

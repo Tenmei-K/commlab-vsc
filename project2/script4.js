@@ -98,7 +98,6 @@ finalWrapper.addEventListener("click", function () {
 
 
 
-
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
