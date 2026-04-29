@@ -723,20 +723,21 @@ window.addEventListener("scroll", function () {
         })
         paper.addEventListener("click", function () {
             OOne.classList.add("paperCLicked")
-            document.location = "hello-muse-paper.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
+            // document.location = "hello-muse-paper.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
+            document.location = "hello-muse-paper.html"
         })
 
-        brooch.style.cursor = "pointer"
-        brooch.addEventListener("mouseover", function () {
-            brooch.style.scale = 1.15
-        })
-        brooch.addEventListener("mouseout", function () {
-            brooch.style.scale = 1
-        })
-        brooch.addEventListener("click", function () {
-            OOne.classList.add("broochCLicked")
-            document.location = "hello-muse-brooch.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
-        })
+        // brooch.style.cursor = "pointer"
+        // brooch.addEventListener("mouseover", function () {
+        //     brooch.style.scale = 1.15
+        // })
+        // brooch.addEventListener("mouseout", function () {
+        //     brooch.style.scale = 1
+        // })
+        // brooch.addEventListener("click", function () {
+        //     OOne.classList.add("broochCLicked")
+        //     document.location = "hello-muse-brooch.html?paperVisited=" + paperVisited + "&broochVisited" + broochVisited
+        // })
     } else {
         document.querySelector("#paperOne").style.opacity = 0
         paper.style.cursor = "default"
@@ -776,18 +777,18 @@ window.addEventListener("scroll", function () {
 
 
 
-
-if (paperVisited >= 1 && broochVisited >= 1) {
-    OTwo.style.cursor = "pointer"
-    OTwo.addEventListener("mouseover", function () {
-        OOne.style.scale = 1.04
-        OTwo.style.scale = 1.04
-    })
-    OTwo.addEventListener("mouseout", function () {
-        OOne.style.scale = 1
-        OTwo.style.scale = 1
-    })
-    OTwo.addEventListener("click", function () {
-        document.location = "hello-muse-final.html"
-    })
-}
+// // 原分支情景全部触发后
+// if (paperVisited >= 1 && broochVisited >= 1) {
+//     OTwo.style.cursor = "pointer"
+//     OTwo.addEventListener("mouseover", function () {
+//         OOne.style.scale = 1.04
+//         OTwo.style.scale = 1.04
+//     })
+//     OTwo.addEventListener("mouseout", function () {
+//         OOne.style.scale = 1
+//         OTwo.style.scale = 1
+//     })
+//     OTwo.addEventListener("click", function () {
+//         document.location = "hello-muse-final.html"
+//     })
+// }

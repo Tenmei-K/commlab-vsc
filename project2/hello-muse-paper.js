@@ -636,19 +636,26 @@ window.addEventListener("scroll", function () {
     if (percentage > 100 / 5 * 4) {
         paperThree.style.cursor = "pointer"
         paperThree.addEventListener("mouseover", function () {
+            paperOne.style.scale = 1.04
+            paperTwo.style.scale = 1.04
             paperThree.style.scale = 1.04
         })
         paperThree.addEventListener("mouseout", function () {
+            paperOne.style.scale = 1
+            paperTwo.style.scale = 1
             paperThree.style.scale = 1
         })
         paperThree.addEventListener("click", function () {
             OOne.classList.add("paperCLicked")
-            document.location = "hello-muse.html?paperVisited=1&broochVisited=" + broochVisited
+            // document.location = "hello-muse.html?paperVisited=1&broochVisited=" + broochVisited
+            document.location = "hello-muse-brooch.html"
         })
     }
     else {
         paperThree.style.cursor = "default"
         paperThree.addEventListener("mouseover", function () {
+            paperOne.style.scale = 1
+            paperTwo.style.scale = 1
             paperThree.style.scale = 1
         })
     }

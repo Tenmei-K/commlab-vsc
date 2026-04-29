@@ -7,21 +7,24 @@ body {
     justify-content: center;
 }
 
-.background{
+.background {
     height: 100vh;
     width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
 }
+
 #backgroundAutumn {
     opacity: 1;
     background-color: rgb(255, 206, 187);
 }
+
 #backgroundWinter {
     opacity: 1;
     background-color: rgb(212, 226, 229);
 }
+
 #backgroundGray {
     opacity: 0;
     background-color: gray;
@@ -47,14 +50,17 @@ body {
 #doorButtonOne {
     opacity: .7;
 }
+
 #doorButtonTwo {
-    opacity: 1 
+    opacity: 1
 }
+
 #doorButtonThree {
     opacity: 0;
 }
 
-.monitor, .Bmonitor{
+.monitor,
+.Bmonitor {
     display: block;
     position: fixed;
     height: 70%;
@@ -62,9 +68,11 @@ body {
     top: 15%;
     opacity: 0;
 }
-#BMonitorFirst{
+
+#BMonitorFirst {
     opacity: 1;
 }
+
 #BMoniStW {
     opacity: 1;
 }
@@ -80,17 +88,18 @@ body {
     overflow: hidden;
     height: 100%;
     width: 25%;
-    transform: skew(8deg,0deg);
+    transform: skew(8deg, 0deg);
     margin-left: -12.5%;
 }
+
 #GWrapper {
     margin-left: 50%;
     opacity: 1;
     width: 400%;
     height: 100%;
     position: fixed;
-    bottom: 0;    
-    transform: skew(-8deg,0deg);
+    bottom: 0;
+    transform: skew(-8deg, 0deg);
     justify-content: center;
     justify-items: center;
     align-content: center;
@@ -122,67 +131,78 @@ body {
     scale: .9;
 }
 
-#bubbleOne, #bubbleShadowOne{
+#bubbleOne,
+#bubbleShadowOne {
     top: 1%;
     left: 15%;
     height: 35%;
 }
 
-#bubbleTwo, #bubbleShadowTwo {
+#bubbleTwo,
+#bubbleShadowTwo {
     top: 25%;
     right: 5%;
     height: 25%;
 }
 
-#bubbleThree, #bubbleShadowThree {
+#bubbleThree,
+#bubbleShadowThree {
     bottom: 25%;
     right: 20%;
     height: 20%;
 }
 
-#bubbleFour, #bubbleShadowFour {
+#bubbleFour,
+#bubbleShadowFour {
     top: 30%;
     left: 3%;
     height: 25%;
 }
 
-#bubbleFive, #bubbleShadowFive {
+#bubbleFive,
+#bubbleShadowFive {
     bottom: 18%;
     left: 25%;
     height: 18%;
 }
 
-#bubbleSix, #bubbleShadowSix {
+#bubbleSix,
+#bubbleShadowSix {
     bottom: 18%;
     right: -3%;
     height: 30%;
 }
 
-#bubbleSeven, #bubbleShadowSeven {
+#bubbleSeven,
+#bubbleShadowSeven {
     bottom: 4%;
     left: -5%;
     height: 40%;
 }
 
-#bubbleEight, #bubbleShadowEight {
+#bubbleEight,
+#bubbleShadowEight {
     top: -2%;
     right: -2%;
     height: 25%;
 }
 
-#bubbleNine, #bubbleShadowNine {
+#bubbleNine,
+#bubbleShadowNine {
     top: -5%;
     right: 25%;
     height: 25%;
 }
 
-#bubbleTen, #bubbleShadowTen {
+#bubbleTen,
+#bubbleShadowTen {
     top: -8%;
     left: -5%;
     height: 35%;
 }
 
-#bubbleEleven, #bubbleShadowEleven {
+#bubbleEleven,
+#bubbleShadowEleven {
     bottom: -18%;
     right: -7%;
     height: 50%;
@@ -198,20 +218,20 @@ body {
     bottom: 8%;
     max-width: 90vw;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 3vh;
     font-weight: 600;
     opacity: 0;
 }
+
 #lineZero {
     opacity: 1;
 }
 
-
 .sen {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.72);
 }
 
 .me {
-    background-color: rgb(90, 90, 90);
+    background-color: rgb(90, 90, 90, 0.84);
 }

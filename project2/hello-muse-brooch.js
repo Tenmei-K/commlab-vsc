@@ -614,11 +614,13 @@ window.addEventListener("scroll", function () {
 
 
 
-    if (percentage > 100 / 8 * 3 && percentage < 100 / 8 * 4) {
+    if (percentage > 100 / 8 * 3 && percentage < 100 / 8 * 4 && document.contains(document.querySelector("#monitorFront"))) {
         document.querySelector("#monitorFront").style.opacity = 1
         document.querySelector("#monitorBack").style.opacity = 1
-    } else {
+    } else if (percentage < 100 / 8 * 7 && document.contains(document.querySelector("#monitorFront"))) {
         document.querySelector("#monitorFront").style.opacity = 0
+        document.querySelector("#monitorBack").style.opacity = 0
+    } else {
         document.querySelector("#monitorBack").style.opacity = 0
     }
 
@@ -659,17 +661,6 @@ window.addEventListener("scroll", function () {
             e.style.border = ".97px solid rgb(247, 167, 194)"
         })
     }
-
-
-
-
-
-    if (percentage > 100 / 8 * 6 && percentage < 100 / 8 * 7) {
-        brooch.style.opacity = 0
-    } else {
-        brooch.style.opacity = 1
-    }
-
 
 
 
@@ -717,7 +708,8 @@ window.addEventListener("scroll", function () {
 
 
 
-
+    /*
+    // 用花推进剧情去下一页
     if (percentage > 100 / 8 * 7) {
         document.querySelector("#monitorFront").remove()
         brooch.style.cursor = "pointer"
@@ -728,16 +720,58 @@ window.addEventListener("scroll", function () {
             brooch.style.scale = 1
         })
         brooch.addEventListener("click", function () {
-            document.location = "hello-muse.html?paperVisited=" + paperVisited + "&broochVisited=1"
+            // document.location = "hello-muse.html?paperVisited=" + paperVisited + "&broochVisited=1"
+            document.location = "hello-muse-final.html"
         })
+
+        brooch.style.opacity = 1
     } else {
         brooch.style.cursor = "default"
         brooch.addEventListener("mouseover", function () {
             brooch.style.scale = 1
         })
+
+        if (percentage > 100 / 8 * 6 && percentage < 100 / 8 * 7) {
+            brooch.style.opacity = 0
+        } else {
+            brooch.style.opacity = 1
+        }
     }
+    */
 
 
+    if (percentage > 100 / 8 * 7) {
+        if (document.contains(document.querySelector("#monitorFront"))) {
+            document.querySelector("#monitorFront").remove()
+        }
+
+        G.style.cursor = "pointer"
+        G.addEventListener("mouseover", function () {
+            G.style.scale = 1.04
+        })
+        G.addEventListener("mouseout", function () {
+            G.style.scale = 1
+        })
+        G.addEventListener("click", function () {
+            // document.location = "hello-muse.html?paperVisited=" + paperVisited + "&broochVisited=1"
+            document.location = "hello-muse-final.html"
+        })
+
+        G.style.opacity = 1
+        brooch.style.opacity = 1
+    } else {
+        G.style.cursor = "default"
+        G.addEventListener("mouseover", function () {
+            G.style.scale = 1
+        })
+
+        if (percentage > 100 / 8 * 6 && percentage < 100 / 8 * 7) {
+            brooch.style.opacity = 0
+        } else {
+            brooch.style.opacity = 1
+        }
+        G.style.opacity = 0
+    }
 
 
 
