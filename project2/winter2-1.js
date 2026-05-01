@@ -42,7 +42,7 @@ forkOne.addEventListener("click", function () {
     setTimeout(function () {
         hint.remove()
         hint1.remove()
-    }, 2000)
+    }, 4000)
 })
 forkTwo.addEventListener("click", function () {
     document.location = "winter3-1.html"

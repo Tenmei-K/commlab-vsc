@@ -29,7 +29,7 @@ fork.forEach(function (e) {
 })
 
 forkOne.addEventListener("click", function () {
-    
+
     hintaudio.play()
     let hint = document.createElement("p")
     hint.innerText = "*you are sure that your sentence makes sense. however, your tone is so weak that you hardly even believe yourself.*"
@@ -45,9 +45,9 @@ forkOne.addEventListener("click", function () {
     setTimeout(function () {
         hint.remove()
         hint1.remove()
-    }, 3000)
+    }, 9000)
 })
 forkTwo.addEventListener("click", function () {
-    
+
     document.location = "winter9.html"
 })

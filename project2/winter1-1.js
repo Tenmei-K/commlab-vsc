@@ -41,5 +41,5 @@ forkTwo.addEventListener("click", function () {
     setTimeout(function () {
         hint.remove()
         hint1.remove()
-    }, 2000)
+    }, 4000)
 })

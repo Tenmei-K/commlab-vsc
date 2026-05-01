@@ -31,7 +31,7 @@ document.body.append(hint1)
 setTimeout(function () {
     hint.remove()
     hint1.remove()
-}, 3500)
+}, 8000)
 
 
 fork.forEach(function (e) {
@@ -63,6 +63,6 @@ forkTwo.addEventListener("click", function () {
     setTimeout(function () {
         hint.remove()
         hint1.remove()
-    }, 2000)
+    }, 4000)
 
 })

@@ -40,11 +40,11 @@ forkTwo.addEventListener("click", function () {
 
     document.body.append(hint)
     document.body.append(hint1)
-    
+
 
     setTimeout(function () {
         hint.remove()
         hint1.remove()
-    },2000)
-    
+    }, 4000)
+
 })
