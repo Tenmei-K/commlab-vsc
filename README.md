@@ -12,7 +12,7 @@
         <br>finals: Adapted for the Web
 
 - [Project 1: Apocalypse X](https://tenmei-k.github.io/commlab-vsc/project1/)
-        <br>midterm: Shanzhai website
+        <br>midterm: Shanzhai Web
 
 <br>
 <h3>Exercises</h3>
