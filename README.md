@@ -23,7 +23,7 @@
         <br>「ハローセカイ」
 - [lorem](https://tenmei-k.github.io/commlab-vsc/lorem/)
         <br>Lorem ipsom dolor sitamet
-- [life story](https://tenmei-K.github.io/commlab-vsc/life-story-as-scrolling/)
+- [life story](https://tenmei-K.github.io/commlab-vsc/life-story-as-scroll/)
         <br>fanart life
 <!-- - [third project](https://tenmei-K.github.io/commlab-vsc/250918/)
         <br>fanart -->
