@@ -62,21 +62,6 @@ function getTime() {
 
     // call toggleSparkle for each of them
     minuteStars.forEach(toggleSparkle)
-    minuteStars.forEach(function(star) {
-        let currentTop = Number(star.style.top.substring(0, star.style.top.length - 2))
-        let currentLeft = Number(star.style.left.substring(0, star.style.left.length - 2))
-        
-        if (star.classList.contains("sparkle") == true) {
-            star.style.top = (currentTop - 2 / clientHeight * 100) + "vh"
-            star.style.left = (currentLeft - 2 / clientWidth * 100) + "vw"
-        } else {
-            star.style.top = (currentTop + 2 / clientHeight * 100) + "vh"
-            star.style.left = (currentLeft + 2 / clientWidth * 100) + "vw"
-            // 这样写不行的原因是即使后面的单位和css里相同，加减运算本身也会违反css的规则
-            // star.style.top += 2 / clientHeight * 100 + "vh"
-            // star.style.left += 2 / clientWidth * 100 + "vw"
-        }
-    })
 
 }
 
@@ -133,13 +118,8 @@ function minutes(h) {
     // 色卡设置
     let rTop = Math.random() * 97 + 1
     let rLeft = Math.random() * 97 + 1
-    if (minute.classList.contains("sparkle") == true) {
-        minute.style.top = (rTop - 2 / clientHeight * 100) + "vh"
-        minute.style.left = (rLeft - 2 / clientWidth * 100) + "vw"
-    } else {
-        minute.style.top = rTop + "vh"
-        minute.style.left = rLeft + "vw"
-    }
+    minute.style.top = rTop + "vh"
+    minute.style.left = rLeft + "vw"
 
     let hourshowTop = (h * 9) * 100 / clientHeight
     let hourshowLeft = 16 * 100 / clientWidth
