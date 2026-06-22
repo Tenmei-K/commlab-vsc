@@ -446,6 +446,7 @@ function createInkFive() {   // 0-20
 
 
 function createInk() {
+    lineaudio.play()
     createInkOne()
     setTimeout(function () {
         createInkOne()
