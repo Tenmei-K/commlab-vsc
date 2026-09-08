@@ -28,23 +28,18 @@ autumnbgm.src = "sounds/autumnbgm.mp3"
 let winterbgm = document.createElement("audio")
 winterbgm.src = "sounds/winterbgm.mp3"
 let finalbgm = document.createElement("audio")
-finalbgm.src = "sounds/hellomuseinst.mp3"
-let finalbgm2 = document.createElement("audio")
-finalbgm2.src = "sounds/hellomusevocal.mp3"
+finalbgm.src = "sounds/hellomusevocal.mp3"
 
 
 finalbgm.play()
 finalbgm.loop = true
 finalbgm.volume = 0.8
-finalbgm2.play()
-finalbgm2.loop = true
-finalbgm2.volume = 0
 
 
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
-    finalbgm.volume = 0.1
+    finalbgm.volume = 0.5
     springbgm.play()
     springbgm.loop = true
 })
@@ -60,7 +55,7 @@ springWrapper.addEventListener("click", function () {
 summerWrapper.style.cursor = "pointer"
 summerWrapper.addEventListener("mouseover", function () {
     summerWrapper.style.scale = 1.05
-    finalbgm.volume = 0.1
+    finalbgm.volume = 0.5
     summerbgm.play()
     summerbgm.loop = true
 })
@@ -76,7 +71,7 @@ summerWrapper.addEventListener("click", function () {
 autumnWrapper.style.cursor = "pointer"
 autumnWrapper.addEventListener("mouseover", function () {
     autumnWrapper.style.scale = 1.05
-    finalbgm.volume = 0.1
+    finalbgm.volume = 0.5
     autumnbgm.play()
     autumnbgm.loop = true
 })
@@ -92,7 +87,7 @@ autumnWrapper.addEventListener("click", function () {
 winterWrapper.style.cursor = "pointer"
 winterWrapper.addEventListener("mouseover", function () {
     winterWrapper.style.scale = 1.05
-    finalbgm.volume = 0.1
+    finalbgm.volume = 0.5
     winterbgm.play()
     winterbgm.loop = true
 })
@@ -108,13 +103,11 @@ winterWrapper.addEventListener("click", function () {
 finalWrapper.style.cursor = "pointer"
 finalWrapper.addEventListener("mouseover", function () {
     finalWrapper.style.scale = 1.05
-    finalbgm.volume = 0
-    finalbgm2.volume = 1
+    finalbgm.volume = 1
 })
 finalWrapper.addEventListener("mouseout", function () {
     finalWrapper.style.scale = 1
     finalbgm.volume = 0.8
-    finalbgm2.volume = 0
 })
 finalWrapper.addEventListener("click", function () {
     document.location = "hello-muse.html"
@@ -126,7 +119,7 @@ finalWrapper.addEventListener("click", function () {
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
-    console.log("scrolling")
+    // console.log("scrolling")
 
 
     mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"
