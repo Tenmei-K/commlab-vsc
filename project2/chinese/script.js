@@ -1,0 +1,104 @@
+function getScrollPercentage() {
+    let scrollTop = window.scrollY
+    // how far can we scroll in total
+    let maxScroll = document.body.scrollHeight - window.innerHeight
+
+    let scrollPercentage = scrollTop / maxScroll * 100
+
+    // console.log(scrollPercentage)
+
+    return scrollPercentage
+}
+
+let finalbgm = document.createElement("audio")
+finalbgm.src = "../sounds/hellomuseinst.mp3"
+
+let mainWrapper = document.querySelector("#mainWrapper")
+let wrapper = document.querySelectorAll(".wrapper")
+let springWrapper = document.querySelector("#springWrapper")
+
+
+finalbgm.play()
+finalbgm.loop = true
+finalbgm.volume = 0.8
+
+
+springWrapper.style.cursor = "pointer"
+springWrapper.addEventListener("mouseover", function () {
+    springWrapper.style.scale = 1.05
+})
+springWrapper.addEventListener("mouseout", function () {
+    springWrapper.style.scale = 1
+})
+springWrapper.addEventListener("click", function () {
+    document.location = "spring.html"
+})
+
+// summerWrapper.style.cursor = "pointer"
+// summerWrapper.addEventListener("mouseover", function () {
+//     summerWrapper.style.scale = 1.05
+// })
+// summerWrapper.addEventListener("mouseout", function () {
+//     summerWrapper.style.scale = 1
+// })
+// summerWrapper.addEventListener("click", function () {
+//     document.location = "summer-unclicked.html"
+// })
+
+// autumnWrapper.style.cursor = "pointer"
+// autumnWrapper.addEventListener("mouseover", function () {
+//     autumnWrapper.style.scale = 1.05
+// })
+// autumnWrapper.addEventListener("mouseout", function () {
+//     autumnWrapper.style.scale = 1
+// })
+// autumnWrapper.addEventListener("click", function () {
+//     document.location = "autumn-unclicked.html"
+// })
+
+// winterWrapper.style.cursor = "pointer"
+// winterWrapper.addEventListener("mouseover", function () {
+//     winterWrapper.style.scale = 1.05
+// })
+// winterWrapper.addEventListener("mouseout", function () {
+//     winterWrapper.style.scale = 1
+// })
+// winterWrapper.addEventListener("click", function () {
+//     document.location = "winter-unclicked.html"
+// })
+
+
+
+
+
+
+
+
+window.addEventListener("scroll", function () {
+    percentage = getScrollPercentage() // 0-100
+
+    console.log("scrolling")
+
+
+    mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"
+    if (mainWrapper.style.top > 0) {
+        mainWrapper.style.top = 0
+    }
+    mainWrapper.style.rotate = percentage / 100 * 60 + "deg"
+
+    if (percentage <= 25) {
+        mainWrapper.style.right = percentage / 25 * 6.9 + "%"
+    }
+    if (percentage > 25 && percentage <= 50) {
+        mainWrapper.style.right = 6.9 - (percentage - 25) / 25 * 0.25 + "%"
+    }
+    if (percentage > 50 && percentage <= 75) {
+        mainWrapper.style.right = 6.65 - (percentage - 50) / 25 * 7.75 + "%"
+    }
+    if (percentage > 75) {
+        mainWrapper.style.right = -1.1 - (percentage - 75) / 25 * 14.1 + "%"
+    }
+
+
+
+})

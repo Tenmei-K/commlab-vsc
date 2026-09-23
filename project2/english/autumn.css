@@ -1,0 +1,261 @@
+body {
+    background-color: rgb(208, 231, 255);
+    /* background-color: black; */
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    justify-items: center;
+    justify-content: center;
+}
+
+.background {
+    width: 100%;
+}
+
+#backgroundWinter {
+    background-color: rgb(212, 226, 229);
+    opacity: 0;
+}
+
+#TreeWrapper {
+    position: fixed;
+    /* outline: red 1px solid; */
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    aspect-ratio: 1842/ 1380;
+    /* height: ; */
+}
+
+#petalBack,
+#petalFront {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+.trunk {
+    width: 100%;
+    /* height: 90vh; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* Autumn */
+.hanaAutumn {
+    border: .97px solid rgb(249, 187, 130);
+    /* border: .95px solid rgb(215, 110, 110); */
+}
+
+.hanaOne {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(255, 223, 202);
+    position: absolute;
+}
+
+.hanaTwo {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(249, 170, 110);
+    position: absolute;
+}
+
+.hanaThree {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    background-color: rgb(215, 107, 49);
+    position: absolute;
+}
+
+#trunkWinter {
+    opacity: 0;
+}
+
+#hanaWrapperBack .hanaAutumn {
+    opacity: 0.5;
+}
+
+
+.wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.ink {
+    display: block;
+    position: fixed;
+    bottom: 0;
+}
+
+#inkOne {
+    height: 75%;
+}
+
+#inkTwo {
+    height: 54%;
+}
+
+#inkThree {
+    height: 35%;
+}
+
+.inkC {
+    position: fixed;
+    height: 55%;
+}
+
+
+
+#hintWrapper {
+    /* position: fixed; */
+    /* bottom: 0; */
+    max-width: 100%;
+    min-width: 100%;
+    /* max-height: 100%;
+    min-height: 100%; */
+    justify-content: center;
+    justify-items: center;
+}
+
+
+#humanWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    justify-content: center;
+    justify-items: center;
+}
+
+.human {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    height: 68%;
+}
+
+#Goverflow {
+    opacity: 0;
+    /* background-color: black; */
+    position: fixed;
+    display: inline-block;
+    bottom: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 8.5%;
+    transform: skew(8deg, 0deg);
+    margin-left: -4.25%;
+}
+
+.GWrapper {
+    margin-left: 213.5%;
+    opacity: 1;
+    width: 850%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    transform: skew(-8deg, 0deg);
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+#GWrapper {
+    margin-left: 213.5%;
+    opacity: 1;
+    width: 850%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    transform: skew(-8deg, 0deg);
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+#AutumnTwo {
+    opacity: 1;
+}
+
+
+
+.lines {
+    margin: 0;
+    display: block;
+    position: fixed;
+    bottom: 8%;
+    max-width: 90vw;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3vh;
+    font-weight: 600;
+    opacity: 0;
+}
+
+#lineDLTT {
+    opacity: 1;
+}
+
+.sen {
+    background-color: rgba(0, 0, 0, 0.72);
+}
+
+.me {
+    background-color: rgb(90, 90, 90, 0.84);
+}
+
+
+
+
+.building {
+    position: fixed;
+    bottom: -5%;
+    left: 0;
+    width: 100%;
+    display: block;
+    opacity: 0;
+}
+
+#buildingOne {
+    opacity: 1;
+}
+
+
+
+
+
+#gossipOne {
+    margin: 0;
+    position: fixed;
+    bottom: 15%;
+    left: 35%;
+    max-width: 90vw;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 600;
+
+    text-shadow: 0px 0px 3px black;
+}
