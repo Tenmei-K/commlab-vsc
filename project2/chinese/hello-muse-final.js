@@ -23,7 +23,7 @@ console.log(clientHeight, clientWidth)
 
 
 let crowdaudio = document.createElement("audio")
-crowdaudio.src = "sounds/crowd.mp3"
+crowdaudio.src = "../sounds/crowd.mp3"
 crowdaudio.volume = 0
 
 
@@ -69,7 +69,7 @@ let broochVisited = urlParams.get('broochVisited') || 0;
 
 
 
-// summer
+
 // ! position one
 // grow one
 function hanaFourPositionOneGrowOne() {
@@ -560,9 +560,11 @@ window.addEventListener("scroll", function () {
 
     if (percentage > 100 / 17 * 3 && percentage < 100 / 17 * 9) {
         document.querySelector("#backgroundSpring").style.opacity = (percentage - 100 / 17 * 3) / (100 / 17 * 6)
+        document.querySelector("#trunkSpring").style.opacity = (percentage - 100 / 17 * 3) / (100 / 17 * 6)
     }
     if (percentage > 100 / 17 * 9) {
         document.querySelector("#backgroundSpring").style.opacity = 1
+        document.querySelector("#trunkSpring").style.opacity = 1
     }
 
 

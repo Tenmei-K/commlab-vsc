@@ -23,7 +23,7 @@ console.log(clientHeight, clientWidth)
 
 
 let crowdAudio = document.createElement("audio")
-crowdAudio.src = "sounds/crowd.mp3"
+crowdAudio.src = "../sounds/crowd.mp3"
 
 
 

@@ -18,18 +18,18 @@ function getScrollPercentage() {
 
 
 let doorbell = document.createElement("audio")
-doorbell.src = "sounds/doorbell.mp3"
+doorbell.src = "../sounds/doorbell.mp3"
 
 let bubbleAudio = document.createElement("audio")
-bubbleAudio.src = "sounds/bubble.mp3"
+bubbleAudio.src = "../sounds/bubble.mp3"
 bubbleAudio.loop = false
 
 let doorOpenAudio = document.createElement("audio")
-doorOpenAudio.src = "sounds/doorOpen.mp3"
+doorOpenAudio.src = "../sounds/doorOpen.mp3"
 doorOpenAudio.loop = false
 
 let microphoneAudio = document.createElement("audio")
-microphoneAudio.src = "sounds/microphonePlugIn.mp3"
+microphoneAudio.src = "../sounds/microphonePlugIn.mp3"
 microphoneAudio.loop = false
 
 

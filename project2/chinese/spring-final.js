@@ -23,7 +23,7 @@ console.log(clientHeight, clientWidth)
 
 
 let crowdAudio = document.createElement("audio")
-crowdAudio.src = "sounds/crowd.mp3"
+crowdAudio.src = "../sounds/crowd.mp3"
 
 
 
@@ -1488,7 +1488,7 @@ window.addEventListener("scroll", function () {
     // final serifu add paper
     if (percentage >= 100 / 14 * 13) {
         let newPaper = document.createElement("img")
-        newPaper.src = "assets/paper1.png"
+        newPaper.src = "../assets/paper1.png"
         newPaper.style.cursor = "pointer"
         newPaper.style.position = "fixed"
         newPaper.style.bottom = -5 + "%"

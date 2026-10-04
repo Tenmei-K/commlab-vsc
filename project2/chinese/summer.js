@@ -18,18 +18,18 @@ function getScrollPercentage() {
 
 
 let doorbell = document.createElement("audio")
-doorbell.src = "sounds/doorbell.mp3"
+doorbell.src = "../sounds/doorbell.mp3"
 
 let bubbleAudio = document.createElement("audio")
-bubbleAudio.src = "sounds/bubble.mp3"
+bubbleAudio.src = "../sounds/bubble.mp3"
 bubbleAudio.loop = false
 
 let doorOpenAudio = document.createElement("audio")
-doorOpenAudio.src = "sounds/doorOpen.mp3"
+doorOpenAudio.src = "../sounds/doorOpen.mp3"
 doorOpenAudio.loop = false
 
 let microphoneAudio = document.createElement("audio")
-microphoneAudio.src = "sounds/microphonePlugIn.mp3"
+microphoneAudio.src = "../sounds/microphonePlugIn.mp3"
 microphoneAudio.loop = false
 
 
@@ -87,6 +87,8 @@ doorButtonOne.addEventListener("click", function () {
         bubbleOne.style.scale = .9
     })
     bubbleOne.addEventListener("click", function () {
+        bubbleAudio.pause();
+        bubbleAudio.currentTime = 0;
         bubbleAudio.play()
         document.querySelector("#lineOne").style.opacity = 0
         document.querySelector("#lineTwo").style.opacity = 1
@@ -108,6 +110,8 @@ doorButtonOne.addEventListener("click", function () {
             bubbleTwo.style.scale = .9
         })
         bubbleTwo.addEventListener("click", function () {
+            bubbleAudio.pause();
+            bubbleAudio.currentTime = 0;
             bubbleAudio.play()
             document.querySelector("#lineTwo").style.opacity = 0
             document.querySelector("#lineThree").style.opacity = 1
@@ -153,7 +157,8 @@ doorButtonOne.addEventListener("click", function () {
 
 
 
-
+                bubbleAudio.pause();
+                bubbleAudio.currentTime = 0;
                 bubbleAudio.play()
                 document.querySelector("#lineThree").style.opacity = 0
                 document.querySelector("#lineFour").style.opacity = 1
@@ -177,6 +182,8 @@ doorButtonOne.addEventListener("click", function () {
                     bubbleFour.style.scale = .9
                 })
                 bubbleFour.addEventListener("click", function () {
+                    bubbleAudio.pause();
+                    bubbleAudio.currentTime = 0;
                     bubbleAudio.play()
                     document.querySelector("#lineFour").style.opacity = 0
                     document.querySelector("#lineFive").style.opacity = 1
@@ -205,7 +212,8 @@ doorButtonOne.addEventListener("click", function () {
                         document.querySelector("#BMonitorTwo").remove()
 
 
-
+                        bubbleAudio.pause();
+                        bubbleAudio.currentTime = 0;
                         bubbleAudio.play()
                         document.querySelector("#lineFive").style.opacity = 0
                         document.querySelector("#lineSix").style.opacity = 1
@@ -231,6 +239,8 @@ doorButtonOne.addEventListener("click", function () {
                             bubbleSix.style.scale = .9
                         })
                         bubbleSix.addEventListener("click", function () {
+                            bubbleAudio.pause();
+                            bubbleAudio.currentTime = 0;
                             bubbleAudio.play()
                             document.querySelector("#lineSix").style.opacity = 0
                             document.querySelector("#lineSeven").style.opacity = 1
@@ -272,7 +282,8 @@ doorButtonOne.addEventListener("click", function () {
                                     }
                                 })
 
-
+                                bubbleAudio.pause();
+                                bubbleAudio.currentTime = 0;
                                 bubbleAudio.play()
                                 document.querySelector("#lineSeven").style.opacity = 0
                                 document.querySelector("#lineEight").style.opacity = 1
@@ -298,6 +309,8 @@ doorButtonOne.addEventListener("click", function () {
                                     bubbleEight.style.scale = .9
                                 })
                                 bubbleEight.addEventListener("click", function () {
+                                    bubbleAudio.pause();
+                                    bubbleAudio.currentTime = 0;
                                     bubbleAudio.play()
                                     document.querySelector("#lineEight").style.opacity = 0
                                     document.querySelector("#lineNine").style.opacity = 1
@@ -329,7 +342,8 @@ doorButtonOne.addEventListener("click", function () {
                                         document.querySelector("#BMonitorThree").remove()
 
 
-
+                                        bubbleAudio.pause();
+                                        bubbleAudio.currentTime = 0;
                                         bubbleAudio.play()
                                         document.querySelector("#lineNine").style.opacity = 0
                                         document.querySelector("#lineTen").style.opacity = 1
@@ -355,6 +369,8 @@ doorButtonOne.addEventListener("click", function () {
                                             bubbleTen.style.scale = .9
                                         })
                                         bubbleTen.addEventListener("click", function () {
+                                            bubbleAudio.pause();
+                                            bubbleAudio.currentTime = 0;
                                             bubbleAudio.play()
                                             document.querySelector("#lineTen").style.opacity = 0
                                             document.querySelector("#lineEleven").style.opacity = 1
@@ -379,6 +395,8 @@ doorButtonOne.addEventListener("click", function () {
                                                 bubbleEleven.style.scale = .9
                                             })
                                             bubbleEleven.addEventListener("click", function () {
+                                                bubbleAudio.pause();
+                                                bubbleAudio.currentTime = 0;
                                                 bubbleAudio.play()
                                                 doorOpenAudio.play()
                                                 document.querySelector("#lineEleven").style.opacity = 0

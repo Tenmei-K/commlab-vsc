@@ -1,9 +1,9 @@
 let biteaudio = document.createElement("audio")
-biteaudio.src = "sounds/pear.mp3"
+biteaudio.src = "../sounds/pear.mp3"
 biteaudio.loop = false
 
 let hintaudio = document.createElement("audio")
-hintaudio.src = "sounds/木头咚.wav"
+hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
 let forkOne = document.querySelector("#forkOne")
@@ -14,8 +14,9 @@ let fork = document.querySelectorAll(".fork")
 let background = document.querySelector("#backgroundWinter")
 background.style.opacity = 0.3
 
+biteaudio.pause();
+biteaudio.currentTime = 0;
 biteaudio.play()
-
 
 let hint = document.createElement("p")
 hint.innerText = "*you didn't manage to answer her. also, you automatically assume that she was referring to her talent, with confidence out of nowhere*"

@@ -56,7 +56,7 @@ function grow(e, i, p1, p2, per) {
 }
 
 let windbellAudio = document.createElement("audio")
-windbellAudio.src = "sounds/windbell.mp3"
+windbellAudio.src = "../sounds/windbell.mp3"
 windbellAudio.loop = false
 // windbellAudio.play()
 // windbellAudio.volume = 0
@@ -593,7 +593,7 @@ window.addEventListener("scroll", function () {
 
 
 
-    if (percentage < 100 / 5) {
+    if (percentage < 100 / 5 || (percentage > 100 / 5 * 2 && percentage < 100 / 5 * 3)) {
         OOne.style.opacity = 1
     } else {
         OOne.style.opacity = 0
@@ -602,11 +602,6 @@ window.addEventListener("scroll", function () {
         SOne.style.opacity = 1
     } else {
         SOne.style.opacity = 0
-    }
-    if (percentage > 100 / 5 * 2 && percentage < 100 / 5 * 3) {
-        SOnePP.style.opacity = 1
-    } else {
-        SOnePP.style.opacity = 0
     }
     if (percentage > 100 / 5 * 3 && percentage < 100 / 5 * 4) {
         OTwo.style.opacity = 1

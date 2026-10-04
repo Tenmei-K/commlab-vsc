@@ -1,9 +1,9 @@
 let biteaudio = document.createElement("audio")
-biteaudio.src = "sounds/pear.mp3"
+biteaudio.src = "../sounds/pear.mp3"
 biteaudio.loop = false
 
 let hintaudio = document.createElement("audio")
-hintaudio.src = "sounds/木头咚.wav"
+hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
 let forkOne = document.querySelector("#forkOne")
@@ -16,6 +16,8 @@ background.style.opacity = 1
 
 let bowl = document.querySelector("#bowl")
 
+biteaudio.pause();
+biteaudio.currentTime = 0;
 biteaudio.play()
 
 bowl.style.cursor = "pointer"

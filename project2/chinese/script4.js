@@ -20,16 +20,16 @@ let winterWrapper = document.querySelector("#winterWrapper")
 let finalWrapper = document.querySelector("#finalWrapper")
 
 let springbgm = document.createElement("audio")
-springbgm.src = "sounds/springbgm.mp3"
+springbgm.src = "../sounds/springbgm.mp3"
 springbgm.loop = true
 let summerbgm = document.createElement("audio")
-summerbgm.src = "sounds/summerbgm.mp3"
+summerbgm.src = "../sounds/summerbgm.mp3"
 summerbgm.loop = true
 let autumnbgm = document.createElement("audio")
-autumnbgm.src = "sounds/autumnbgm.mp3"
+autumnbgm.src = "../sounds/autumnbgm.mp3"
 autumnbgm.loop = true
 let winterbgm = document.createElement("audio")
-winterbgm.src = "sounds/winterbgm.mp3"
+winterbgm.src = "../sounds/winterbgm.mp3"
 winterbgm.loop = true
 
 

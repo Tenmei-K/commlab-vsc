@@ -751,7 +751,7 @@ window.addEventListener("scroll", function () {
 
     if (percentage >= 100 / 4 * 3) {
         let newInk = document.createElement("img")
-        newInk.src = "assets/inkThree.png"
+        newInk.src = "../assets/inkThree.png"
         newInk.classList.add("ink")
         newInk.style.height = 35 + "%"
         hintWrapper.append(newInk)

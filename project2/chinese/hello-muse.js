@@ -50,18 +50,18 @@ function grow(e, i, p1, p2, per) {
 
 
 let crowdAudio = document.createElement("audio")
-crowdAudio.src = "sounds/crowd.mp3"
+crowdAudio.src = "../sounds/crowd.mp3"
 crowdAudio.loop = true
 crowdAudio.play()
 
 let windbellAudio = document.createElement("audio")
-windbellAudio.src = "sounds/windbell.mp3"
+windbellAudio.src = "../sounds/windbell.mp3"
 windbellAudio.loop = false
 // windbellAudio.play()
 // windbellAudio.volume = 0
 
 let hintaudio = document.createElement("audio")
-hintaudio.src = "sounds/木头咚.wav"
+hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
 

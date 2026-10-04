@@ -622,7 +622,7 @@ window.addEventListener("scroll", function () {
 
     if (percentage >= 100 / 3 * 2) {
         let newInk = document.createElement("img")
-        newInk.src = "assets/inkTwo.png"
+        newInk.src = "../assets/inkTwo.png"
         newInk.classList.add("ink")
         newInk.style.height = 54 + "%"
 

@@ -59,11 +59,11 @@ function fall(e, i, p1, p2) {
 
 
 let inkaudio = document.createElement("audio")
-inkaudio.src = "sounds/microphonePlugIn.mp3"
+inkaudio.src = "../sounds/microphonePlugIn.mp3"
 inkaudio.loop = false
 
 let lineaudio = document.createElement("audio")
-lineaudio.src = "sounds/轻响指.wav"
+lineaudio.src = "../sounds/轻响指.wav"
 lineaudio.loop = false
 
 let ink = document.querySelectorAll(".ink")
@@ -367,7 +367,7 @@ document.querySelector(".background").style.height = 100 + "vh"
 function createInkOne() {   // 0-20
 
     let inkCOne = document.createElement("img")
-    inkCOne.src = "assets/ink.png"
+    inkCOne.src = "../assets/ink.png"
 
     rTopOne = Math.floor(Math.random() * 20) - 20
     rLeftOne = Math.floor(Math.random() * 90) - 5
@@ -383,7 +383,7 @@ function createInkOne() {   // 0-20
 function createInkTwo() {   // 0-20
 
     let inkCTwo = document.createElement("img")
-    inkCTwo.src = "assets/ink.png"
+    inkCTwo.src = "../assets/ink.png"
 
     rTopTwo = Math.floor(Math.random() * 20)
     rLeftTwo = Math.floor(Math.random() * 90) - 5
@@ -399,7 +399,7 @@ function createInkTwo() {   // 0-20
 function createInkThree() {   // 0-20
 
     let inkCThree = document.createElement("img")
-    inkCThree.src = "assets/ink.png"
+    inkCThree.src = "../assets/ink.png"
 
     rTopThree = Math.floor(Math.random() * 20) + 20
     rLeftThree = Math.floor(Math.random() * 90) - 5
@@ -415,7 +415,7 @@ function createInkThree() {   // 0-20
 function createInkFour() {   // 0-20
 
     let inkCFour = document.createElement("img")
-    inkCFour.src = "assets/ink.png"
+    inkCFour.src = "../assets/ink.png"
 
     rTopFour = Math.floor(Math.random() * 20) + 40
     rLeftFour = Math.floor(Math.random() * 90) - 5
@@ -431,7 +431,7 @@ function createInkFour() {   // 0-20
 function createInkFive() {   // 0-20
 
     let inkCFive = document.createElement("img")
-    inkCFive.src = "assets/ink.png"
+    inkCFive.src = "../assets/ink.png"
 
     rTopFive = Math.floor(Math.random() * 20) + 60
     rLeftFive = Math.floor(Math.random() * 90) - 5

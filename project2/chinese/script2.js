@@ -17,7 +17,7 @@ let springWrapper = document.querySelector("#springWrapper")
 let summerWrapper = document.querySelector("#summerWrapper")
 
 let springbgm = document.createElement("audio")
-springbgm.src = "sounds/springbgm.mp3"
+springbgm.src = "../sounds/springbgm.mp3"
 springbgm.loop = true
 
 
