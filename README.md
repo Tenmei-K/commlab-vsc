@@ -1,7 +1,7 @@
 # CommLab page
 <br>
 <br>
-<h2>2025.9-2025-12</h2>
+<h2>2025.9-2025.12</h2>
 <br>
 
 ![manimani-banner](manimani.png)
