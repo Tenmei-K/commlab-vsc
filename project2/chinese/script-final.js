@@ -39,7 +39,7 @@ finalbgm.volume = 0.8
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
-    finalbgm.volume = 0.11
+    finalbgm.volume = 0.1
     springbgm.play()
     springbgm.loop = true
 })
@@ -55,7 +55,7 @@ springWrapper.addEventListener("click", function () {
 summerWrapper.style.cursor = "pointer"
 summerWrapper.addEventListener("mouseover", function () {
     summerWrapper.style.scale = 1.05
-    finalbgm.volume = 0.11
+    finalbgm.volume = 0.1
     summerbgm.play()
     summerbgm.loop = true
 })
@@ -71,7 +71,7 @@ summerWrapper.addEventListener("click", function () {
 autumnWrapper.style.cursor = "pointer"
 autumnWrapper.addEventListener("mouseover", function () {
     autumnWrapper.style.scale = 1.05
-    finalbgm.volume = 0.11
+    finalbgm.volume = 0.1
     autumnbgm.play()
     autumnbgm.loop = true
 })
@@ -87,7 +87,7 @@ autumnWrapper.addEventListener("click", function () {
 winterWrapper.style.cursor = "pointer"
 winterWrapper.addEventListener("mouseover", function () {
     winterWrapper.style.scale = 1.05
-    finalbgm.volume = 0.11
+    finalbgm.volume = 0.1
     winterbgm.play()
     winterbgm.loop = true
 })
