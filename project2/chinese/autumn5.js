@@ -462,6 +462,7 @@ window.addEventListener("scroll", function () {
     // final hover
     if (percentage > 100 / 5 * 4) {
         AutumnTwo.style.cursor = "pointer"
+        document.querySelector("#AutumnOneP").style.scale = 1.04
         AutumnTwo.addEventListener("mouseover", function () {
             document.querySelector("#AutumnOneP").style.scale = 1.04
         })
@@ -473,6 +474,7 @@ window.addEventListener("scroll", function () {
         })
     } else {
         AutumnTwo.style.cursor = "default"
+        document.querySelector("#AutumnOneP").style.scale = 1
         AutumnTwo.addEventListener("mouseover", function () {
             document.querySelector("#AutumnOneP").style.scale = 1
         })

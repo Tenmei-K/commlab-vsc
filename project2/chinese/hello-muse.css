@@ -254,7 +254,7 @@ p {
 
 
 #brooch {
-    display: block;
+    display: inline-block;
     position: fixed;
     height: 20%;
 }
