@@ -1,0 +1,89 @@
+body {
+    background-color: bisque;
+    height: 1000vh;
+}
+
+
+#background {
+    height: 100vh;
+    width: 100%;
+}
+
+
+#mainWrapper {
+    position: fixed;
+    /* outline: red 1px solid; */
+    top: 25%;
+    height: 200%;
+    width: 100%;
+}
+
+.wrapper {
+    position: absolute;
+    width: 80%;
+    height: 30%;
+}
+
+img {
+    width: 100%;
+}
+
+#springWrapper {
+    top: 0;
+    right: 0;
+    /* background-color: pink; */
+}
+
+#summerWrapper {
+    top: 20.4%;
+    right: -3.05%;
+    rotate: -15deg;
+    /* background-color: greenyellow; */
+}
+
+#autumnWrapper {
+    top: 39.4%;
+    right: -12%;
+    rotate: -30deg;
+    /* background-color: orange; */
+}
+
+#winterWrapper {
+    top: 55.6%;
+    right: -26.1%;
+    rotate: -45deg;
+    /* background-color: skyblue; */
+}
+
+#finalWrapper {
+    top: 68%;
+    right: -44.5%;
+    rotate: -60deg;
+    /* background-color: darkblue; */
+}
+
+#paper {
+    width: 60%;
+    top: 94.15%;
+    right: -60%;
+    rotate: -60deg;
+}
+
+@keyframes pop {
+    from {
+        transform: translate(0vh, 0vh);
+    }
+
+    to {
+        transform: translate(- 100vh * sin(calc(pi / 9 * 6)), 100vh * cos(calc(pi / 9 * 6)));
+    }
+}
+
+#paper:hover {
+    /* animation: pop 0.6s ease-out infinite; */
+    /* opacity: 0;
+    transition: opacity 0.6s ease-out; */
+    /* transform: translate(calc(- 100vh * sin(pi / 9 * 6)), calc(100vh * cos(pi / 9 * 6))); */
+    transform: translate(0, -25vh);
+    transition: transform 0.6s ease-out;
+}

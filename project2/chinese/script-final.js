@@ -18,6 +18,7 @@ let summerWrapper = document.querySelector("#summerWrapper")
 let autumnWrapper = document.querySelector("#autumnWrapper")
 let winterWrapper = document.querySelector("#winterWrapper")
 let finalWrapper = document.querySelector("#finalWrapper")
+let paper = document.querySelector("#paper")
 
 let springbgm = document.createElement("audio")
 springbgm.src = "../sounds/springbgm.mp3"
@@ -111,6 +112,17 @@ finalWrapper.addEventListener("mouseout", function () {
 })
 finalWrapper.addEventListener("click", function () {
     document.location = "hello-muse.html"
+})
+
+paper.style.cursor = "pointer"
+// paper.addEventListener("mouseover", function () {
+//     paper.style.scale = 1.05
+// })
+// paper.addEventListener("mouseout", function () {
+//     paper.style.scale = 1
+// })
+paper.addEventListener("click", function () {
+    document.location = "../index.html"
 })
 
 
