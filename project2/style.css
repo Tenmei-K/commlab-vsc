@@ -25,10 +25,10 @@ canvas {
 
 .text-wrapper {
     color: rgb(90, 90, 90);
-    text-shadow: #ffffff 0 0 3px;
+    /* text-shadow: #ffffff 0 0 3px; */
 
     position: fixed;
-    bottom: -4.5%;
+    bottom: -5%;
     left: 0;
     max-width: 100%;
     min-width: 100%;
@@ -39,18 +39,34 @@ canvas {
     align-content: center;
 
     text-align: center;
-    font-size: 2.6vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#select {
+    display: inline;
+    padding-top: 0.25vh;
+    padding-bottom: 0.25vh;
+    padding-left: 0.25vw;
+    padding-right: 0.25vw;
+
+    font-size: 2.6vh;
+    background-color: rgb(255, 255, 255, 0.75);
+    color: rgb(100, 100, 100);
+    /* font-weight: bold; */
 }
 
 .language {
     display: inline;
+    padding-top: 0.3vh;
+    padding-bottom: 0.3vh;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
     margin: 2vw;
-    background-color: rgb(255, 255, 255, 0.75);
-    color: rgb(60, 60, 60);
+    background-color: rgb(255, 255, 255);
+    color: rgb(70, 70, 70);
     /* text-shadow: #ffffff 0 0 3px; */
     text-align: center;
-    font-size: 2.8vh;
+    font-size: 2.6vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
 }

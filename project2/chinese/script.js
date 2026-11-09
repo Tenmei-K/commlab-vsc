@@ -73,7 +73,6 @@ springWrapper.addEventListener("click", function () {
 
 
 
-
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
@@ -81,6 +80,7 @@ window.addEventListener("scroll", function () {
 
 
     mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"
+    mainWrapper.style.right = percentage / 25 * 6.9 + "%"
     if (mainWrapper.style.top > 0) {
         mainWrapper.style.top = 0
     }

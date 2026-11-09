@@ -1515,10 +1515,10 @@ window.addEventListener("scroll", function () {
             document.location = "index2.html"
         })
         newPaper.addEventListener("mouseover", function () {
-            newPaperWrapper.style.scale = 1.04
+            newPaper.style.scale = 1.04
         })
         newPaper.addEventListener("mouseout", function () {
-            newPaperWrapper.style.scale = 1
+            newPaper.style.scale = 1
         })
 
         newPaperWrapper.append(newPaper)
@@ -1530,7 +1530,7 @@ window.addEventListener("scroll", function () {
         newLine.innerText = "“所以，不考虑入社吗？”";
         newLine.style.opacity = 1;
 
-        document.body.append(newLine);
+        document.querySelector(".paperWrapper").append(newLine);
 
         ///// IN CONSTRUCTION /////
     } else if (percentage < 100 / 14 * 13 && paperWrapper) {
