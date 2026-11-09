@@ -648,9 +648,10 @@ window.addEventListener("scroll", function () {
         inkTwo.addEventListener("mouseover", function () {
             inkTwo.style.scale = 1
         })
-        inkTwo.addEventListener("click", function () {
-            document.location = "autumn2.html"
-        })
+        // inkTwo.addEventListener("click", function () {
+        //     document.location = "autumn2.html"
+        // })
+        inkTwo.removeEventListener("click", proceedAutumn3);
     }
 
 
@@ -658,3 +659,6 @@ window.addEventListener("scroll", function () {
 
 })
 
+function proceedAutumn3() {
+    document.location = "autumn3.html"
+}

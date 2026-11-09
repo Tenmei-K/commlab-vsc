@@ -32,7 +32,7 @@ document.body.append(hint1)
 setTimeout(function () {
     hint.remove()
     hint1.remove()
-}, 3500)
+}, 6000);
 
 
 fork.forEach(function (e) {

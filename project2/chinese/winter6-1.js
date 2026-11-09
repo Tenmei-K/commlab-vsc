@@ -19,10 +19,10 @@ biteaudio.currentTime = 0;
 biteaudio.play()
 
 let hint = document.createElement("p")
-hint.innerText = "you didn't dare to look at her"
+hint.innerText = "*you didn't dare to look at her*"
 hint.classList.add("hint")
 let hint1 = document.createElement("p")
-hint1.innerText = "you didn't dare to look at her"
+hint1.innerText = "*you didn't dare to look at her*"
 hint1.classList.add("hint")
 
 document.body.append(hint)

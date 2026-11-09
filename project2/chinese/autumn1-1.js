@@ -766,18 +766,17 @@ window.addEventListener("scroll", function () {
         inkThree.addEventListener("mouseout", function () {
             inkThree.style.scale = 1
         })
-        inkThree.addEventListener("click", function () {
-            document.location = "autumn2-1.html"
-        })
+        inkThree.addEventListener("click", proceedAutumn2);
     }
-    if (percentage < 100 / 3 * 2) {
+    if ( percentage < 100 / 3 * 2) {
         inkThree.style.cursor = "default"
         inkThree.addEventListener("mouseover", function () {
             inkThree.style.scale = 1
         })
-        inkThree.addEventListener("click", function () {
-            document.location = "autumn1-1.html"
-        })
+        // inkThree.addEventListener("click", function () {
+        //     document.location = "autumn1.html"
+        // })
+        inkThree.removeEventListener("click", proceedAutumn2);
     }
 
 
@@ -785,3 +784,6 @@ window.addEventListener("scroll", function () {
 
 })
 
+function proceedAutumn2() {
+    document.location = "autumn2-1.html"
+}

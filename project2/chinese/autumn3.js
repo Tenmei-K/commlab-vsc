@@ -538,9 +538,7 @@ window.addEventListener("scroll", function () {
         inkOne.addEventListener("mouseover", function () {
             inkOne.style.scale = 1
         })
-        inkOne.addEventListener("click", function () {
-            document.location = "autumn3.html"
-        })
+        inkOne.removeEventListener("click", proceedAutumn4);
     }
 
 
@@ -548,3 +546,6 @@ window.addEventListener("scroll", function () {
 
 })
 
+function proceedAutumn4() {
+    document.location = "autumn4.html"
+}
