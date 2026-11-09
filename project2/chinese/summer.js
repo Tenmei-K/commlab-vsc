@@ -148,8 +148,9 @@ doorButtonOne.addEventListener("click", function () {
                         document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
 
                         document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
-
-                        document.querySelector("#BMonitorTwo").style.opacity = 1
+                        if (document.querySelector("#BMonitorTwo")) {
+                            document.querySelector("#BMonitorTwo").style.opacity = 1
+                        }
                     } else {
                         document.querySelector("#Goverflow").style.opacity = 0
                     }
@@ -275,8 +276,9 @@ doorButtonOne.addEventListener("click", function () {
                                         document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
 
                                         document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
-
-                                        document.querySelector("#BMonitorThree").style.opacity = 1
+                                        if (document.querySelector("#BMonitorThree")) {
+                                            document.querySelector("#BMonitorThree").style.opacity = 1
+                                        }
                                     } else {
                                         document.querySelector("#Goverflow").style.opacity = 0
                                     }
