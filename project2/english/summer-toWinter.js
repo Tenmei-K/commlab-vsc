@@ -7,9 +7,12 @@ console.log(clientHeight, clientWidth)
 
 
 let dooraudio = document.createElement("audio")
-dooraudio.src = "sounds/doorOpen.mp3"
+dooraudio.src = "../sounds/doorOpen.mp3"
 dooraudio.loop = false
 
+let audios = [];
+audios.push(dooraudio);
+let audioVolumeP = 1;
 
 
 dooraudio.play()

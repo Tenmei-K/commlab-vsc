@@ -25,10 +25,10 @@ biteaudio.currentTime = 0;
 biteaudio.play()
 
 let hint = document.createElement("p")
-hint.innerText = "*你没能找出办法回答她。以及，不知你的自信从何而来，你假定她所讲的是她的天赋。*"
+hint.innerText = "*你没能回答她。以及，抱着不知从何而来的自信，你很肯定她刚刚说的是她的天赋。*"
 hint.classList.add("hint")
 let hint1 = document.createElement("p")
-hint1.innerText = "*你没能找出办法回答她。以及，不知你的自信从何而来，你假定她所讲的是她的天赋。*"
+hint1.innerText = "*你没能回答她。以及，抱着不知从何而来的自信，你很肯定她刚刚说的是她的天赋。*"
 hint1.classList.add("hint")
 
 document.body.append(hint)

@@ -1,15 +1,23 @@
 let biteaudio = document.createElement("audio")
-biteaudio.src = "sounds/pear.mp3"
+biteaudio.src = "../sounds/pear.mp3"
 biteaudio.loop = false
 
 let hintaudio = document.createElement("audio")
-hintaudio.src = "sounds/木头咚.wav"
+hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
+
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
 
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
 let fork = document.querySelectorAll(".fork")
 
+biteaudio.pause();
+biteaudio.currentTime = 0;
 biteaudio.play()
 
 fork.forEach(function (e) {
@@ -28,10 +36,10 @@ forkOne.addEventListener("click", function () {
 forkTwo.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "*you started talking first*"
+    hint.innerText = "*you started talking first.*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "*you started talking first*"
+    hint1.innerText = "*you started talking first.*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

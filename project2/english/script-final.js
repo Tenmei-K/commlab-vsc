@@ -18,17 +18,26 @@ let summerWrapper = document.querySelector("#summerWrapper")
 let autumnWrapper = document.querySelector("#autumnWrapper")
 let winterWrapper = document.querySelector("#winterWrapper")
 let finalWrapper = document.querySelector("#finalWrapper")
+let paper = document.querySelector("#paper")
 
 let springbgm = document.createElement("audio")
-springbgm.src = "sounds/springbgm.mp3"
+springbgm.src = "../sounds/springbgm.mp3"
 let summerbgm = document.createElement("audio")
-summerbgm.src = "sounds/summerbgm.mp3"
+summerbgm.src = "../sounds/summerbgm.mp3"
 let autumnbgm = document.createElement("audio")
-autumnbgm.src = "sounds/autumnbgm.mp3"
+autumnbgm.src = "../sounds/autumnbgm.mp3"
 let winterbgm = document.createElement("audio")
-winterbgm.src = "sounds/winterbgm.mp3"
+winterbgm.src = "../sounds/winterbgm.mp3"
 let finalbgm = document.createElement("audio")
-finalbgm.src = "sounds/hellomusevocal.mp3"
+finalbgm.src = "../sounds/hellomusevocal.mp3"
+
+let audios = [];
+audios.push(springbgm);
+audios.push(summerbgm);
+audios.push(autumnbgm);
+audios.push(winterbgm);
+audios.push(finalbgm);
+let audioVolumeP = 1;
 
 
 finalbgm.play()
@@ -39,7 +48,7 @@ finalbgm.volume = 0.8
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
     springWrapper.style.scale = 1.05
-    finalbgm.volume = 0.12
+    finalbgm.volume = 0.1
     springbgm.play()
     springbgm.loop = true
 })
@@ -55,7 +64,7 @@ springWrapper.addEventListener("click", function () {
 summerWrapper.style.cursor = "pointer"
 summerWrapper.addEventListener("mouseover", function () {
     summerWrapper.style.scale = 1.05
-    finalbgm.volume = 0.12
+    finalbgm.volume = 0.1
     summerbgm.play()
     summerbgm.loop = true
 })
@@ -71,7 +80,7 @@ summerWrapper.addEventListener("click", function () {
 autumnWrapper.style.cursor = "pointer"
 autumnWrapper.addEventListener("mouseover", function () {
     autumnWrapper.style.scale = 1.05
-    finalbgm.volume = 0.12
+    finalbgm.volume = 0.1
     autumnbgm.play()
     autumnbgm.loop = true
 })
@@ -87,7 +96,7 @@ autumnWrapper.addEventListener("click", function () {
 winterWrapper.style.cursor = "pointer"
 winterWrapper.addEventListener("mouseover", function () {
     winterWrapper.style.scale = 1.05
-    finalbgm.volume = 0.12
+    finalbgm.volume = 0.1
     winterbgm.play()
     winterbgm.loop = true
 })
@@ -111,6 +120,17 @@ finalWrapper.addEventListener("mouseout", function () {
 })
 finalWrapper.addEventListener("click", function () {
     document.location = "hello-muse.html"
+})
+
+paper.style.cursor = "pointer"
+// paper.addEventListener("mouseover", function () {
+//     paper.style.scale = 1.05
+// })
+// paper.addEventListener("mouseout", function () {
+//     paper.style.scale = 1
+// })
+paper.addEventListener("click", function () {
+    document.location = "../index.html"
 })
 
 
@@ -138,7 +158,7 @@ window.addEventListener("scroll", function () {
         mainWrapper.style.right = 6.65 - (percentage - 50) / 25 * 7.75 + "%"
     }
     if (percentage > 75) {
-        mainWrapper.style.right = -1.1 - (percentage - 75) / 25 * 14.1 + "%"
+        mainWrapper.style.right = - 1.1 - (percentage - 75) / 25 * 14.1 + "%"
     }
 
 

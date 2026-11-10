@@ -50,19 +50,25 @@ function grow(e, i, p1, p2, per) {
 
 
 let crowdAudio = document.createElement("audio")
-crowdAudio.src = "sounds/crowd.mp3"
+crowdAudio.src = "../sounds/crowd.mp3"
 crowdAudio.loop = true
 crowdAudio.play()
 
 let windbellAudio = document.createElement("audio")
-windbellAudio.src = "sounds/windbell.mp3"
+windbellAudio.src = "../sounds/windbell.mp3"
 windbellAudio.loop = false
 // windbellAudio.play()
 // windbellAudio.volume = 0
 
 let hintaudio = document.createElement("audio")
-hintaudio.src = "sounds/木头咚.wav"
+hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
+
+let audios = [];
+audios.push(crowdAudio);
+audios.push(windbellAudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
 
 
 // for condition clickable element  其实我真的没招了。我到底在干什么？太过于神秘了。

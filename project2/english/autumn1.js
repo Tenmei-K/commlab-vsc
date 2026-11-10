@@ -751,7 +751,7 @@ window.addEventListener("scroll", function () {
 
     if (percentage >= 100 / 4 * 3) {
         let newInk = document.createElement("img")
-        newInk.src = "assets/inkThree.png"
+        newInk.src = "../assets/inkThree.png"
         newInk.classList.add("ink")
         newInk.style.height = 35 + "%"
         hintWrapper.append(newInk)
@@ -766,18 +766,17 @@ window.addEventListener("scroll", function () {
         inkThree.addEventListener("mouseout", function () {
             inkThree.style.scale = 1
         })
-        inkThree.addEventListener("click", function () {
-            document.location = "autumn2.html"
-        })
+        inkThree.addEventListener("click", proceedAutumn2);
     }
     if ( percentage < 100 / 3 * 2) {
         inkThree.style.cursor = "default"
         inkThree.addEventListener("mouseover", function () {
             inkThree.style.scale = 1
         })
-        inkThree.addEventListener("click", function () {
-            document.location = "autumn1.html"
-        })
+        // inkThree.addEventListener("click", function () {
+        //     document.location = "autumn1.html"
+        // })
+        inkThree.removeEventListener("click", proceedAutumn2);
     }
 
 
@@ -785,3 +784,6 @@ window.addEventListener("scroll", function () {
 
 })
 
+function proceedAutumn2() {
+    document.location = "autumn2.html"
+}

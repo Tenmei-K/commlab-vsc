@@ -20,17 +20,25 @@ let winterWrapper = document.querySelector("#winterWrapper")
 let finalWrapper = document.querySelector("#finalWrapper")
 
 let springbgm = document.createElement("audio")
-springbgm.src = "sounds/springbgm.mp3"
+springbgm.src = "../sounds/springbgm.mp3"
 springbgm.loop = true
 let summerbgm = document.createElement("audio")
-summerbgm.src = "sounds/summerbgm.mp3"
+summerbgm.src = "../sounds/summerbgm.mp3"
 summerbgm.loop = true
 let autumnbgm = document.createElement("audio")
-autumnbgm.src = "sounds/autumnbgm.mp3"
+autumnbgm.src = "../sounds/autumnbgm.mp3"
 autumnbgm.loop = true
 let winterbgm = document.createElement("audio")
-winterbgm.src = "sounds/winterbgm.mp3"
+winterbgm.src = "../sounds/winterbgm.mp3"
 winterbgm.loop = true
+
+let audios = [];
+audios.push(springbgm);
+audios.push(summerbgm);
+audios.push(autumnbgm);
+audios.push(winterbgm);
+let audioVolumeP = 1;
+
 
 
 springWrapper.style.cursor = "pointer"
@@ -101,7 +109,7 @@ finalWrapper.addEventListener("click", function () {
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
-    console.log("scrolling")
+    // console.log("scrolling")
 
 
     mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"

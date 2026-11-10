@@ -40,10 +40,10 @@ forkOne.addEventListener("click", function () {
 forkTwo.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "*她结束了自己的讲话，然后将叉子握在手中轻轻晃动，似乎是为了好玩。*"
+    hint.innerText = "*她没有继续说下去，将叉子握在手中轻轻晃动，也许是觉得好玩。*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "*她结束了自己的讲话，然后将叉子握在手中轻轻晃动，似乎是为了好玩。*"
+    hint1.innerText = "*她没有继续说下去，将叉子握在手中轻轻晃动，也许是觉得好玩。*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

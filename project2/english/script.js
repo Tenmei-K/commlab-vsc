@@ -11,7 +11,7 @@ function getScrollPercentage() {
 }
 
 let finalbgm = document.createElement("audio")
-finalbgm.src = "sounds/hellomuseinst.mp3"
+finalbgm.src = "../sounds/hellomuseinst.mp3"
 
 let mainWrapper = document.querySelector("#mainWrapper")
 let wrapper = document.querySelectorAll(".wrapper")
@@ -21,6 +21,10 @@ let springWrapper = document.querySelector("#springWrapper")
 finalbgm.play()
 finalbgm.loop = true
 finalbgm.volume = 0.8
+
+let audios = [];
+audios.push(finalbgm);
+let audioVolumeP = 1;
 
 
 springWrapper.style.cursor = "pointer"
@@ -73,14 +77,14 @@ springWrapper.addEventListener("click", function () {
 
 
 
-
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
-    console.log("scrolling")
+    // console.log("scrolling")
 
 
     mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"
+    mainWrapper.style.right = percentage / 25 * 6.9 + "%"
     if (mainWrapper.style.top > 0) {
         mainWrapper.style.top = 0
     }

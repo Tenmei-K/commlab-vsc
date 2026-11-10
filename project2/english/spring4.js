@@ -18,13 +18,16 @@ function getScrollPercentage() {
 
 let clientHeight = document.body.clientHeight
 let clientWidth = document.body.clientWidth
-console.log(clientHeight, clientWidth)
+// console.log(clientHeight, clientWidth)
 
 
 
 let crowdAudio = document.createElement("audio")
-crowdAudio.src = "sounds/crowd.mp3"
+crowdAudio.src = "../sounds/crowd.mp3"
 
+let audios = [];
+audios.push(crowdAudio);
+let audioVolumeP = 1;
 
 
 let human = document.querySelectorAll(".human")
@@ -64,9 +67,9 @@ function fall(e, i, p1, p2) {
         rY = distToFall;
     }
 
-    if (i == 0) {
-        console.log(e, currentYpix, treeHeight)
-    }
+    // if (i == 0) {
+    //     console.log(e, currentYpix, treeHeight)
+    // }
 
     e.style.transform = "translate(0px, " + rY + "px)"
 
@@ -1332,17 +1335,18 @@ window.addEventListener("scroll", function () {
 
 
     // human hover effect
-    if (((percentage > 100 / 14 * 3) && (percentage < 100 / 14 * 5)) || ((percentage > 100 / 14 * 10) && (percentage < 100 / 14 * 13))) {
+    if (((percentage > 100 / 14 * 3) && (percentage < 100 / 14 * 5)) || ((percentage > 100 / 14 * 10) && (percentage < 100 / 14 * 12))) {
         document.querySelector("#GWrapper").style.maxWidth = clientWidth
         document.querySelector("#GWrapper").style.minWidth = clientWidth
         document.addEventListener("mousemove", function (eventInfo) {
-            if (eventInfo.pageY > 0.35 * clientHeight) {
-
+            if (eventInfo.clientY > 0.32 * clientHeight) {
                 document.querySelector("#Goverflow").style.opacity = 1
                 document.querySelector("#GWrapper").style.opacity = 1
                 document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"
 
                 document.querySelector("#GWrapper").style.left = - eventInfo.pageX + "px"
+            } else {
+                document.querySelector("#Goverflow").style.opacity = 0
             }
         })
     } else {
@@ -1357,7 +1361,7 @@ window.addEventListener("scroll", function () {
     } else {
         document.querySelector("#G1").style.opacity = 0
     }
-    if ((percentage > 100 / 14 * 10) && (percentage < 100 / 14 * 13)) {
+    if ((percentage > 100 / 14 * 10) && (percentage < 100 / 14 * 12)) {
         document.querySelector("#G2").style.opacity = 1
     } else {
         document.querySelector("#G2").style.opacity = 0
@@ -1486,29 +1490,61 @@ window.addEventListener("scroll", function () {
 
 
     // final serifu add paper
-    if (percentage >= 100 / 14 * 13) {
+    let paperWrapper = document.querySelector(".paperWrapper")
+    let Line = document.querySelector(".newLine")
+    if (percentage >= 100 / 14 * 13 && !paperWrapper) {
+        let newPaperWrapper = document.createElement("div");
+        newPaperWrapper.style.justifyItems = "center";
+        newPaperWrapper.style.width = 100 + "%";
+        newPaperWrapper.style.position = "fixed";
+        newPaperWrapper.style.bottom = 0;
+        newPaperWrapper.style.height = 100 + "%";
+
+        newPaperWrapper.classList.add("paperWrapper")
+
+        document.body.append(newPaperWrapper);
+
         let newPaper = document.createElement("img")
-        newPaper.src = "assets/paper1.png"
+        newPaper.src = "../assets/paper1.png"
         newPaper.style.cursor = "pointer"
         newPaper.style.position = "fixed"
         newPaper.style.bottom = -5 + "%"
         newPaper.style.width = 36.5 + "%"
         newPaper.style.display = "block"
+
+        // newPaperWrapper.style.scale = 1.04
+
         newPaper.addEventListener("click", function () {
             document.location = "index4.html"
         })
         newPaper.addEventListener("mouseover", function () {
-            paperWrapper.style.scale = 1.04
+            newPaper.style.scale = 1.04
         })
         newPaper.addEventListener("mouseout", function () {
-            paperWrapper.style.scale = 1
+            newPaper.style.scale = 1
         })
 
-        paperWrapper.append(newPaper)
+        newPaperWrapper.append(newPaper)
 
+        let newLine = document.createElement("p"); 
+        newLine.classList.add("lines");
+        newLine.classList.add("sen");
+        newLine.classList.add("newLine");
+        newLine.innerText = "“所以，不考虑入社吗？”";
+        newLine.style.opacity = 1;
 
-    } else {
+        document.querySelector(".paperWrapper").append(newLine);
+
+        ///// IN CONSTRUCTION /////
+    } else if (percentage < 100 / 14 * 13 && paperWrapper) {
+        // let newPaperWrapper = document.querySelector(".paperWrapper")
+        // if (newPaperWrapper) {
+        // newPaperWrapper.innerText = ""
+        // newPaperWrapper.remove();
+        // }
         paperWrapper.innerText = ""
+        paperWrapper.remove();
+        Line.remove();
     }
 
 

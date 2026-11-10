@@ -62,10 +62,14 @@ function grow(e, i, p1, p2, per) {
 }
 
 let windbellAudio = document.createElement("audio")
-windbellAudio.src = "sounds/windbell.mp3"
+windbellAudio.src = "../sounds/windbell.mp3"
 windbellAudio.loop = false
 // windbellAudio.play()
 // windbellAudio.volume = 0
+
+let audios = [];
+audios.push(windbellAudio);
+let audioVolumeP = 1;
 
 
 

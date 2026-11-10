@@ -1,10 +1,16 @@
 let biteaudio = document.createElement("audio")
-biteaudio.src = "sounds/pear.mp3"
+biteaudio.src = "../sounds/pear.mp3"
 biteaudio.loop = false
 
 let hintaudio = document.createElement("audio")
-hintaudio.src = "sounds/木头咚.wav"
+hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
+
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
 
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
@@ -14,8 +20,9 @@ let fork = document.querySelectorAll(".fork")
 let background = document.querySelector("#backgroundWinter")
 background.style.opacity = 0.4
 
+biteaudio.pause();
+biteaudio.currentTime = 0;
 biteaudio.play()
-
 
 let hint = document.createElement("p")
 hint.innerText = "*she took a bite of pear, and stared at your face. invisible pressure crawled up your leg.*"

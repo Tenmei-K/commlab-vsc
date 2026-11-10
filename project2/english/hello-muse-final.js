@@ -23,9 +23,12 @@ console.log(clientHeight, clientWidth)
 
 
 let crowdaudio = document.createElement("audio")
-crowdaudio.src = "sounds/crowd.mp3"
+crowdaudio.src = "../sounds/crowd.mp3"
 crowdaudio.volume = 0
 
+let audios = [];
+audios.push(crowdaudio);
+let audioVolumeP = 1;
 
 
 let human = document.querySelectorAll(".human")
@@ -69,7 +72,7 @@ let broochVisited = urlParams.get('broochVisited') || 0;
 
 
 
-// summer
+
 // ! position one
 // grow one
 function hanaFourPositionOneGrowOne() {
@@ -560,9 +563,11 @@ window.addEventListener("scroll", function () {
 
     if (percentage > 100 / 17 * 3 && percentage < 100 / 17 * 9) {
         document.querySelector("#backgroundSpring").style.opacity = (percentage - 100 / 17 * 3) / (100 / 17 * 6)
+        document.querySelector("#trunkSpring").style.opacity = (percentage - 100 / 17 * 3) / (100 / 17 * 6)
     }
     if (percentage > 100 / 17 * 9) {
         document.querySelector("#backgroundSpring").style.opacity = 1
+        document.querySelector("#trunkSpring").style.opacity = 1
     }
 
 
@@ -785,7 +790,7 @@ window.addEventListener("scroll", function () {
         document.querySelector("#GWrapper").style.minWidth = clientWidth
         document.addEventListener("mousemove", function (eventInfo) {
             if (eventInfo.clientY > 0.32 * clientHeight) {
-
+                console.log(eventInfo.clientY, 0.32 * clientHeight, eventInfo.pageX)
                 document.querySelector("#Goverflow").style.opacity = 1
                 document.querySelector("#GWrapper").style.opacity = 1
                 document.querySelector("#Goverflow").style.left = eventInfo.pageX + "px"

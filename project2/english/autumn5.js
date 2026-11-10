@@ -71,11 +71,14 @@ let inkTwo = document.querySelector("#inkTwo")
 
 
 let wind = document.createElement("audio")
-wind.src = "sounds/wind.mp3"
+wind.src = "../sounds/wind.mp3"
 wind.loop = true
 wind.volume = 0
 wind.play()
 
+let audios = [];
+audios.push(wind);
+let audioVolumeP = 1;
 
 
 document.querySelector("#trunkWinter").style.opacity = 0.4
@@ -462,6 +465,7 @@ window.addEventListener("scroll", function () {
     // final hover
     if (percentage > 100 / 5 * 4) {
         AutumnTwo.style.cursor = "pointer"
+        document.querySelector("#AutumnOneP").style.scale = 1.04
         AutumnTwo.addEventListener("mouseover", function () {
             document.querySelector("#AutumnOneP").style.scale = 1.04
         })
@@ -473,6 +477,7 @@ window.addEventListener("scroll", function () {
         })
     } else {
         AutumnTwo.style.cursor = "default"
+        document.querySelector("#AutumnOneP").style.scale = 1
         AutumnTwo.addEventListener("mouseover", function () {
             document.querySelector("#AutumnOneP").style.scale = 1
         })
@@ -490,7 +495,7 @@ window.addEventListener("scroll", function () {
     //     AutumnOne.style.opacity = 0
 
     //     let AutumnAppend = document.createElement("img")
-    //     AutumnAppend.src = "assets/Autumn1.1.png"
+    //     AutumnAppend.src = "../assets/Autumn1.1.png"
     //     AutumnAppend.classList.add("human")
     //     AutumnAppend.style.cursor = "pointer"
     //     AutumnAppend.addEventListener("mouseover", function () {
