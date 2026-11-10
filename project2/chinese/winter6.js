@@ -6,6 +6,12 @@ let hintaudio = document.createElement("audio")
 hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
+
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
 let fork = document.querySelectorAll(".fork")
@@ -19,10 +25,10 @@ biteaudio.currentTime = 0;
 biteaudio.play()
 
 let hint = document.createElement("p")
-hint.innerText = "*you didn't dare to look at her*"
+hint.innerText = "*你没敢看向她。*"
 hint.classList.add("hint")
 let hint1 = document.createElement("p")
-hint1.innerText = "*you didn't dare to look at her*"
+hint1.innerText = "*你没敢看向她。*"
 hint1.classList.add("hint")
 
 document.body.append(hint)
@@ -51,10 +57,10 @@ forkOne.addEventListener("click", function () {
 forkTwo.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "*you are still trying to find some reason to persuade her. miraculously, she isn't anxious to cut you off.*"
+    hint.innerText = "*你仍然在尝试找出理由说服她。奇迹般地，她并不着急打断你。*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "*you are still trying to find some reason to persuade her. miraculously, she isn't anxious to cut you off.*"
+    hint1.innerText = "*你仍然在尝试找出理由说服她。奇迹般地，她并不着急打断你。*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

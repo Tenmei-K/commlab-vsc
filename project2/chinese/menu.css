@@ -9,10 +9,10 @@
 }
 
 .menu {
-    width: 7vh;
+    width: 7.5vh;
     padding: 0.5vh;
 
     position: fixed;
     left: 1.2vw;
-    bottom: 1.6vh;
+    bottom: 2vh;
 }

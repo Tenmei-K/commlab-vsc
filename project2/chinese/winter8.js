@@ -6,6 +6,12 @@ let hintaudio = document.createElement("audio")
 hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
+
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
 let fork = document.querySelectorAll(".fork")
@@ -33,10 +39,10 @@ forkOne.addEventListener("click", function () {
 
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "*you are sure that your sentence makes sense. however, your tone is so weak that you hardly even believe yourself.*"
+    hint.innerText = "*你很确信你说得很有道理。然而，你的语气实在太过虚弱，以至于你自己都不完全相信自己。*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "*you are sure that your sentence makes sense. however, your tone is so weak that you hardly even believe yourself.*"
+    hint1.innerText = "*你很确信你说得很有道理。然而，你的语气实在太过虚弱，以至于你自己都不完全相信自己。*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

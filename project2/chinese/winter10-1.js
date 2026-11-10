@@ -6,6 +6,12 @@ let hintaudio = document.createElement("audio")
 hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
+
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
 let fork = document.querySelectorAll(".fork")

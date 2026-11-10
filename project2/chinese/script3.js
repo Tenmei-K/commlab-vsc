@@ -24,6 +24,12 @@ let summerbgm = document.createElement("audio")
 summerbgm.src = "../sounds/summerbgm.mp3"
 summerbgm.loop = true
 
+let audios = [];
+audios.push(springbgm);
+audios.push(summerbgm);
+let audioVolumeP = 1;
+
+
 
 
 springWrapper.style.cursor = "pointer"

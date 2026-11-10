@@ -66,6 +66,12 @@ let lineaudio = document.createElement("audio")
 lineaudio.src = "../sounds/轻响指.wav"
 lineaudio.loop = false
 
+let audios = [];
+audios.push(inkaudio);
+audios.push(lineaudio);
+let audioVolumeP = 1;
+
+
 let ink = document.querySelectorAll(".ink")
 let inkOne = document.querySelector("#inkOne")
 let inkTwo = document.querySelector("#inkTwo")

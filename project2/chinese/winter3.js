@@ -6,6 +6,12 @@ let hintaudio = document.createElement("audio")
 hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
+
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
 let fork = document.querySelectorAll(".fork")
@@ -34,10 +40,10 @@ forkOne.addEventListener("click", function () {
 forkTwo.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "*she ended her talk and started to spin the fork, probably for fun*"
+    hint.innerText = "*她结束了自己的讲话，然后将叉子握在手中轻轻晃动，似乎是为了好玩。*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "*she ended her talk and started to spin the fork, probably for fun*"
+    hint1.innerText = "*她结束了自己的讲话，然后将叉子握在手中轻轻晃动，似乎是为了好玩。*"
     hint1.classList.add("hint")
 
     document.body.append(hint)

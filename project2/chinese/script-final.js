@@ -31,6 +31,14 @@ winterbgm.src = "../sounds/winterbgm.mp3"
 let finalbgm = document.createElement("audio")
 finalbgm.src = "../sounds/hellomusevocal.mp3"
 
+let audios = [];
+audios.push(springbgm);
+audios.push(summerbgm);
+audios.push(autumnbgm);
+audios.push(winterbgm);
+audios.push(finalbgm);
+let audioVolumeP = 1;
+
 
 finalbgm.play()
 finalbgm.loop = true

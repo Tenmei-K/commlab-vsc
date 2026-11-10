@@ -32,6 +32,13 @@ let microphoneAudio = document.createElement("audio")
 microphoneAudio.src = "../sounds/microphonePlugIn.mp3"
 microphoneAudio.loop = false
 
+let audios = [];
+audios.push(doorbell);
+audios.push(bubbleAudio);
+audios.push(doorOpenAudio);
+audios.push(microphoneAudio);
+let audioVolumeP = 1;
+
 
 let clientHeight = document.body.clientHeight
 let clientWidth = document.body.clientWidth

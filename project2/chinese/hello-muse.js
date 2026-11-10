@@ -64,6 +64,12 @@ let hintaudio = document.createElement("audio")
 hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
+let audios = [];
+audios.push(crowdAudio);
+audios.push(windbellAudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
 
 // for condition clickable element  其实我真的没招了。我到底在干什么？太过于神秘了。
 let urlString = window.location.search;

@@ -20,6 +20,11 @@ let springbgm = document.createElement("audio")
 springbgm.src = "../sounds/springbgm.mp3"
 springbgm.loop = true
 
+let audios = [];
+audios.push(springbgm);
+let audioVolumeP = 1;
+
+
 
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
@@ -49,7 +54,7 @@ summerWrapper.addEventListener("click", function () {
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
-    console.log("scrolling")
+    // console.log("scrolling")
 
 
     mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"

@@ -76,6 +76,9 @@ wind.loop = true
 wind.volume = 0
 wind.play()
 
+let audios = [];
+audios.push(wind);
+let audioVolumeP = 1;
 
 
 document.querySelector("#trunkWinter").style.opacity = 0.4

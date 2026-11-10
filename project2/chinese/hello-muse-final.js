@@ -26,6 +26,9 @@ let crowdaudio = document.createElement("audio")
 crowdaudio.src = "../sounds/crowd.mp3"
 crowdaudio.volume = 0
 
+let audios = [];
+audios.push(crowdaudio);
+let audioVolumeP = 1;
 
 
 let human = document.querySelectorAll(".human")

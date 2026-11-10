@@ -22,6 +22,10 @@ finalbgm.play()
 finalbgm.loop = true
 finalbgm.volume = 0.8
 
+let audios = [];
+audios.push(finalbgm);
+let audioVolumeP = 1;
+
 
 springWrapper.style.cursor = "pointer"
 springWrapper.addEventListener("mouseover", function () {
@@ -76,7 +80,7 @@ springWrapper.addEventListener("click", function () {
 window.addEventListener("scroll", function () {
     percentage = getScrollPercentage() // 0-100
 
-    console.log("scrolling")
+    // console.log("scrolling")
 
 
     mainWrapper.style.top = 25 * (50 - percentage) / 50 - percentage * 1.4 + "%"

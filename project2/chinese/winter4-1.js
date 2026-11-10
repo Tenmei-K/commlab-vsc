@@ -6,6 +6,12 @@ let hintaudio = document.createElement("audio")
 hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
+
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
 let fork = document.querySelectorAll(".fork")
@@ -19,10 +25,10 @@ biteaudio.currentTime = 0;
 biteaudio.play()
 
 let hint = document.createElement("p")
-hint.innerText = "*you didn't manage to answer her. also, you automatically assume that she was referring to her talent, with confidence out of nowhere*"
+hint.innerText = "*你没能找出办法回答她。以及，不知你的自信从何而来，你假定她所讲的是她的天赋。*"
 hint.classList.add("hint")
 let hint1 = document.createElement("p")
-hint1.innerText = "*you didn't manage to answer her. also, you automatically assume that she was referring to her talent, with confidence out of nowhere*"
+hint1.innerText = "*你没能找出办法回答她。以及，不知你的自信从何而来，你假定她所讲的是她的天赋。*"
 hint1.classList.add("hint")
 
 document.body.append(hint)
@@ -51,12 +57,12 @@ forkOne.addEventListener("click", function () {
 forkTwo.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "*she's still waiting for you to swallow the pear in your mouth and say something*"
+    hint.innerText = "*她仍然在等你把嘴里的梨吞下去，然后说点什么。*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "*she's still waiting for you to swallow the pear in your mouth and say something*"
+    hint1.innerText = "*她仍然在等你把嘴里的梨吞下去，然后说点什么。*"
     hint1.classList.add("hint")
-
+          
     document.body.append(hint)
     document.body.append(hint1)
 

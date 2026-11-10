@@ -6,6 +6,12 @@ let hintaudio = document.createElement("audio")
 hintaudio.src = "../sounds/木头咚.wav"
 hintaudio.loop = false
 
+let audios = [];
+audios.push(biteaudio);
+audios.push(hintaudio);
+let audioVolumeP = 1;
+
+
 let forkOne = document.querySelector("#forkOne")
 let forkTwo = document.querySelector("#forkTwo")
 let fork = document.querySelectorAll(".fork")
@@ -31,10 +37,10 @@ fork.forEach(function (e) {
 forkOne.addEventListener("click", function () {
     hintaudio.play()
     let hint = document.createElement("p")
-    hint.innerText = "*you are polite, maybe a little too polite, and you waited for her to take a bite*"
+    hint.innerText = "*你很礼貌，或许有点过于礼貌了，你在等待她咬下一口梨*"
     hint.classList.add("hint")
     let hint1 = document.createElement("p")
-    hint1.innerText = "*you are polite, maybe a little too polite, and you waited for her to take a bite*"
+    hint1.innerText = "*你很礼貌，或许有点过于礼貌了，你在等待她咬下一口梨*"
     hint1.classList.add("hint")
 
     document.body.append(hint)
