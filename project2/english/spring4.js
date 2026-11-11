@@ -1530,7 +1530,7 @@ window.addEventListener("scroll", function () {
         newLine.classList.add("lines");
         newLine.classList.add("sen");
         newLine.classList.add("newLine");
-        newLine.innerText = "“所以，不考虑入社吗？”";
+        newLine.innerText = '"So, would you consider joining?"';
         newLine.style.opacity = 1;
 
         document.querySelector(".paperWrapper").append(newLine);
