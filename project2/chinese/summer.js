@@ -33,7 +33,7 @@ microphoneAudio.src = "../sounds/microphonePlugIn.mp3"
 microphoneAudio.loop = false
 
 let audios = [];
-audios.push(dooraudoorbelldio);
+audios.push(doorbell);
 audios.push(bubbleAudio);
 audios.push(doorOpenAudio);
 audios.push(microphoneAudio);
