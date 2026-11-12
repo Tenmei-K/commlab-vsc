@@ -127,7 +127,7 @@ body {
 .bubble {
     position: fixed;
     display: block;
-    opacity: .6;
+    opacity: .32;
     scale: .9;
 }
 

@@ -86,12 +86,13 @@ doorButtonOne.addEventListener("click", function () {
 
     // bubbles
     bubbleOne.style.cursor = "pointer"
+    bubbleOne.style.opacity = .92
     bubbleOne.addEventListener("mouseover", function () {
         bubbleOne.style.opacity = 1
         bubbleOne.style.scale = 1
     })
     bubbleOne.addEventListener("mouseout", function () {
-        bubbleOne.style.opacity = .6
+        bubbleOne.style.opacity = .92
         bubbleOne.style.scale = .9
     })
     bubbleOne.addEventListener("click", function () {
@@ -109,12 +110,13 @@ doorButtonOne.addEventListener("click", function () {
         }, 160)
 
         bubbleTwo.style.cursor = "pointer"
+        bubbleTwo.style.opacity = .92
         bubbleTwo.addEventListener("mouseover", function () {
             bubbleTwo.style.opacity = 1
             bubbleTwo.style.scale = 1
         })
         bubbleTwo.addEventListener("mouseout", function () {
-            bubbleTwo.style.opacity = .6
+            bubbleTwo.style.opacity = .92
             bubbleTwo.style.scale = .9
         })
         bubbleTwo.addEventListener("click", function () {
@@ -135,12 +137,13 @@ doorButtonOne.addEventListener("click", function () {
 
 
             bubbleThree.style.cursor = "pointer"
+            bubbleThree.style.opacity = .92
             bubbleThree.addEventListener("mouseover", function () {
                 bubbleThree.style.opacity = 1
                 bubbleThree.style.scale = 1
             })
             bubbleThree.addEventListener("mouseout", function () {
-                bubbleThree.style.opacity = .6
+                bubbleThree.style.opacity = .92
                 bubbleThree.style.scale = .9
             })
             bubbleThree.addEventListener("click", function () {
@@ -182,12 +185,13 @@ doorButtonOne.addEventListener("click", function () {
 
 
                 bubbleFour.style.cursor = "pointer"
+                bubbleFour.style.opacity = .92
                 bubbleFour.addEventListener("mouseover", function () {
                     bubbleFour.style.opacity = 1
                     bubbleFour.style.scale = 1
                 })
                 bubbleFour.addEventListener("mouseout", function () {
-                    bubbleFour.style.opacity = .6
+                    bubbleFour.style.opacity = .92
                     bubbleFour.style.scale = .9
                 })
                 bubbleFour.addEventListener("click", function () {
@@ -205,12 +209,13 @@ doorButtonOne.addEventListener("click", function () {
                     }, 160)
 
                     bubbleFive.style.cursor = "pointer"
+                    bubbleFive.style.opacity = .92
                     bubbleFive.addEventListener("mouseover", function () {
                         bubbleFive.style.opacity = 1
                         bubbleFive.style.scale = 1
                     })
                     bubbleFive.addEventListener("mouseout", function () {
-                        bubbleFive.style.opacity = .6
+                        bubbleFive.style.opacity = .92
                         bubbleFive.style.scale = .9
                     })
                     bubbleFive.addEventListener("click", function () {
@@ -239,12 +244,13 @@ doorButtonOne.addEventListener("click", function () {
                         }, 160)
 
                         bubbleSix.style.cursor = "pointer"
+                        bubbleSix.style.opacity = .92
                         bubbleSix.addEventListener("mouseover", function () {
                             bubbleSix.style.opacity = 1
                             bubbleSix.style.scale = 1
                         })
                         bubbleSix.addEventListener("mouseout", function () {
-                            bubbleSix.style.opacity = .6
+                            bubbleSix.style.opacity = .92
                             bubbleSix.style.scale = .9
                         })
                         bubbleSix.addEventListener("click", function () {
@@ -265,12 +271,13 @@ doorButtonOne.addEventListener("click", function () {
                             }, 160)
 
                             bubbleSeven.style.cursor = "pointer"
+                            bubbleSeven.style.opacity = .92
                             bubbleSeven.addEventListener("mouseover", function () {
                                 bubbleSeven.style.opacity = 1
                                 bubbleSeven.style.scale = 1
                             })
                             bubbleSeven.addEventListener("mouseout", function () {
-                                bubbleSeven.style.opacity = .6
+                                bubbleSeven.style.opacity = .92
                                 bubbleSeven.style.scale = .9
                             })
                             bubbleSeven.addEventListener("click", function () {
@@ -310,12 +317,13 @@ doorButtonOne.addEventListener("click", function () {
                                 }, 160)
 
                                 bubbleEight.style.cursor = "pointer"
+                                bubbleEight.style.opacity = .92
                                 bubbleEight.addEventListener("mouseover", function () {
                                     bubbleEight.style.opacity = 1
                                     bubbleEight.style.scale = 1
                                 })
                                 bubbleEight.addEventListener("mouseout", function () {
-                                    bubbleEight.style.opacity = .6
+                                    bubbleEight.style.opacity = .92
                                     bubbleEight.style.scale = .9
                                 })
                                 bubbleEight.addEventListener("click", function () {
@@ -336,12 +344,13 @@ doorButtonOne.addEventListener("click", function () {
                                     }, 160)
 
                                     bubbleNine.style.cursor = "pointer"
+                                    bubbleNine.style.opacity = .92
                                     bubbleNine.addEventListener("mouseover", function () {
                                         bubbleNine.style.opacity = 1
                                         bubbleNine.style.scale = 1
                                     })
                                     bubbleNine.addEventListener("mouseout", function () {
-                                        bubbleNine.style.opacity = .6
+                                        bubbleNine.style.opacity = .92
                                         bubbleNine.style.scale = .9
                                     })
                                     bubbleNine.addEventListener("click", function () {
@@ -370,12 +379,13 @@ doorButtonOne.addEventListener("click", function () {
                                         }, 160)
 
                                         bubbleTen.style.cursor = "pointer"
+                                        bubbleTen.style.opacity = .92
                                         bubbleTen.addEventListener("mouseover", function () {
                                             bubbleTen.style.opacity = 1
                                             bubbleTen.style.scale = 1
                                         })
                                         bubbleTen.addEventListener("mouseout", function () {
-                                            bubbleTen.style.opacity = .6
+                                            bubbleTen.style.opacity = .92
                                             bubbleTen.style.scale = .9
                                         })
                                         bubbleTen.addEventListener("click", function () {
@@ -396,12 +406,13 @@ doorButtonOne.addEventListener("click", function () {
                                             }, 160)
 
                                             bubbleEleven.style.cursor = "pointer"
+                                            bubbleEleven.style.opacity = .92
                                             bubbleEleven.addEventListener("mouseover", function () {
                                                 bubbleEleven.style.opacity = 1
                                                 bubbleEleven.style.scale = 1
                                             })
                                             bubbleEleven.addEventListener("mouseout", function () {
-                                                bubbleEleven.style.opacity = .6
+                                                bubbleEleven.style.opacity = .92
                                                 bubbleEleven.style.scale = .9
                                             })
                                             bubbleEleven.addEventListener("click", function () {
